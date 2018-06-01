@@ -1,0 +1,48 @@
+//
+//	Кнопки
+//
+
+.btn {
+
+	@include td ( none, none );
+	display: inline-block;
+	padding: 3px 5px;
+	margin: 2px 0px;
+	cursor: pointer;
+
+	&-default {
+		border: 1px solid darken( $brand-default, 25% );
+		background-color: $brand-default;
+		color: #262626 !important;
+		&:hover { background-color: darken( $brand-default, 10% ); }
+	}
+
+	&-primary {
+		border: 1px solid darken( $brand-primary, 25% );
+		background-color: $brand-primary;
+		color: #fff !important;
+		text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.75 );
+		&:hover { background-color: lighten( $brand-primary, 10% ); }
+	}
+
+	&-success {
+		border: 1px solid darken( $brand-success, 25% );
+		background-color: $brand-success;
+		color: #fff !important;
+		text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.75 );
+		&:hover { background-color: lighten( $brand-success, 10% ); }
+	}
+
+	&-md {
+		padding: 5px 10px;
+		font-size: 1.25em;
+	}
+
+	&-lg {
+		padding: 10px 20px;
+		font-size: 1.75em;
+	}
+
+	&-block { display: block; text-align: center;	}
+
+}

@@ -1,0 +1,15 @@
+//
+//	Галерея в контенте поста
+//
+
+
+.gallery {
+	position: relative;
+
+	.item {
+		display: block;
+	}
+
+	img { dislay: block; max-width: 100%; }
+
+}

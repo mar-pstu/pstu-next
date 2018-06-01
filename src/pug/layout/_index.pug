@@ -1,0 +1,30 @@
+include ../helpers/_variables
+include ../helpers/_mixins
+- page.title = "Главная";
+- page.excerpt = "Шаблон страницы front-page.php";
+- page.type = "home";
+block variables
+doctype html
+html(lang="ru")
+  include ../components/_head
+  block head
+  body( class=page.type )
+    .wrapper#wrapper
+      include ../parts/_header
+      main.wrapper__item.wrapper__item--main.main#main
+        if ( page.type == "home" )
+          include ../asides/_home
+        .container
+          block main
+          .row
+            .col-xs-12.col-sm-5.first-sm.col-md-3.col-lg-3
+              block left
+                include ../asides/_left
+            .col-xs-12.first-xs.col-sm-7.col-md-6.col-lg-6
+              block content
+                include ../components/_content
+            .col-xs-12.last-xs.col-sm-12.col-md-3.col-lg-3
+              block right
+                include ../asides/_right
+      include ../parts/_footer
+      include ../components/_enqueue

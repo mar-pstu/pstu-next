@@ -1,0 +1,48 @@
+//
+// START #header
+header.wrapper__item.header#header( style="background-image: url(./images/bg.png);" )
+	.header__menu.menu: .container: .row
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6: include ../components/_social
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6: .resources: ul.list-inline.resources__list.list
+			li.has-sub-menu
+				span ресурсы
+				ul.sub-menu
+					li: a( href="#" ) Обучение для инотсранцев
+					li: a( href="#" ) Сайт ПГТУ
+					li: a( href="#" ) Библиотека
+					li: a( href="#" ) Структура ПГТУ
+			li: a( href="#" ) русский
+			li: a( href="#" ) украинский
+	.header__logos.logos: .container: .row.middle-xs
+		.col-xs-6.col-sm-3.col-md-3.col-lg-2.text-left: a.custom-logo-link(href="/")
+			img.custom-logo(src='http://placehold.it/150x150/2ecc71/ecf0f1')
+		.col-xs-12.col-sm-6.col-md-6.col-lg-8.last-xs.text-center
+			if ( page.type == 'home' )
+				h1.blog-name= blog.name
+			else 
+				.blog-name= blog.name
+			p.blog-description= blog.description
+		.col-xs-6.col-sm-3.col-md-3.col-lg-2.last-sm.text-right: a.pstu-link(href="//pstu.edu")
+			img.pstu-logo(src=src.img+'pstu.png')
+	nav.header__nav.nav#header-nav: .container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+		button#burger.nav__burger( href="#" ) Меню
+		ul.nav__list.list#nav-list
+			li: a( href="#" ) Главная
+			li: a( href="#" ) Новости
+			li: a( href="#" ) Объявления
+			li
+				a(href="#") Студенту
+				ul.sub-menu
+					li: a( href="#" ) Пункт №1
+					li
+						a( href="#" ) Пункт №2
+						ul.sub-menu
+							li: a( href="#" ) Пункт №2.1
+							li: a( href="#" ) Пункт №2.2
+							li: a( href="#" ) Пункт №2.3
+							li: a( href="#" ) Пункт №2.4
+					li: a( href="#" ) Пункт №3
+					li: a( href="#" ) Пункт №4
+			li: a( href="#" ) Сотруднику
+// END #header
+//

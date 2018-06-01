@@ -1,0 +1,30 @@
+extend layout/_index
+block variables
+	-
+		page.title = 'Страница с медиасписком подстраниц';
+		page.type = 'page';
+block main
+	.row
+		.col-xs-12.col-sm-3.first-sm.col-md-3.col-lg-3
+			include asides/_left
+		.col-xs-12.first-xs.col-sm-9.col-md-9.col-lg-9
+			include components/_share
+			.content
+				// START Контент (the_content)
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam beatae fugiat ratione! Earum, eos nihil eum quaerat non rem ipsum. Necessitatibus recusandae nobis saepe temporibus facere perspiciatis non eos tempora.
+				p Incidunt, laborum blanditiis saepe dolorum suscipit quaerat, earum consectetur ea repudiandae molestias, fugiat tempore sapiente voluptates debitis sunt. Nesciunt veritatis placeat eveniet delectus ipsam iste quaerat laborum culpa aliquam officia!
+				p Id velit unde aperiam cupiditate ducimus beatae voluptatem et officiis perspiciatis, enim sapiente repellendus esse facere? Qui, error sunt omnis officiis ea, architecto delectus assumenda hic, amet dolore molestiae repellendus.
+				// END Контент (the_content)
+				hr.separeted
+				+media( { 'title': 'Страница 1' } )
+				+media( { 'title': 'Страница 2' } )
+					+media( { 'title': 'Страница 2.1' } )
+					+media( { 'title': 'Страница 2.2' } )
+				+media( { 'title': 'Страница 3' } )
+				+media( { 'title': 'Страница 4' } )
+					+media( { 'title': 'Страница 4.1' } )
+						+media( { 'title': 'Страница 4.1.1' } )
+				include components/_comments
+block left
+block content
+block right

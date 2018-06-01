@@ -1,0 +1,86 @@
+//
+//    Mixins
+//    миксины
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@mixin x-y-center() {
+  transform: translate3d(-50%, -50%, 0);
+  margin-top: 50%;
+  margin-left: 50%;
+}
+
+
+@mixin y-center() {
+  transform: translateY(-50%);
+  margin-top: 50%;
+}
+
+@mixin linkBorder($color) {
+  transition: all 250ms 0ms ease-out;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) -10px, $color 100%);
+  background-size: 1px 1px;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+}
+
+
+@mixin min-width($min-width) {
+  @media only screen and (min-width : $min-width) {
+    @content;
+  }
+}
+
+@mixin max-width($max-width) {
+  @media only screen and (max-width : $max-width) {
+    @content;
+  }
+}
+
+@mixin position ($p: relative, $t: auto, $l: auto, $r: auto, $b: auto) {
+  position: $p;
+  top: $t;
+  left: $l;
+  right: $r;
+  bottom: $b;
+}
+
+@mixin color ( $link: $link-color, $hover: $link-hover-color, $visited: $link-color, $active: $link-hover-color ) {
+  &:link { color: $link; }
+  &:visited { color: $visited; }
+  &:active { color: $active; }
+  &:hover { color: $hover; }
+}
+
+@mixin td ( $link: none, $hover: underline ) {
+  text-decoration: $link;
+  &:hover { text-decoration: $hover; }
+}
+
+@mixin bgc ( $link: none, $hover: underline ) {
+  background-color: $link;
+  &:hover { background-color: $hover; }
+}
+
+@mixin list-inline () {
+  > li,
+  > .item {
+    display: inline-block;
+    margin: 0px 5px;
+  }
+}
+
+@mixin size ( $w: auto, $h: auto ) {
+  width: $w;
+  height: $h;
+}

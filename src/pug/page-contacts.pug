@@ -1,0 +1,22 @@
+extend layout/_index
+block variables
+	-
+		page.title = 'Контакты';
+		page.type = 'page';
+block content
+	include components/_share
+	.content
+		include forms/_contacts
+		hr
+		h3 И
+		ul
+			li: a( href="#" ) Иванов Иван Иванович <i>(доцент)</i>
+			li: a( href="#" ) Иванов Федор ПРетрович <i>(доцент)</i>
+		h3 П
+		ul
+			li: a( href="#" ) Петров Иван Иванович <i>(доцент)</i>
+			li: a( href="#" ) Петров Федор ПРетрович <i>(доцент)</i>
+		h3 с
+		ul
+			li: a( href="#" ) Сидоров Иван Иванович <i>(доцент)</i>
+			li: a( href="#" ) Сидоров Федор ПРетрович <i>(доцент)</i>

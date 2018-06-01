@@ -1,0 +1,45 @@
+@import "helpers/_variables.scss";              //переменные
+@import "helpers/_mixins.scss";                 //миксины
+
+//
+@import "base/_normalize";
+@import "base/_base.scss";
+
+
+//
+@import "bootstrap/_bootstrap.scss";
+
+
+//компоненты по БЭМу
+@import "components/_flexboxgrid.scss";
+@import "components/_wrapper.scss";             //контейнер страницы, прижатие футера
+@import "components/_icon.scss";
+@import "components/_nav.scss";
+@import "components/_widget.scss";
+@import "components/_tags.scss";
+@import "components/_comments.scss";
+@import "components/_btn.scss";
+@import "components/_form.scss";
+@import "components/_to-top-btn.scss";
+@import "components/_pagination.scss";
+@import "components/_section.scss";
+@import "components/_media.scss";
+@import "components/_pager.scss";
+@import "components/_breadcrumb.scss";
+@import "components/_share.scss";
+@import "components/_info.scss";
+
+@import "wordpress/_calendar.scss";
+@import "wordpress/_tagcloud.scss";
+@import "wordpress/_menu.scss";
+@import "wordpress/_gallery.scss";
+
+
+//части страницы
+@import "parts/_header.scss";										//стили шапки сайта
+@import "parts/_aside.scss";
+@import "parts/_important.scss";
+@import "parts/_news.scss";
+@import "parts/_search.scss";
+@import "parts/_flat.scss";
+@import "parts/_footer.scss";										//стили подвала сайта

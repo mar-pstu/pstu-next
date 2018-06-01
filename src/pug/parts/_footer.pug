@@ -1,0 +1,24 @@
+mixin footer_widget ( args )
+	.col-xs-12.col-sm-6.col-md-3.col-lg-3: +widget( args )
+		if ( block )
+			block
+		else
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum vero rem porro repellendus dignissimos eveniet molestiae, aliquam in similique iste cum amet aut ullam quibusdam soluta. Iste iusto, quidem.
+// start FOOTER
+footer.footer.wrapper__item#footer
+	.footer__menu.menu: .container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12: ul.list-inline.text-center
+		li: a( href="#" ) Item 1
+		li: a( href="#" ) Item 2
+		li: a( href="#" ) Item 3
+		li: a( href="#" ) Item 4
+		li: a( href="#" ) Item 5
+	.footer__aside.aside: .container: .row
+		+footer_widget( {} )
+		+footer_widget( {} )
+		+footer_widget( {} )
+		+footer_widget( {} )
+	.footer__basement.basement: .container: .row
+		.col-xs-12.first-sm.col-sm-3.col-md-4.col-lg-4: p.copyright 2018 &copy; <a href="//pstu.edu" title="Государственное высшее учебное заведение Приазовский государственный технический университет">ГВУЗ ПГТУ</a>
+		.col-xs-12.first-xs.col-sm-6.col-md-4.col-lg-4: include ../components/_social
+		.col-xs-12.col-sm-3.col-md-4.col-lg-4: p.developer Разработка: <a href="//cct.pstu.edu" title="Центр компьютерных технологий Приазовского государственного технического университета">ЦКТ ПГТУ</a>
+// end FOOTER

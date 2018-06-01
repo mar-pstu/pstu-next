@@ -1,0 +1,33 @@
+/**
+ *	_ASIDE
+ *	стили сайдбара виджетов
+ */
+
+
+.aside {
+
+		
+	&--home {
+		background-color: $brand-default;
+		box-shadow: inset 0px 0px 5px rgba( 0, 0, 0, 0.50 );
+		border-bottom: 1px solid $border-color-default;
+	}
+
+
+	&--left {
+
+		.widget { border-bottom: 1px solid lighten( $border-color-default, 35% ); margin: 10px 0px; }
+		.widget:last-of-type { border-bottom: none; }
+
+	}
+
+
+	&--right {
+
+		.widget { border-bottom: 1px solid lighten( $border-color-default, 35% ); margin: 10px 0px; }
+		.widget:last-of-type { border-bottom: none; }
+		
+	}
+
+
+}

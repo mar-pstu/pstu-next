@@ -1,0 +1,42 @@
+/**
+ *
+ */
+
+
+
+.search {
+
+	&__list {
+		counter-reset: searchCounter;
+		list-style-type: none;
+		padding-left: 0px;
+		> li,
+		> .entry {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-top: 1px solid #eee;
+			> * { padding-left: 40px; }
+			&:first-child { border-top: none; }
+			.title { margin: 5px 0px; }
+		} // item
+		> .entry:before,
+		> li:before {
+			counter-increment: searchCounter;
+			content: counter( searchCounter );
+			color: white;
+			display: block;
+			text-align: center;
+			margin: 5px 10px 5px 0px;
+			line-height: 30px;
+			width: 30px;
+			height: 30px;
+			float: left;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.50 );
+			box-shadow: inset 0px 0px 8px rgba( 0, 0, 0, 0.25 );
+			background-color: $brand-success;
+		}
+
+	} // list
+
+}

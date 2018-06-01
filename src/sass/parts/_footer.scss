@@ -1,0 +1,46 @@
+//
+//		FOOTER
+//		стили подвала сайта
+
+
+
+.footer {
+
+	background-color: $footer-bgc;
+	color: $footer-text-color;
+	text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.75 );
+
+	a { @include color ( $footer-text-color, $footer-text-color, $footer-text-color, $footer-text-color ); }
+
+	.copyright {
+		@include min-width ( $screen-sm ) { text-align: left; }
+		text-align: center;
+	}
+
+	.developer {
+		@include min-width ( $screen-sm ) { text-align: right; }
+		text-align: center;
+	}
+
+	.social {
+		text-align: center;
+		li:before { display: none; }
+	}
+
+	&__menu {
+		border-bottom: 1px solid $footer-border-color;
+		a {
+			@include td ( none, none );
+			padding: 3px 5px;
+			display: block;
+			&:hover { background-color: $brand-success; box-shadow: inset 0px 0px 3px rgba( 0, 0, 0, 0.25 ); }
+		}
+		li:before { display: none; }
+	}
+
+	&__basement {
+		border-top: 1px solid $footer-border-color;
+		p, ul { margin: 13px 0px; }
+	}
+
+}

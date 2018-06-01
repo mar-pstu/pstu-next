@@ -1,0 +1,18 @@
+form.comments__form.form(action="#", method="post")
+	.row
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12: .form-group--sm
+			label( for="contacts-msg" ) Коментарий:
+			textarea#comment-msg( name="msg", placeholder="remarknce, pronouncement, judgement, reflection, opinion, view, criticism", required )
+	.row
+		.col-xs-12.col-sm-4.col-md-4.col-lg-4: .form-group--sm
+			label(for="comment-user") Ваше имя
+			input#comment-user( type="text", placeholder="Name" )
+		.col-xs-12.col-sm-4.col-md-4.col-lg-4: .form-group--sm
+			label( for="comment-email" ) Ваш email
+			input#comment-email( type="email", placeholder="email@example.com" )
+		.col-xs-12.col-sm-4.col-md-4.col-lg-4: .form-group--sm
+			label( for="comment-site" ) Ваш сайт
+			input#comment-site( type="text", name="site", placeholder="http://example.com" )
+	.row
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12: .form-group--sm
+			a.btn.btn-block.btn-success( href="#", role="button" ) Опубликовать комметарий

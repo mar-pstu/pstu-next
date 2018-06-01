@@ -1,0 +1,56 @@
+//
+//	Пагинация ( 1, 2, 3 ... 7, 8 )
+//
+
+
+
+.pagination {
+
+	margin: 25px 0px;
+	text-align: center;
+	font-size: 1.25em;
+	text-align: center;
+
+	
+
+	a {
+		// @include td ( none, none );
+	}
+
+	.page-numbers {
+		display: inline-block;
+
+	}
+	.page-numbers + .page-numbers { margin-left: 15px; }
+
+
+	.current { font-size: 1.50em; }
+
+	.dots { margin: 0px 15px; }
+
+	.screen-reader-text:not( h2 ) { display: none; }
+
+	h2 {
+		display: inline-block;
+		font-size: 0.85em;
+		margin: 10px 0px;
+		font-weight: normal;
+		position: relative;
+		&:after {
+			@include position ( absolute, 100%, 0%, 0%, auto );
+			content: '';
+			display: block;
+			background-color: $border-color-default;
+			height: 1px;
+			transform-origin: center center;
+			transform: scale( 0.5 );
+			opacity: 0;
+			transition: opacity 150ms, transform 250ms;
+		}
+	}
+
+	&:hover {
+		h2:after { opacity: 1; transform: scale( 1.0 ); }
+	}
+
+}

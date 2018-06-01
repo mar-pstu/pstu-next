@@ -1,0 +1,46 @@
+//
+//	Виджет "Меню" wordpress
+//
+
+
+.widget .menu {
+
+	background-color: #eee;
+	margin-bottom: -10px;
+
+	li {
+		position: relative;
+		&:before { display: none; content: ''; }
+		&:hover .sub-menu {
+			max-height: 100vh; display: block;
+			opacity: 1;
+		}
+	} // li
+
+	.has-sub-menu > a:after {
+		content: '+';
+		display: inline-block;
+		float: right;
+	}
+
+	.sub-menu {
+		padding: 0px;
+		overflow: hidden;
+		max-height: 0px;
+		transition: max-height 500ms, opacity 350ms;
+		opacity: 0;
+
+		a { padding-left: 25px; font-size: 1.00em; }
+
+	} // .sub-menu
+
+	a {
+		@include td ( none, none );
+		display: block;
+		padding: 5px;
+		font-size: 1.15em;
+		transition: background-color 150ms;
+		&:hover { background-color: rgba( 0, 0, 0, 0.15 ); text-shadow: 1px 1px 1px rgba( 255, 255, 255, 0.75 ); }
+	}	
+
+}

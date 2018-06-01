@@ -1,0 +1,19 @@
+/**
+ *	Теги
+ */
+
+
+.tags {
+
+	&__list {
+		display: inline;
+		margin: 0px;
+		padding: 0px;
+		li {
+			display: inline-block;
+			margin: 0px 3px;
+			&:before { display: none; }
+		}
+	}
+
+}

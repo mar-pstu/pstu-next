@@ -1,0 +1,21 @@
+include ./helpers/_mixins
+include ./helpers/_variables
+html
+	include ./components/_head
+	body
+		-
+			var list = {
+				'list': [
+					{ 'url': 'home.html', 'text': 'Главная' },
+					{ 'url': 'blog.html', 'text': 'Блог' },
+					{ 'url': 'page.html', 'text': 'Страница с сайдбаром' },
+					{ 'url': 'page-full-width.html', 'text': 'Страница по ширине' },
+					{ 'url': 'page-subpages-content.html', 'text': 'Страница с медиасписком подстраниц' },
+					{ 'url': 'page-subpage-flat.html', 'text': 'Страница с флат-списком подстраниц' },
+					{ 'url': 'page-contacts.html', 'text': 'Контакты' },
+					{ 'url': '404.html', 'text': 'Страница 404' },
+					{ 'url': 'search.html', 'text': 'Страница результатов поиска' },
+					{ 'url': 'single.html', 'text': 'Пост' },
+				],
+			}
+		ul: +links_list( list )

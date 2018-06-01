@@ -1,0 +1,29 @@
+//
+//	Виджет Wordpress Календарь
+//
+
+.calendar_wrap {
+
+	table {
+		width: 100%;
+		text-align: center;
+	}
+	caption {
+		text-align: center;
+		font-weight: bold;
+	}
+	th {
+		text-align: center;
+		font-weight: bold;
+		border-bottom: 1px solid #888;
+		padding: 5px 3px;
+	}
+	td {
+		border-bottom: 1px solid #eee;
+		padding: 5px 3px;
+	}
+	a {
+		font-weight: bold;
+	}
+
+}

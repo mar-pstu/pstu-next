@@ -1,0 +1,25 @@
+extend layout/_index
+mixin search_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Molestias eveniet nihil dicta voluptatum, officiis esse eius unde tenetur eos ipsum nemo quia voluptas, fugiat ratione obcaecati, iste nostrum error recusandae.';
+	.search__entry.entry
+		h2.entry__title.title= args.title
+		.entry__excerpt.excerpt: p=args.excerpt
+		p.text-right: a.btn.btn-default( href="#" ) Подробней <i class="icon icon-more"></i>
+block variables
+	-
+		page.title = 'Поиск';
+		page.excerpt = 'Шаблон страницы поиска (search.php)';
+		page.type = 'search';
+block content
+	h1.text-center.title= page.title
+	include components/_share
+	include forms/_search
+	.search__list.list
+		+search_entry( {} )
+		+search_entry( { title: 'Заголовок' } )
+		+search_entry( {} )
+		+search_entry( {} )
+		+search_entry( {} )
+	include components/_pagination

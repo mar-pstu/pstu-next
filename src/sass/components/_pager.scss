@@ -1,0 +1,63 @@
+//
+//	
+//
+
+
+.pager {
+
+	.arrow {
+		transition: background-color 150ms;
+		color: #fff;
+		width: 115px;
+		text-align: center;
+		position: absolute;
+		bottom: 0px;
+		padding: 6px 2px;
+		border: 2px solid;
+		border-bottom: none;
+	}
+
+	.next {
+		padding-right: 120px;
+		border-bottom: 2px solid $brand-primary;
+		.arrow {
+			float: left;
+			right: 0px;
+			background-color: $brand-primary;
+			border-color: $brand-primary;
+		}
+		&:hover .arrow { color: $brand-primary; background-color: #fff; }
+	} 
+
+	.previous {
+		padding-left: 120px;
+		border-bottom: 2px solid $brand-success;
+		.arrow {
+			float: right;
+			left: 0px;
+			background-color: $brand-success;
+			border-color: $brand-success;
+		}
+		&:hover .arrow { color: $brand-success; background-color: #fff; }
+	}
+
+	.title {
+		font-weight: normal;
+		margin: 0px;
+		padding: 0px;
+		max-height: $line-height-base * 4;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		@include min-width ( $screen-sm ) { max-height: $line-height-base * 2; }
+	}
+
+	&__item {
+		@include td ( none, none );
+		position: relative;
+		display: block;
+		margin: 25px 0px;
+		position: relative;
+	}
+
+
+}

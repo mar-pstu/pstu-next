@@ -1,0 +1,16 @@
+extend layout/_index
+block variables
+	-
+		page.title = 'Страница по ширине';
+		page.type = 'page';
+block main
+	.row
+		.col-xs-12.col-sm-3.first-sm.col-md-3.col-lg-3
+			include asides/_left
+		.col-xs-12.first-xs.col-sm-9.col-md-9.col-lg-9
+			include components/_share
+			include components/_content
+			include components/_comments
+block right
+block left
+block content

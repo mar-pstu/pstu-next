@@ -1,0 +1,20 @@
+//
+//
+//
+
+
+
+.info {
+
+
+	.qr-code {
+		display: block;
+		margin: 0px auto;
+		@include min-width ( $screen-md ) {
+			float: right;
+			margin: 0px;
+		}
+	}
+
+
+}
