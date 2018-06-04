@@ -1,0 +1,15 @@
+mixin widget_basement( args )
+	.col-xs-12.col-sm-4.col-md-3.col-lg-3: +widget( args )
+		if block
+			block
+		else
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod perspiciatis rerum dolores doloribus vitae aut minima non laudantium qui ullam, dignissimos possimus omnis velit, facilis sunt reiciendis quos recusandae culpa!
+//
+// 
+aside.aside.aside--basement#aside-basement: .container: .row
+	+widget_basement( {} )
+	+widget_basement( {} )
+	+widget_basement( {} )
+	+widget_basement( {} )
+// 
+//
