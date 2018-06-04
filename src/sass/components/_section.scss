@@ -6,22 +6,7 @@
 .section {
 
 	&__heading {
-		.title a {
-			@include td ( none, none );
-			color: inherit;
-			position: relative;
-			padding: 0px 15px;
-			&:after {
-				@extend .icon;
-				@extend .icon-share;
-				@include position ( absolute, 50%, 100%, auto, auto );
-				content: '';
-				margin-top: -5px;
-				opacity: 0;
-				transition: opacity 150ms;
-			}
-			&:hover:after { opacity: 1; }
-		}
+
 	} // heading
 
 	&__body {
@@ -29,7 +14,7 @@
 	} // body
 
 	&__basement {
-		margin: 1em 0em;
+
 	} // basement
 
 }

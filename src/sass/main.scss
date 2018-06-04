@@ -6,28 +6,18 @@
 @import "base/_base.scss";
 
 
-//
-@import "bootstrap/_bootstrap.scss";
-
-
 //компоненты по БЭМу
 @import "components/_flexboxgrid.scss";
 @import "components/_wrapper.scss";             //контейнер страницы, прижатие футера
 @import "components/_icon.scss";
+@inport "components/_sprites.scss";
 @import "components/_nav.scss";
 @import "components/_widget.scss";
-@import "components/_tags.scss";
 @import "components/_comments.scss";
 @import "components/_btn.scss";
-@import "components/_form.scss";
 @import "components/_to-top-btn.scss";
-@import "components/_pagination.scss";
 @import "components/_section.scss";
 @import "components/_media.scss";
-@import "components/_pager.scss";
-@import "components/_breadcrumb.scss";
-@import "components/_share.scss";
-@import "components/_info.scss";
 
 @import "wordpress/_calendar.scss";
 @import "wordpress/_tagcloud.scss";

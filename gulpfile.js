@@ -9,7 +9,37 @@ var gulp           = require( 'gulp' ),
     rigger         = require( 'gulp-rigger' ),           // склеивает файлы с помощью //- filename
     uglify         = require( 'gulp-uglify' ),           // минифицырует js
     cssmin         = require( 'gulp-cssmin' ),           // минификация css
-    rename         = require( 'gulp-rename' );           // переименование / добавление префикса min
+    rename         = require( 'gulp-rename' ),           // переименование / добавление префикса min
+    spritesmith    = require( 'gulp.spritesmith' ),
+    gulpif         = require( 'gulp-if' ),
+    imagemin       = require( 'gulp-imagemin' );
+
+
+// создание спрайта
+gulp.task( 'icon', function () {
+    var spriteData =
+        gulp.src('./src/icon/*') // путь, откуда берем картинки для спрайта
+            .pipe( spritesmith( {
+                imgName: 'icon.png',
+                cssName: '_icon.scss',
+                cssFormat: 'scss',
+                algorithm: 'binary-tree',
+                imgPath: "../images/icon.png",
+                cssVarMap: function ( sprite ) {
+                  sprite.name = sprite.name
+                }
+            } ) );
+    spriteData.img.pipe( gulp.dest( './build/images/') ); // путь, куда сохраняем картинку
+    spriteData.css.pipe( gulp.dest( './src/sass/components/') ); // путь, куда сохраняем стили
+});
+
+
+// сжатие изображений
+gulp.task( 'imagemin', function() {
+  gulp.src( [ 'src/images/**/*.*', 'src/images/*.*' ] )
+  .pipe( imagemin() )
+  .pipe( gulp.dest( 'build/images' ) );
+});
 
 
 //pug - сборка html
@@ -83,7 +113,10 @@ gulp.task( 'watch', function () {
   gulp.watch( './src/pug/**/*.*',           [ 'pug'] );
   gulp.watch( './src/sprite/**/*.*',        [ 'icon'] );
   gulp.watch( './src/scripts/**/*.*',       [ 'js'] );
+  gulp.watch( './src/images/**/*.*',        [ 'imagemin'] );
+  gulp.watch( './src/images/*.*',        [ 'imagemin'] );
+  gulp.watch( './src/icon/*.*',             [ 'icon'] );
   gulp.watch( './build/css/*.*',            [ 'cssmin'] );
 });
 
-gulp.task( 'default', [ 'sass', 'pug', 'js', 'cssmin', 'watch' ] );
+gulp.task( 'default', [ 'sass', 'pug', 'js', 'cssmin', 'imagemin', 'watch' ] );

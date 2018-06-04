@@ -1,29 +1,9 @@
 extend layout/_index
-mixin important_entry( args )
-	-
-		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
-		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit';
-		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/640x480/2ecc71/ecf0f1';
-	a.important__entry.entry( href="#", title=args.title )
-		img.attachment-thumbnail.size-thumbnail.wp-post-imag( src=args.thumbnail, alt=args.title )
-		.overflow
-			h3.entry__title.title= args.title
-			.entry__excerpt.excerpt: p= args.excerpt
-block content
-	include components/_share
-	section.section: .section__body.body: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12: #important-entryes.important
-		+important_entry( { 'title': 'Заголовок' } )
-		+important_entry( { 'excerpt': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil optio iure ad laboriosam ex veritatis possimus eaque ut! Fuga ipsum dolorum eos ipsam delectus, aliquam aspernatur nemo libero rem dolor.' } )
-		+important_entry( {} )
-	section.section
-		.section__heading.heading: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
-			h2.text-center.title: a( href="#" ) Новости
-			hr.separeted
-			p.text-center.font-italic.description Excepturi perferendis sequi aut consequatur ea iusto blanditiis neque placeat illo, est ipsam accusantium, modi optio alias commodi praesentium eos molestias!
-		.section__body.body: .row: .news
-			+entry( {} )
-			+entry( {} )
-			+entry( {} )
-			+entry( {} )
-		.section__basement.basement: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
-			p.text-center: a.btn.btn-success.btn-md( href="#" ) Смотреть ещё
+block main
+	include parts/_jumbotron
+	include parts/_share
+	include parts/_projects
+	include parts/_current
+	include parts/_people
+	include asides/_basement
+	include parts/_partners

@@ -1,245 +1,508 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
 //
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$at-name: 'at';
+$at-x: 96px;
+$at-y: 98px;
+$at-offset-x: -96px;
+$at-offset-y: -98px;
+$at-width: 16px;
+$at-height: 16px;
+$at-total-width: 137px;
+$at-total-height: 129px;
+$at-image: '../images/icon.png';
+$at: (96px, 98px, -96px, -98px, 16px, 16px, 137px, 129px, '../images/icon.png', 'at', );
+$bookmark-name: 'bookmark';
+$bookmark-x: 129px;
+$bookmark-y: 0px;
+$bookmark-offset-x: -129px;
+$bookmark-offset-y: 0px;
+$bookmark-width: 8px;
+$bookmark-height: 13px;
+$bookmark-total-width: 137px;
+$bookmark-total-height: 129px;
+$bookmark-image: '../images/icon.png';
+$bookmark: (129px, 0px, -129px, 0px, 8px, 13px, 137px, 129px, '../images/icon.png', 'bookmark', );
+$calendar-name: 'calendar';
+$calendar-x: 98px;
+$calendar-y: 44px;
+$calendar-offset-x: -98px;
+$calendar-offset-y: -44px;
+$calendar-width: 15px;
+$calendar-height: 16px;
+$calendar-total-width: 137px;
+$calendar-total-height: 129px;
+$calendar-image: '../images/icon.png';
+$calendar: (98px, 44px, -98px, -44px, 15px, 16px, 137px, 129px, '../images/icon.png', 'calendar', );
+$call-name: 'call';
+$call-x: 113px;
+$call-y: 64px;
+$call-offset-x: -113px;
+$call-offset-y: -64px;
+$call-width: 16px;
+$call-height: 16px;
+$call-total-width: 137px;
+$call-total-height: 129px;
+$call-image: '../images/icon.png';
+$call: (113px, 64px, -113px, -64px, 16px, 16px, 137px, 129px, '../images/icon.png', 'call', );
+$chevron-up-name: 'chevron-up';
+$chevron-up-x: 0px;
+$chevron-up-y: 0px;
+$chevron-up-offset-x: 0px;
+$chevron-up-offset-y: 0px;
+$chevron-up-width: 50px;
+$chevron-up-height: 50px;
+$chevron-up-total-width: 137px;
+$chevron-up-total-height: 129px;
+$chevron-up-image: '../images/icon.png';
+$chevron-up: (0px, 0px, 0px, 0px, 50px, 50px, 137px, 129px, '../images/icon.png', 'chevron-up', );
+$comments-name: 'comments';
+$comments-x: 16px;
+$comments-y: 114px;
+$comments-offset-x: -16px;
+$comments-offset-y: -114px;
+$comments-width: 16px;
+$comments-height: 12px;
+$comments-total-width: 137px;
+$comments-total-height: 129px;
+$comments-image: '../images/icon.png';
+$comments: (16px, 114px, -16px, -114px, 16px, 12px, 137px, 129px, '../images/icon.png', 'comments', );
+$csv-name: 'csv';
+$csv-x: 74px;
+$csv-y: 0px;
+$csv-offset-x: -74px;
+$csv-offset-y: 0px;
+$csv-width: 24px;
+$csv-height: 24px;
+$csv-total-width: 137px;
+$csv-total-height: 129px;
+$csv-image: '../images/icon.png';
+$csv: (74px, 0px, -74px, 0px, 24px, 24px, 137px, 129px, '../images/icon.png', 'csv', );
+$doc-name: 'doc';
+$doc-x: 74px;
+$doc-y: 24px;
+$doc-offset-x: -74px;
+$doc-offset-y: -24px;
+$doc-width: 24px;
+$doc-height: 24px;
+$doc-total-width: 137px;
+$doc-total-height: 129px;
+$doc-image: '../images/icon.png';
+$doc: (74px, 24px, -74px, -24px, 24px, 24px, 137px, 129px, '../images/icon.png', 'doc', );
+$dwg-name: 'dwg';
+$dwg-x: 74px;
+$dwg-y: 48px;
+$dwg-offset-x: -74px;
+$dwg-offset-y: -48px;
+$dwg-width: 24px;
+$dwg-height: 24px;
+$dwg-total-width: 137px;
+$dwg-total-height: 129px;
+$dwg-image: '../images/icon.png';
+$dwg: (74px, 48px, -74px, -48px, 24px, 24px, 137px, 129px, '../images/icon.png', 'dwg', );
+$email-name: 'email';
+$email-x: 32px;
+$email-y: 114px;
+$email-offset-x: -32px;
+$email-offset-y: -114px;
+$email-width: 16px;
+$email-height: 11px;
+$email-total-width: 137px;
+$email-total-height: 129px;
+$email-image: '../images/icon.png';
+$email: (32px, 114px, -32px, -114px, 16px, 11px, 137px, 129px, '../images/icon.png', 'email', );
+$envelope-name: 'envelope';
+$envelope-x: 64px;
+$envelope-y: 98px;
+$envelope-offset-x: -64px;
+$envelope-offset-y: -98px;
+$envelope-width: 16px;
+$envelope-height: 16px;
+$envelope-total-width: 137px;
+$envelope-total-height: 129px;
+$envelope-image: '../images/icon.png';
+$envelope: (64px, 98px, -64px, -98px, 16px, 16px, 137px, 129px, '../images/icon.png', 'envelope', );
+$eye-open-name: 'eye-open';
+$eye-open-x: 48px;
+$eye-open-y: 114px;
+$eye-open-offset-x: -48px;
+$eye-open-offset-y: -114px;
+$eye-open-width: 16px;
+$eye-open-height: 9px;
+$eye-open-total-width: 137px;
+$eye-open-total-height: 129px;
+$eye-open-image: '../images/icon.png';
+$eye-open: (48px, 114px, -48px, -114px, 16px, 9px, 137px, 129px, '../images/icon.png', 'eye-open', );
+$facebook-name: 'facebook';
+$facebook-x: 113px;
+$facebook-y: 80px;
+$facebook-offset-x: -113px;
+$facebook-offset-y: -80px;
+$facebook-width: 16px;
+$facebook-height: 16px;
+$facebook-total-width: 137px;
+$facebook-total-height: 129px;
+$facebook-image: '../images/icon.png';
+$facebook: (113px, 80px, -113px, -80px, 16px, 16px, 137px, 129px, '../images/icon.png', 'facebook', );
+$google-plus-name: 'google-plus';
+$google-plus-x: 48px;
+$google-plus-y: 98px;
+$google-plus-offset-x: -48px;
+$google-plus-offset-y: -98px;
+$google-plus-width: 16px;
+$google-plus-height: 16px;
+$google-plus-total-width: 137px;
+$google-plus-total-height: 129px;
+$google-plus-image: '../images/icon.png';
+$google-plus: (48px, 98px, -48px, -98px, 16px, 16px, 137px, 129px, '../images/icon.png', 'google-plus', );
+$instagram-name: 'instagram';
+$instagram-x: 80px;
+$instagram-y: 98px;
+$instagram-offset-x: -80px;
+$instagram-offset-y: -98px;
+$instagram-width: 16px;
+$instagram-height: 16px;
+$instagram-total-width: 137px;
+$instagram-total-height: 129px;
+$instagram-image: '../images/icon.png';
+$instagram: (80px, 98px, -80px, -98px, 16px, 16px, 137px, 129px, '../images/icon.png', 'instagram', );
+$left-name: 'left';
+$left-x: 98px;
+$left-y: 0px;
+$left-offset-x: -98px;
+$left-offset-y: 0px;
+$left-width: 15px;
+$left-height: 22px;
+$left-total-width: 137px;
+$left-total-height: 129px;
+$left-image: '../images/icon.png';
+$left: (98px, 0px, -98px, 0px, 15px, 22px, 137px, 129px, '../images/icon.png', 'left', );
+$linkedin-name: 'linkedin';
+$linkedin-x: 113px;
+$linkedin-y: 16px;
+$linkedin-offset-x: -113px;
+$linkedin-offset-y: -16px;
+$linkedin-width: 16px;
+$linkedin-height: 16px;
+$linkedin-total-width: 137px;
+$linkedin-total-height: 129px;
+$linkedin-image: '../images/icon.png';
+$linkedin: (113px, 16px, -113px, -16px, 16px, 16px, 137px, 129px, '../images/icon.png', 'linkedin', );
+$lst-name: 'lst';
+$lst-x: 129px;
+$lst-y: 21px;
+$lst-offset-x: -129px;
+$lst-offset-y: -21px;
+$lst-width: 8px;
+$lst-height: 8px;
+$lst-total-width: 137px;
+$lst-total-height: 129px;
+$lst-image: '../images/icon.png';
+$lst: (129px, 21px, -129px, -21px, 8px, 8px, 137px, 129px, '../images/icon.png', 'lst', );
+$more-name: 'more';
+$more-x: 113px;
+$more-y: 48px;
+$more-offset-x: -113px;
+$more-offset-y: -48px;
+$more-width: 16px;
+$more-height: 16px;
+$more-total-width: 137px;
+$more-total-height: 129px;
+$more-image: '../images/icon.png';
+$more: (113px, 48px, -113px, -48px, 16px, 16px, 137px, 129px, '../images/icon.png', 'more', );
+$mp3-name: 'mp3';
+$mp3-x: 50px;
+$mp3-y: 0px;
+$mp3-offset-x: -50px;
+$mp3-offset-y: 0px;
+$mp3-width: 24px;
+$mp3-height: 24px;
+$mp3-total-width: 137px;
+$mp3-total-height: 129px;
+$mp3-image: '../images/icon.png';
+$mp3: (50px, 0px, -50px, 0px, 24px, 24px, 137px, 129px, '../images/icon.png', 'mp3', );
+$odt-name: 'odt';
+$odt-x: 72px;
+$odt-y: 74px;
+$odt-offset-x: -72px;
+$odt-offset-y: -74px;
+$odt-width: 24px;
+$odt-height: 24px;
+$odt-total-width: 137px;
+$odt-total-height: 129px;
+$odt-image: '../images/icon.png';
+$odt: (72px, 74px, -72px, -74px, 24px, 24px, 137px, 129px, '../images/icon.png', 'odt', );
+$pdf-name: 'pdf';
+$pdf-x: 48px;
+$pdf-y: 74px;
+$pdf-offset-x: -48px;
+$pdf-offset-y: -74px;
+$pdf-width: 24px;
+$pdf-height: 24px;
+$pdf-total-width: 137px;
+$pdf-total-height: 129px;
+$pdf-image: '../images/icon.png';
+$pdf: (48px, 74px, -48px, -74px, 24px, 24px, 137px, 129px, '../images/icon.png', 'pdf', );
+$phone-name: 'phone';
+$phone-x: 112px;
+$phone-y: 98px;
+$phone-offset-x: -112px;
+$phone-offset-y: -98px;
+$phone-width: 16px;
+$phone-height: 15px;
+$phone-total-width: 137px;
+$phone-total-height: 129px;
+$phone-image: '../images/icon.png';
+$phone: (112px, 98px, -112px, -98px, 16px, 15px, 137px, 129px, '../images/icon.png', 'phone', );
+$pinterest-name: 'pinterest';
+$pinterest-x: 32px;
+$pinterest-y: 98px;
+$pinterest-offset-x: -32px;
+$pinterest-offset-y: -98px;
+$pinterest-width: 16px;
+$pinterest-height: 16px;
+$pinterest-total-width: 137px;
+$pinterest-total-height: 129px;
+$pinterest-image: '../images/icon.png';
+$pinterest: (32px, 98px, -32px, -98px, 16px, 16px, 137px, 129px, '../images/icon.png', 'pinterest', );
+$plus-name: 'plus';
+$plus-x: 129px;
+$plus-y: 13px;
+$plus-offset-x: -129px;
+$plus-offset-y: -13px;
+$plus-width: 8px;
+$plus-height: 8px;
+$plus-total-width: 137px;
+$plus-total-height: 129px;
+$plus-image: '../images/icon.png';
+$plus: (129px, 13px, -129px, -13px, 8px, 8px, 137px, 129px, '../images/icon.png', 'plus', );
+$psd-name: 'psd';
+$psd-x: 24px;
+$psd-y: 74px;
+$psd-offset-x: -24px;
+$psd-offset-y: -74px;
+$psd-width: 24px;
+$psd-height: 24px;
+$psd-total-width: 137px;
+$psd-total-height: 129px;
+$psd-image: '../images/icon.png';
+$psd: (24px, 74px, -24px, -74px, 24px, 24px, 137px, 129px, '../images/icon.png', 'psd', );
+$quote-name: 'quote';
+$quote-x: 113px;
+$quote-y: 0px;
+$quote-offset-x: -113px;
+$quote-offset-y: 0px;
+$quote-width: 16px;
+$quote-height: 16px;
+$quote-total-width: 137px;
+$quote-total-height: 129px;
+$quote-image: '../images/icon.png';
+$quote: (113px, 0px, -113px, 0px, 16px, 16px, 137px, 129px, '../images/icon.png', 'quote', );
+$rar-name: 'rar';
+$rar-x: 0px;
+$rar-y: 74px;
+$rar-offset-x: 0px;
+$rar-offset-y: -74px;
+$rar-width: 24px;
+$rar-height: 24px;
+$rar-total-width: 137px;
+$rar-total-height: 129px;
+$rar-image: '../images/icon.png';
+$rar: (0px, 74px, 0px, -74px, 24px, 24px, 137px, 129px, '../images/icon.png', 'rar', );
+$right-name: 'right';
+$right-x: 98px;
+$right-y: 22px;
+$right-offset-x: -98px;
+$right-offset-y: -22px;
+$right-width: 15px;
+$right-height: 22px;
+$right-total-width: 137px;
+$right-total-height: 129px;
+$right-image: '../images/icon.png';
+$right: (98px, 22px, -98px, -22px, 15px, 22px, 137px, 129px, '../images/icon.png', 'right', );
+$rtf-name: 'rtf';
+$rtf-x: 48px;
+$rtf-y: 50px;
+$rtf-offset-x: -48px;
+$rtf-offset-y: -50px;
+$rtf-width: 24px;
+$rtf-height: 24px;
+$rtf-total-width: 137px;
+$rtf-total-height: 129px;
+$rtf-image: '../images/icon.png';
+$rtf: (48px, 50px, -48px, -50px, 24px, 24px, 137px, 129px, '../images/icon.png', 'rtf', );
+$search-name: 'search';
+$search-x: 16px;
+$search-y: 98px;
+$search-offset-x: -16px;
+$search-offset-y: -98px;
+$search-width: 16px;
+$search-height: 16px;
+$search-total-width: 137px;
+$search-total-height: 129px;
+$search-image: '../images/icon.png';
+$search: (16px, 98px, -16px, -98px, 16px, 16px, 137px, 129px, '../images/icon.png', 'search', );
+$share-name: 'share';
+$share-x: 98px;
+$share-y: 73px;
+$share-offset-x: -98px;
+$share-offset-y: -73px;
+$share-width: 8px;
+$share-height: 16px;
+$share-total-width: 137px;
+$share-total-height: 129px;
+$share-image: '../images/icon.png';
+$share: (98px, 73px, -98px, -73px, 8px, 16px, 137px, 129px, '../images/icon.png', 'share', );
+$tag-name: 'tag';
+$tag-x: 98px;
+$tag-y: 60px;
+$tag-offset-x: -98px;
+$tag-offset-y: -60px;
+$tag-width: 13px;
+$tag-height: 13px;
+$tag-total-width: 137px;
+$tag-total-height: 129px;
+$tag-image: '../images/icon.png';
+$tag: (98px, 60px, -98px, -60px, 13px, 13px, 137px, 129px, '../images/icon.png', 'tag', );
+$twitter-name: 'twitter';
+$twitter-x: 0px;
+$twitter-y: 98px;
+$twitter-offset-x: 0px;
+$twitter-offset-y: -98px;
+$twitter-width: 16px;
+$twitter-height: 16px;
+$twitter-total-width: 137px;
+$twitter-total-height: 129px;
+$twitter-image: '../images/icon.png';
+$twitter: (0px, 98px, 0px, -98px, 16px, 16px, 137px, 129px, '../images/icon.png', 'twitter', );
+$txt-name: 'txt';
+$txt-x: 0px;
+$txt-y: 50px;
+$txt-offset-x: 0px;
+$txt-offset-y: -50px;
+$txt-width: 24px;
+$txt-height: 24px;
+$txt-total-width: 137px;
+$txt-total-height: 129px;
+$txt-image: '../images/icon.png';
+$txt: (0px, 50px, 0px, -50px, 24px, 24px, 137px, 129px, '../images/icon.png', 'txt', );
+$user-name: 'user';
+$user-x: 0px;
+$user-y: 114px;
+$user-offset-x: 0px;
+$user-offset-y: -114px;
+$user-width: 16px;
+$user-height: 15px;
+$user-total-width: 137px;
+$user-total-height: 129px;
+$user-image: '../images/icon.png';
+$user: (0px, 114px, 0px, -114px, 16px, 15px, 137px, 129px, '../images/icon.png', 'user', );
+$vk-name: 'vk';
+$vk-x: 113px;
+$vk-y: 32px;
+$vk-offset-x: -113px;
+$vk-offset-y: -32px;
+$vk-width: 16px;
+$vk-height: 16px;
+$vk-total-width: 137px;
+$vk-total-height: 129px;
+$vk-image: '../images/icon.png';
+$vk: (113px, 32px, -113px, -32px, 16px, 16px, 137px, 129px, '../images/icon.png', 'vk', );
+$xls-name: 'xls';
+$xls-x: 50px;
+$xls-y: 24px;
+$xls-offset-x: -50px;
+$xls-offset-y: -24px;
+$xls-width: 24px;
+$xls-height: 24px;
+$xls-total-width: 137px;
+$xls-total-height: 129px;
+$xls-image: '../images/icon.png';
+$xls: (50px, 24px, -50px, -24px, 24px, 24px, 137px, 129px, '../images/icon.png', 'xls', );
+$zip-name: 'zip';
+$zip-x: 24px;
+$zip-y: 50px;
+$zip-offset-x: -24px;
+$zip-offset-y: -50px;
+$zip-width: 24px;
+$zip-height: 24px;
+$zip-total-width: 137px;
+$zip-total-height: 129px;
+$zip-image: '../images/icon.png';
+$zip: (24px, 50px, -24px, -50px, 24px, 24px, 137px, 129px, '../images/icon.png', 'zip', );
+$spritesheet-width: 137px;
+$spritesheet-height: 129px;
+$spritesheet-image: '../images/icon.png';
+$spritesheet-sprites: ($at, $bookmark, $calendar, $call, $chevron-up, $comments, $csv, $doc, $dwg, $email, $envelope, $eye-open, $facebook, $google-plus, $instagram, $left, $linkedin, $lst, $more, $mp3, $odt, $pdf, $phone, $pinterest, $plus, $psd, $quote, $rar, $right, $rtf, $search, $share, $tag, $twitter, $txt, $user, $vk, $xls, $zip, );
+$spritesheet: (137px, 129px, '../images/icon.png', $spritesheet-sprites, );
 
-$icon-url: "../images/icon.png";
-
-.icon {
-  background-image: url( $icon-url );
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 1px;
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
 }
 
-.icon-at {
-    width: 16px;
-    height: 16px;
-    background-position: -2px -2px;
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
 }
 
-.icon-bookmark {
-    width: 8px;
-    height: 13px;
-    background-position: -22px -2px;
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
 }
 
-.icon-calendar {
-    width: 15px;
-    height: 16px;
-    background-position: -34px -2px;
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
 }
 
-.icon-call {
-    width: 16px;
-    height: 16px;
-    background-position: -53px -2px;
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
 }
 
-.icon-chevron-up {
-    width: 50px;
-    height: 50px;
-    background-position: -73px -2px;
-}
-
-.icon-comments {
-    width: 16px;
-    height: 12px;
-    background-position: -127px -2px;
-}
-
-.icon-csv {
-    width: 24px;
-    height: 24px;
-    background-position: -2px -56px;
-}
-
-.icon-doc {
-    width: 24px;
-    height: 24px;
-    background-position: -30px -56px;
-}
-
-.icon-dwg {
-    width: 24px;
-    height: 24px;
-    background-position: -58px -56px;
-}
-
-.icon-email {
-    width: 16px;
-    height: 11px;
-    background-position: -127px -18px;
-}
-
-.icon-envelope {
-    width: 16px;
-    height: 16px;
-    background-position: -2px -33px;
-}
-
-.icon-eye-open {
-    width: 16px;
-    height: 9px;
-    background-position: -22px -33px;
-}
-
-.icon-facebook {
-    width: 16px;
-    height: 16px;
-    background-position: -42px -33px;
-}
-
-.icon-google-plus {
-    width: 16px;
-    height: 16px;
-    background-position: -127px -33px;
-}
-
-.icon-instagram {
-    width: 16px;
-    height: 16px;
-    background-position: -127px -53px;
-}
-
-.icon-left {
-    width: 15px;
-    height: 22px;
-    background-position: -86px -73px;
-}
-
-.icon-linkedin {
-    width: 16px;
-    height: 16px;
-    background-position: -105px -73px;
-}
-
-.icon-lst {
-    width: 8px;
-    height: 8px;
-    background-position: -125px -73px;
-}
-
-.icon-more {
-    width: 16px;
-    height: 16px;
-    background-position: -2px -85px;
-}
-
-.icon-mp3 {
-    width: 24px;
-    height: 24px;
-    background-position: -22px -93px;
-}
-
-.icon-odt {
-    width: 24px;
-    height: 24px;
-    background-position: -50px -93px;
-}
-
-.icon-pdf {
-    width: 24px;
-    height: 24px;
-    background-position: -105px -93px;
-}
-
-.icon-phone {
-    width: 16px;
-    height: 15px;
-    background-position: -2px -121px;
-}
-
-.icon-pinterest {
-    width: 16px;
-    height: 16px;
-    background-position: -22px -121px;
-}
-
-.icon-plus {
-    width: 8px;
-    height: 8px;
-    background-position: -137px -73px;
-}
-
-.icon-psd {
-    width: 24px;
-    height: 24px;
-    background-position: -42px -121px;
-}
-
-.icon-quote {
-    width: 16px;
-    height: 16px;
-    background-position: -70px -121px;
-}
-
-.icon-rar {
-    width: 24px;
-    height: 24px;
-    background-position: -90px -121px;
-}
-
-.icon-right {
-    width: 15px;
-    height: 22px;
-    background-position: -118px -121px;
-}
-
-.icon-rtf {
-    width: 24px;
-    height: 24px;
-    background-position: -147px -2px;
-}
-
-.icon-search {
-    width: 16px;
-    height: 16px;
-    background-position: -147px -30px;
-}
-
-.icon-share {
-    width: 8px;
-    height: 16px;
-    background-position: -147px -50px;
-}
-
-.icon-tag {
-    width: 13px;
-    height: 13px;
-    background-position: -159px -50px;
-}
-
-.icon-twitter {
-    width: 16px;
-    height: 16px;
-    background-position: -149px -70px;
-}
-
-.icon-txt {
-    width: 24px;
-    height: 24px;
-    background-position: -133px -90px;
-}
-
-.icon-user {
-    width: 16px;
-    height: 15px;
-    background-position: -137px -118px;
-}
-
-.icon-vk {
-    width: 16px;
-    height: 16px;
-    background-position: -157px -118px;
-}
-
-.icon-xls {
-    width: 24px;
-    height: 24px;
-    background-position: -137px -138px;
-}
-
-.icon-zip {
-    width: 24px;
-    height: 24px;
-    background-position: -175px -2px;
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
 }
