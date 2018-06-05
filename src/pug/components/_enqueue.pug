@@ -3,7 +3,7 @@ script(src="./scripts/jquery.min.js")
 script(asinc, src=src.js+'lazyload.js')
 script.
 	jQuery( document ).ready( function () {
-		jQuery( "img.lazyload" ).lazy();
+		jQuery( "img.lazy" ).lazy();
 	} );
 
 script(asinc, src=src.js+'main.js')
@@ -14,10 +14,8 @@ script(asinc, src=src.js+'rrssb.js')
 script.
 	jQuery(document).ready(function ($) {
 		$( '#rrssb-buttons' ).rrssb({
-			// required:
 			title: 'Заголовок',
 			url: 'http://pstu.edu/',
-			// optional:
 			description: 'Описаение страницы',
 			emailBody: 'the_excerpt()'
 		});
@@ -47,15 +45,3 @@ script.
 		jQuery( window ).load( GalleriesInit );
 		jQuery( window ).resize( GalleriesInit );
 	} )();
-
-script(asinc, src=src.js+'slick.js')
-script.
-	jQuery( '#important-entryes' ).slick( {
-		prevArrow: '<button class="slick-arrow slick-prev"><i class="icon icon-left"></i></button>',
-		nextArrow: '<button class="slick-arrow slick-next"><i class="icon icon-right"></i></button>',
-		dots: true,
-		dotsClass: 'slick-dots',
-		lazyLoad: 'ondemand',
-		autoplay: true,
-		autoplaySpeed: 3000,
-	} );

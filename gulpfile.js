@@ -22,7 +22,7 @@ gulp.task( 'icon', function () {
             .pipe( spritesmith( {
                 imgName: 'icon.png',
                 cssName: '_icon.scss',
-                cssFormat: 'scss',
+                cssFormat: 'sass',
                 algorithm: 'binary-tree',
                 imgPath: "../images/icon.png",
                 cssVarMap: function ( sprite ) {
@@ -113,10 +113,7 @@ gulp.task( 'watch', function () {
   gulp.watch( './src/pug/**/*.*',           [ 'pug'] );
   gulp.watch( './src/sprite/**/*.*',        [ 'icon'] );
   gulp.watch( './src/scripts/**/*.*',       [ 'js'] );
-  gulp.watch( './src/images/**/*.*',        [ 'imagemin'] );
-  gulp.watch( './src/images/*.*',        [ 'imagemin'] );
   gulp.watch( './src/icon/*.*',             [ 'icon'] );
-  gulp.watch( './build/css/*.*',            [ 'cssmin'] );
 });
 
-gulp.task( 'default', [ 'sass', 'pug', 'js', 'cssmin', 'imagemin', 'watch' ] );
+gulp.task( 'default', [ 'sass', 'pug', 'js', 'watch' ] );

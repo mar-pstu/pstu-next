@@ -39,13 +39,13 @@ mixin list( args )
 mixin media ( args )
 	-
 		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
-		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/150x150/2ecc71/ecf0f1';
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
 		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum distinctio facere minima ducimus eos, et laudantium quaerat, iure quis unde eveniet nulla dolore fugit praesentium sapiente officiis cumque sit recusandae.';
 	.media.clearfix
-		.media-left.pull-left: a(href="#"): img.lazyload.media-object.hidden-xs( src="#", data-src=args.thumbnail, alt=args.title )
+		.media-left.pull-left: a(href="#"): img.lazy.media-object.hidden-xs( src="#", data-src=args.thumbnail, alt=args.title )
 		.media-body
-			h4.media-heading= args.title
-			div.excerpt: p= args.excerpt
+			h4.media-heading #{args.title}
+			div.excerpt: p #{args.excerpt}
 			if ( block )
 				block
 //-
@@ -77,3 +77,11 @@ mixin entry ( args )
 					li: b 20.06.2018
 					li: a( href="#" ) admin
 				a.btn.btn-default.pull-right( href="#" ) Подробней <i class="icon icon-more"></i>
+//-
+//-
+//-
+mixin lorem ()
+	if block
+		block
+	else
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ducimus quasi, ipsum cupiditate odio alias. Ea, soluta dolore, expedita asperiores illo quam, officia facilis modi laboriosam mollitia quaerat consequatur ad.

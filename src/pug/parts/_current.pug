@@ -1,0 +1,30 @@
+//-
+	Актуальная "текущая" тема. К примеру новости категории: "Поступление", "Мероприятия" ...
+
+mixin current_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, praesentium explicabo! Placeat rerum, voluptas commodi aspernatur ratione eveniet ex quam repellendus, aliquid alias facere esse sequi quo nostrum natus ipsum?';
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x200/2ecc71/ecf0f1';
+	a( href="#" ).current__entry.entry
+		img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
+		h3.title  #{args.title}
+		.excerpt: p #{args.excerpt}
+//
+// start section
+section.section.current#current: .container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+	.section__heading.heading
+		h2.title Поступление
+		p.desctiption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, laudantium hic! Eligendi accusantium quas fugit temporibus modi veniam magnam? Doloremque commodi doloribus.
+	.section__body.body: #current-slider
+		+current_entry( {} )
+		+current_entry( {} )
+		+current_entry( {} )
+		+current_entry( {} )
+		+current_entry( {} )
+		+current_entry( {} )
+		+current_entry( {} )
+	.section__basement.basement
+		p.text-center: a.small( href="#" ) Смотреть ещё
+// CURRENT end
+//

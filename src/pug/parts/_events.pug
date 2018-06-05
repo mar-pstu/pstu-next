@@ -1,0 +1,25 @@
+//-
+	Секция для вывода категории "Анонсы"
+	
+mixin events_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+		args.day = ( args.day ) ? args.day : 'XX';
+		args.month = ( args.month ) ? args.month : 'xxxx';
+		args.year = ( args.year ) ? args.year : 'xxxx';
+	.col-xs-12.col-sm-3.col-md-12.col-lg-12: a( href="#" ).events__entry.entry
+		.date
+			.day #{args.day}
+			.month #{args.month}
+		h3.title #{args.title}
+//
+// EVENTS start
+section.events#events: .row
+		+events_entry( {} )
+		+events_entry( {} )
+		+events_entry( {} )
+		+events_entry( {} )
+		+events_entry( {} )
+		.col-xs-12.col-sm-3.col-md-12.col-lg-12: a.btn.btn-success( href="#" ) Смотреть ешё
+// EVENTS end
+//

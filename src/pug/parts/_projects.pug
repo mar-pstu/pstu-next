@@ -1,0 +1,43 @@
+//-
+	Секция-слайдер главной страницы для вывода информации о проектах вуза. К примеру: ШАДР, Бизнес школа, BioArt ...
+
+mixin projects_for_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit.';
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x300/2ecc71/ecf0f1';
+	.people_for__entry.entry: .container: .row
+		.col-xs-12: img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
+		.col-xs-12
+			h3.title
+			.excerpt: p #{args.excerpt}
+			p: a.btn.btn-success( href="#" ) Подробней
+
+mixin projects_nav_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit.';
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/150x150/2ecc71/ecf0f1';
+	button.people_nav__entry.entry: img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
+
+//
+// PROJECTS start
+section.projects#projects
+	.section__heading.heading
+		h2.title Выпускники
+		p.desctiption Выдающиеся выпускники Приазовского государственного технического университета
+	.section__body.body
+		.people-for#people-for: .container
+			+people_for_entry ( {} )
+			+people_for_entry ( {} )
+			+people_for_entry ( {} )
+			+people_for_entry ( {} )
+			+people_for_entry ( {} )
+		.people-nav#people-for: .container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+			+people_nav_entry ( {} )
+			+people_nav_entry ( {} )
+			+people_nav_entry ( {} )
+			+people_nav_entry ( {} )
+			+people_nav_entry ( {} )
+// PROJECTS end
+//

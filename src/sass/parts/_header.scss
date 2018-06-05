@@ -5,67 +5,6 @@
 
 .header {
 
-	background-color: $header-bgc;
-	color: $header-text-color;
 
-	a { @include color ( $header-text-color, $header-text-color, $header-text-color, $header-text-color ); }
-
-	.blog-name {
-		font-size: 36px;
-		line-height: 1.25em;
-		margin: 5px 0px;
-	}
-
-	.blog-description {
-		font-size: 13px;
-		line-height: 1.25em;
-		margin: 5px 0px;
-		letter-spacing: 1px;
-	}
-
-	.social {
-		text-align: center;
-		@include min-width ( $screen-sm ) { text-align: left; }
-	}
-
-	.resources {
-		text-align: center;
-		@include min-width ( $screen-sm ) { text-align: right; }
-		.has-sub-menu:hover {
-			background-color: $brand-success;
-			.sub-menu { display: block; }
-		}
-		.sub-menu {
-			@include position ( absolute, auto, 0%, auto, auto );
-			display: none;
-			background-color: $brand-success;
-			text-align: left;
-			width: 150px;
-			padding: 5px;
-			z-index: 100;
-		}
-	}
-
-	&__menu {
-		border-bottom: 1px solid $header-border-color;
-		li { position: relative; padding: 5px; }
-		a { @include td ( none, underline ); }
-		li:before { display: none; }
-	} // menu
-
-	&__logos {
-		padding: 5px 0px;
-		img { max-height: 100px; display: block; width: auto; }
-		.custom-logo-link, .pstu-link { display: inline-block; }
-	} // logos
-
-	&__nav {
-		display: block;
-		box-shadow: inset 0px 0px 5px rgba( 0, 0, 0, 0.50 );
-		padding: 10px 0px;
-		border-top: 1px solid $header-border-color;
-		border-bottom: 1px solid $header-border-color;
-		@include  min-width ( 767px ) { padding: 0px; }
-	} // nav
 
 } // .header

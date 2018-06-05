@@ -1,0 +1,15 @@
+//-
+//- Сайдбар главной страницы. Отображается справа от блока новостей сайта
+//-
+mixin home_widget ( args )
+	.col-xs-12.col-sm-3.col-md-12.col-lg-12
+		+widget( args )
+			+lorem()
+//
+// SIDE_HOME start
+aside.aside
+	+home_widget ( {} )
+	+home_widget ( {} )
+	+home_widget ( {} )
+// SIDE_HOME end
+//

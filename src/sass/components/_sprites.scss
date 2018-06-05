@@ -2,4 +2,13 @@
   display: inline-block;
 }
 
-@include sprites( $spritesheet );
+@mixin icon-sprites( $sprites ) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .icon-#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+@include icon-sprites( $spritesheet-sprites );

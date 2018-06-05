@@ -1,0 +1,22 @@
+mixin jumbotron_entry( args )
+	-
+		args.title = ( args.title ) ? args.title : "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
+		args.excerpt = ( args.excerpt ) ? args.excerpt : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed explicabo dolorem minima odit optio voluptates commodi maiores ducimus cupiditate, eaque ipsa, debitis minus earum quia ut! Voluptates velit, ipsa inventore.";
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
+	.jumbotron__entry
+		img.wp-post-image.lazy( src="#", data-lazy=args.thumbnail, title=args.title )
+		.overlay
+			h3.title #{args.title}
+			.excerpt #{args.excerpt}
+			a.btn.btn-success( href="#" ) Подробней
+//
+// JUMBOTRON start
+.jumbotron#jumbotron: .container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+	.jumbotron-slider#jumbotron-slider
+		+jumbotron_entry( {} )
+		+jumbotron_entry( {} )
+		+jumbotron_entry( {} )
+		+jumbotron_entry( {} )
+		+jumbotron_entry( {} )
+// JUMBOTRON end
+//
