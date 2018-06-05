@@ -45,3 +45,78 @@ script.
 		jQuery( window ).load( GalleriesInit );
 		jQuery( window ).resize( GalleriesInit );
 	} )();
+
+script(asinc, src=src.js+'slick.js')
+script.
+	jQuery( document ).ready( function () {
+
+		// "Текущая тема"
+		( function () {
+			jQuery( '#current-slider' ).slick( {
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 2000,
+				dots: false,
+				infinite: true,
+				speed: 300,
+				centerMode: true,
+				variableWidth: true
+			} );
+		} )();
+
+		// люди
+		( function () {
+			jQuery( '#people-for' ).slick( {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '#people-nav'
+			} );
+			jQuery( '#people-nav' ).slick( {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				asNavFor: '#people-for',
+				dots: false,
+				centerMode: true,
+				focusOnSelect: true,
+				variableWidth: true
+			} );
+		} )();
+
+		// проекты
+		( function () {
+			jQuery( '#projects-for' ).slick( {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '#projects-nav'
+			} );
+			jQuery( '#projects-nav' ).slick( {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				asNavFor: '#projects-for',
+				dots: false,
+				centerMode: true,
+				focusOnSelect: true,
+				variableWidth: true
+			} );
+		} )();
+
+		// "Партнёры"
+		( function () {
+			jQuery( '#partners-slider' ).slick( {
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 2000,
+				dots: true,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				centerMode: true,
+				variableWidth: true
+			} );
+		} )();
+
+	} );

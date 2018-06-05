@@ -1,8 +1,22 @@
 //-
 	Слайдер "Партнёры"
 
+mixin partners_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet';
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x200/2ecc71/ecf0f1';
+	a( href="#", title=args.title )
+		img( data-lazy=args.thumbnail, alt=args.title )
+
 //
 // PARTNERS start
-section.partners#partners
+section.partners#partners: .container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+	#partners-slider
+		+partners_entry( {} )
+		+partners_entry( {} )
+		+partners_entry( {} )
+		+partners_entry( {} )
+		+partners_entry( {} )
+		+partners_entry( {} )
 // PARTNERS end
 //
