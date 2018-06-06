@@ -1,0 +1,13 @@
+extend layout/_index
+block variables
+	- page.title = "404";
+	- page.excerpt = "Шаблон страницы \"ошибки 404\" (404.php)";
+	- page.type = "404";
+block main
+	.container
+		.row
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6
+				h1 Ошибка 404
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil officia, doloremque nisi eum animi similique debitis, adipisci rem quam deserunt ab quibusdam suscipit consequuntur laudantium sunt modi cupiditate quisquam repellat.
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6.first-sm
+				img.center-block( src=src.img+'error-logo.png' )

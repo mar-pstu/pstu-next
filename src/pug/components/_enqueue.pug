@@ -50,15 +50,48 @@ script(asinc, src=src.js+'slick.js')
 script.
 	jQuery( document ).ready( function () {
 
-		// "Текущая тема"
+		// "похожие записи"
 		( function () {
-			jQuery( '#current-slider' ).slick( {
+			jQuery( '#similar-slider' ).slick( {
 				lazyLoad: 'ondemand',
 				autoplay: true,
 				autoplaySpeed: 2000,
 				dots: false,
 				infinite: true,
 				speed: 300,
+				centerMode: true,
+				variableWidth: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			} );
+		} )();
+
+		// "первый экран"
+		( function () {
+			jQuery( '#jumbotron-slider' ).slick( {
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 2000,
+				dots: false,
+				infinite: true,
+				speed: 300,
+				centerMode: true,
+				variableWidth: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			} );
+		} )();
+
+		// "Текущая тема"
+		( function () {
+			jQuery( '#current-slider' ).slick( {
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 2000,
+				dots: true,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
 				centerMode: true,
 				variableWidth: true
 			} );

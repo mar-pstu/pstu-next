@@ -1,0 +1,15 @@
+extend layout/_index
+block variables
+	- page.title = "Запись";
+	- page.excerpt = "Шаблон страницы записи (поста/новости) (single.php)";
+	- page.type = "single";
+block main
+	.container
+		.row
+			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+				include components/_content
+				include components/_pager
+				include parts/_similar
+				include components/_comments
+				include parts/_current
+			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right

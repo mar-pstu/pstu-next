@@ -22,7 +22,7 @@ gulp.task( 'icon', function () {
             .pipe( spritesmith( {
                 imgName: 'icon.png',
                 cssName: '_icon.scss',
-                cssFormat: 'sass',
+                cssFormat: 'scss',
                 algorithm: 'binary-tree',
                 imgPath: "../images/icon.png",
                 cssVarMap: function ( sprite ) {

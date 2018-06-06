@@ -10,10 +10,11 @@ html(lang="ru")
 	block head
 	body( class=page.type )
 		.wrapper#wrapper
-			include ../parts/_nav
+			include ../nav/_top
 			include ../parts/_header
 			main.wrapper__item.wrapper__item--main.main#main
 				block main
+			include ../nav/_basement
 			include ../asides/_basement
 			include ../parts/_partners
 			include ../parts/_footer
