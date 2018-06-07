@@ -1,12 +1,12 @@
 extend layout/_index
 block variables
-	- page.title = "Страница";
-	- page.excerpt = "Шаблон страницы (page.php)";
+	- page.title = "Страница (sidebar)";
+	- page.excerpt = "Шаблон страницы без сайдбара (page-without-sidebar.php)";
 	- page.type = "page";
 block main
 	.container
 		.row
-			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12
 				include parts/_info
 				include components/_content
 				ul.text-right.list-unstyled.font-italic
@@ -14,5 +14,4 @@ block main
 					li Обновлено: <a href="#">invitery</a> 21.06.2018
 					li Ответственный: Иванов И.И. <a href="#">ivanov_i_i@pstu.edu</a>
 				include components/_comments
-			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
 	include parts/_current

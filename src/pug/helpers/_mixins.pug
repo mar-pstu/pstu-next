@@ -5,7 +5,7 @@ mixin widget( args )
 		if ( args.title )
 			h3.widget__title
 				i.icon.icon-quote
-				span= " " + args.title
+				span " " + args.title
 		else
 			h3.widget__title
 				i.icon.icon-quote
@@ -51,29 +51,12 @@ mixin media ( args )
 //-
 //-
 //-
-mixin entry ( args )
+mixin flat_entry( args )
 	-
-		args.prefix = ( args.prefix ) ? args.prefix : "news";
-		args.title = ( args.title ) ? args.title : "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
-		args.excerpt = ( args.excerpt ) ? args.excerpt : "Excepturi perferendis sequi aut consequatur ea iusto blanditiis neque placeat illo, est ipsam repellat accusantium, modi optio alias commodi praesentium eos molestias.";
-	div( class=args.prefix + '__entry entry' )
-		if ( args.thumbnail )
-			a.center-block.text-center( href="#", title=args.title ): img.wp-post-image.attachment-medium( src=args.thumbnail )
-		.overflow
-			h3.entry__title.title: a( href="#" )= args.title
-			ul.entry__tax.tax.list-unstyled.small
-				li: .tags: ul.tags__list.list.list-unstyled.list-inline
-					li: a(href="#") <i class="icon icon-tag"></i> Тег 1
-					li: a(href="#") <i class="icon icon-tag"></i> Тег 2
-					li: a(href="#") <i class="icon icon-tag"></i> Тег 3
-					li: a(href="#") <i class="icon icon-tag"></i> Тег 4
-					li: a(href="#") <i class="icon icon-tag"></i> Тег 5
-				li: .category: ul.category__list.list.list-unstyled.list-inline
-					li: a(href="#") <i class="icon icon-bookmark"></i> Категория 1
-					li: a(href="#") <i class="icon icon-bookmark"></i> Категория 2
-			.entry__excerpt.excerpt: p=args.excerpt
-			.clearfix
-				ul.small.list-unstyled.list-inline.pull-left
-					li: b 20.06.2018
-					li: a( href="#" ) admin
-				a.btn.btn-default.pull-right( href="#" ) Подробней <i class="icon icon-more"></i>
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit?';
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x200/2ecc71/ecf0f1';
+	.col-xs-12.col-sm-6.col-md-6.col-lg-6: a( href="#", title=args.title ).important__entry.entry
+		img.lazy( src="#", data-src=args.thumbnail )
+		h3.title #{args.title}
+		.excerpt: p #{args.excerpt}

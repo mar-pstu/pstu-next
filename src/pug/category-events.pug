@@ -1,0 +1,35 @@
+extend layout/_index
+mixin events_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+		args.excerpt = ( args.excerpt ) ? args.excerpt : 	'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quasi sapiente repellat minima numquam aliquam, in temporibus, tempora ratione! Perspiciatis sunt maiores voluptates, numquam ex necessitatibus consequatur aliquid tempore cumque.';
+		args.day = ( args.day ) ? args.day : 'XX';
+		args.month = ( args.month ) ? args.month : 'xxxx';
+		args.year = ( args.year ) ? args.year : 'xxxx';
+	.media.clearfix
+		.media-left.pull-left: a(href="#"): .date
+			.day #{args.day}
+			.month #{args.month}
+			.year #{args.year}
+		.media-body
+			h4.media-heading #{args.title}
+			div.excerpt: p #{args.excerpt}
+		.text-right: a.btn.btn-primary( href="#" ) Подробней
+block variables
+	- page.title = "Анонсы";
+	- page.excerpt = "Шаблон категории Анонсы (category-events.php)";
+	- page.type = "category";
+block main
+	.container
+		.row
+			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+				include parts/_info
+				+events_entry ( {} )
+				+events_entry ( {} )
+				+events_entry ( {} )
+				+events_entry ( {} )
+				+events_entry ( {} )
+				+events_entry ( {} )
+				include components/_pagination
+			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
+	include parts/_current

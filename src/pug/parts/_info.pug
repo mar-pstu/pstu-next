@@ -1,0 +1,13 @@
+.main__info.info
+	img.lazy.qr-code( src="#", data-src="http://chart.apis.google.com/chart?choe=UTF-8&chld=L&cht=qr&chs=150x150&chl=http://pstu.edu/" )
+	h1.title #{page.title}
+	p.lead #{page.excerpt}
+	include ../components/_breadcrumb
+	include ../components/_share
+	if ( page.type == 'page' ) || ( page.type == 'single' )
+		.tags: ul.tags__list.list
+			li: a( href="#" ) <i class="icon icon-tag"></i> метка
+			li: a( href="#" ) <i class="icon icon-tag"></i> метка
+			li: a( href="#" ) <i class="icon icon-tag"></i> метка
+			li: a( href="#" ) <i class="icon icon-tag"></i> метка
+			li: a( href="#" ) <i class="icon icon-tag"></i> метка
