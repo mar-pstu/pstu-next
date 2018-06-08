@@ -1,0 +1,25 @@
+extend layout/_index
+mixin search_entry ( args )
+	.search__entry.entry
+		h3.title Lorem ipsum dolor sit amet, consectetur adipisicing elit
+		.excerpt: p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus fugiat eligendi placeat. At, dolor quisquam officia nisi molestiae minus distinctio eaque recusandae, incidunt vel cupiditate? Repellendus assumenda mollitia neque. Iusto.
+		.text-right: a.btn.btn-primary( href="#" ) Подробней
+
+block variables
+	- page.title = "Поиск";
+	- page.excerpt = "Шаблон страницы результатов поиска (search.php)";
+	- page.type = "blog category archive";
+block main
+	.container
+		.row
+			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+				include parts/_info
+				+search_entry ( {} )
+				+search_entry ( {} )
+				+search_entry ( {} )
+				+search_entry ( {} )
+				+search_entry ( {} )
+				+search_entry ( {} )
+				include components/_pagination
+			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
+	include parts/_current

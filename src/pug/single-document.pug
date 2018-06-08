@@ -1,0 +1,38 @@
+extend layout/_index
+block variables
+	- page.title = "Документ";
+	- page.excerpt = "Шаблон страницы документа (single-document.php)";
+	- page.type = "single";
+block main
+	.container
+		.row
+			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+				include parts/_info
+				
+				//
+				// SINGLE-DOCUMENT start
+				.row
+					.col-xs-12.col-sm-5.col-md-5.col-lg-4
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis molestias nisi unde ex porro, amet veniam nostrum accusantium expedita non illum nesciunt placeat repudiandae necessitatibus soluta minima eos sed, minus!
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quo inventore cupiditate, architecto, fuga rerum nemo impedit distinctio, fugit deleniti aperiam magni iure mollitia sed quis debitis atque? Magni, quia.
+						p Quasi dolor eligendi itaque ipsum at sunt eius, excepturi inventore totam maiores nisi pariatur reprehenderit autem, molestiae velit cum. Repellat dolores, dolore repellendus quae optio modi assumenda, voluptatem quos maiores.
+						p Tempora eum nostrum rerum nam non dolores deleniti, cupiditate assumenda unde omnis deserunt maxime incidunt nemo natus rem vitae ipsum, sunt accusantium itaque at reprehenderit totam, necessitatibus voluptates ut consequuntur!
+					.col-xs-12.col-sm-7.col-md-7.col-lg-8
+						//- фрейм от google <iframe src="https://docs.google.com/viewer?url=http://pstu.edu/wp-content/uploads/2018/05/015.01-%D0%9C-%D0%9F%D0%A1.pdf&amp;embedded=true" height="860" width="620"></iframe>
+						//- 
+						//- фрей от MS
+						//- <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=http://pstu.edu/wp-content/uploads/2018/05/015.01-%D0%9C-%D0%9F%D0%A1.pdf' width='1366px' height='623px' frameborder='0'></iframe>
+						div.
+							<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://pstu.edu/wp-content/uploads/2017/05/polozh.doc' frameborder='0'>This is an embedded <a target='_blank' href='http://office.com'>Microsoft Office</a> document, powered by <a target='_blank' href='http://office.com/webapps'>Office Online</a>.</iframe>
+				// SINGLE-DOCUMENT end
+				//
+
+				ul.text-right.list-unstyled.font-italic
+					li Опубликовано: <a href="#">admin</a> 20.06.2018
+					li Обновлено: <a href="#">invitery</a> 21.06.2018
+					li Ответственный: Иванов И.И. <a href="#">ivanov_i_i@pstu.edu</a>
+				include components/_pager
+				include parts/_similar
+				include components/_comments
+			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
+	include parts/_current

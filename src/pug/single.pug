@@ -7,10 +7,14 @@ block main
 	.container
 		.row
 			.col-xs-12.col-sm-7.col-md-7.col-lg-8
-				include components/_info
+				include parts/_info
 				include components/_content
+				ul.text-right.list-unstyled.font-italic
+					li Опубликовано: <a href="#">admin</a> 20.06.2018
+					li Обновлено: <a href="#">invitery</a> 21.06.2018
+					li Ответственный: Иванов И.И. <a href="#">ivanov_i_i@pstu.edu</a>
 				include components/_pager
 				include parts/_similar
 				include components/_comments
-				include parts/_current
 			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
+	include parts/_current

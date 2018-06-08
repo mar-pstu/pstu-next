@@ -1,17 +1,114 @@
 //
 // START #header
-header.wrapper__item.header#header: .container
-	.row
-		.col-xs-12.col-sm-12.col-md-6.col-lg-6: a( href="#" ).header__bloginfo.bloginfo
-			img.custom-logo( src=src.img+'pstu.png', title=blog.name )
+header.wrapper__item.header#header
+	.header__top.top: .container-fluid: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+		.nav: ul.nav__list.list#top-nav-list
+			li: a( href="#" ) 100 часов волонтёрства
+			li: a( href="#" ) «Такий я є!»
+			li
+				a( href="#" ) Наука
+				ul.sub-menu
+					li: a( href="#" ) Аспирантура, докторантура
+					li
+						a( href="#" ) Выставки
+						ul.sub-menu
+							li: a( href="#" ) Web-ресурсы
+							li: a( href="#" ) История
+							li: a( href="#" ) Профсоюзный комитет
+							li: a( href="#" ) Ректорат
+							li: a( href="#" ) Структура ПГТУ
+							li: a( href="#" ) Ученый совет
+					li: a( href="#" ) Научные издания
+					li: a( href="#" ) План проведения конференций и олимпиад
+					li
+						a( href="#" ) Приоритетные направления деятельности
+						ul.sub-menu
+							li: a( href="#" ) Web-ресурсы
+							li: a( href="#" ) История
+							li: a( href="#" ) Профсоюзный комитет
+							li: a( href="#" ) Ректорат
+							li: a( href="#" ) Структура ПГТУ
+							li: a( href="#" ) Ученый совет
+					li: a( href="#" ) Совет молодых ученых ПГТУ
+					li: a( href="#" ) Специализированные ученые советы
+					li: a( href="#" ) Студенческая наука
+			li: a( href="#" ) Международная работа
+			li
+				a( href="#" ) Университет
+				ul.sub-menu
+					li: a( href="#" ) Web-ресурсы
+					li: a( href="#" ) История
+					li: a( href="#" ) Профсоюзный комитет
+					li: a( href="#" ) Ректорат
+					li: a( href="#" ) Структура ПГТУ
+					li: a( href="#" ) Ученый совет
+			li: a( href="#" ) Факультеты
+			li: a( href="#" ) Анонсы
+			li
+				a( href="#" ) Информация
+				ul.sub-menu
+					li: a( href="#" ) Действующие стандарты университета и положения подготовленные в соответствии с системой Менеджмента качества
+					li: a( href="#" ) Информация, подлежащая публикации в соответствии с действующим законодательством
+					li: a( href="#" ) Кодекс академической доброчестности ГВУЗ «ПГТУ»
+					li: a( href="#" ) Кодекс корпоративной культуры университета
+					li: a( href="#" ) Лицензионные дела (аспирантура, докторантура)
+					li: a( href="#" ) Лицензионные и аккредитационные дела
+					li: a( href="#" ) Лицензия на осуществление образовательной деятельности
+					li: a( href="#" ) Образовательные программы (бакалавриат)
+					li: a( href="#" ) Образовательные программы (магистратура)
+					li: a( href="#" ) Перечень сертификатов по специальностям
+					li: a( href="#" ) Противодействие коррупции
+					li: a( href="#" ) Публичные закупки
+					li: a( href="#" ) Результаты аккредитационной экспертизы
+					li: a( href="#" ) Структура и органы управления учебного заведения
+			li: a( href="#" ) Старый сайт
+			li: a( href="#" ) Украинский
+			li: a( href="#" ) русский
+			li: a( href="#" ) english
+	.header__bloginfo.bloginfo: .container: .row
+		.col-xs-12.col-sm-3.col-md-2.col-lg-2.middle-xs: a.custom-logo-link( href="#" ): img.custom-logo( src=src.img+'pstu.png', title=blog.name )
+		.col-xs-12.col-sm-9.col-md.col-lg.middle-xs
 			h1.bloginfo-name #{blog.name}
 			p.bloginfo-description #{blog.description}
-		.col-xs-12.col-sm-12.col-md-6.col-lg-6: include ../asides/_header
-	.row
-		.col-xs-12.col-sm-5.col-md-5.col-lg-4: form.header__search.search#header-search( action="#", method="post" )
-			.input-group
-				input.form-control( type="search", name="s", placeholder="" )
-				input.btn.btn-success( type="submit", value="Поиск" )
-		.col-xs-12.col-sm-7.first-sm.col-md-7.col-lg-8: include ../nav/_header
+		.col-xs-12.col-sm.col-md-3.col-lg-3: +widget( {} )
+		.col-xs-12.col-sm.col-md-3.col-lg-3: +widget( {} )
+	.header__nav.nav: .container: .row
+		.col-xs-12.col-sm-5.col-md-5.col-lg-4: form.searchform#header-search( action="#", method="post" )
+			input.form-control( type="search", name="s", placeholder="" )
+			input.submit( type="submit", value="Поиск" )
+		.col-xs-12.col-sm-7.first-sm.col-md-7.col-lg-8: ul.nav__list.list#header-nav-list
+			li: a( href="#" ) Главная
+			li: a( href="#" ) Новости
+			li
+				a( href="#" ) Студенту
+				ul.sub-menu
+					li
+						a( href="#" ) Проекты
+						ul.sub-menu
+							li: a( href="#" ) Бизнес — инкубатор
+							li: a( href="#" ) Мариупольская бизнес-школа
+							li: a( href="#" ) Региональный учебный центр бизнес-навыков
+							li: a( href="#" ) Студенческие трудовые отряды
+							li: a( href="#" ) Театр моды «Магия»
+							li: a( href="#" ) Центр карьеры
+							li: a( href="#" ) Школа Архитектурного и Дизайнерского Развития
+					li: a( href="#" ) Расписание
+					li: a( href="#" ) Рейтинг студентов-бюджетников
+					li: a( href="#" ) Студенческий сенат
+			li
+				a( href="#" ) Абитуриенту
+				ul.sub-menu
+					li: a( href="#" ) Информация о приеме
+					li: a( href="#" ) Кафедра военной подготовки
+					li: a( href="#" ) Образовательный центр «Донбасс – Украина»
+					li: a( href="#" ) Подбор специальности
+					li: a( href="#" ) Подготовительное отделение
+					li: a( href="#" ) Приёмная комиссия
+					li: a( href="#" ) Программы вступительных экзаменов
+					li: a( href="#" ) Профориентационная практика
+					li: a( href="#" ) Специальности
+					li: a( href="#" ) Списки приёмной комиссии
+					li: a( href="#" ) Стоимость обучения
+			li: a( href="#" ) Контакты
 // END #header
 //
