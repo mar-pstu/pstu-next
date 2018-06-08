@@ -1,3 +1,8 @@
+/**
+ *  Навигационные меню
+ */
+
+
 .nav__list {
 
   display: block;
@@ -8,13 +13,11 @@
   li {
     display: inline-block;
     position: relative;
-    z-index: 100;
     &:before { display: none; }
     &:first-child { margin-left:0; }
 
     a {
       text-decoration: none;
-      padding: 11px;
       display: block;
       display: flex;
       flex-direction: row;
@@ -56,9 +59,7 @@
     }
 
     li a {
-      font-size: 12px;
       font-weight: normal;
-      color: #797979;
       background: #3E4156;
     }
 
@@ -99,7 +100,6 @@
   .mainWrap{ width:768px; }
   .nav__list ul { top:37px; }
   .nav__list li a {
-    font-size:12px;
     padding:8px;
   }
 
