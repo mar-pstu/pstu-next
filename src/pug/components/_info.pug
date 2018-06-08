@@ -1,35 +1,6 @@
--
-	var info_tags = {
-		'list': [
-			{ 'url': '#', 'text': '<i class="icon icon-tag"></i> web' },
-			{ 'url': '#', 'text': '<i class="icon icon-tag"></i> html' },
-			{ 'url': '#', 'text': '<i class="icon icon-tag"></i> ЦКТ' },
-			{ 'url': '#', 'text': '<i class="icon icon-tag"></i> ПГТУ' },
-			{ 'url': '#', 'text': '<i class="icon icon-tag"></i> разработка' },
-		],
-	}
-	var info_categoryes = {
-		'list': [
-			{ 'url': '#', 'text': '<i class="icon icon-bookmark"></i> Поступление' },
-			{ 'url': '#', 'text': '<i class="icon icon-bookmark"></i> Плагины' },
-			{ 'url': '#', 'text': '<i class="icon icon-bookmark"></i> Wordpress' },
-		],
-	}
 .main__info.info
-	img.wp-post-image.attachment-medium.lazyload( src="#" data-src='http://placehold.it/640x480/2ecc71/ecf0f1', alt=page.title )
-	.clearfix
-		img.qr-code.lazyload( src="#" data-src="http://chart.apis.google.com/chart?choe=UTF-8&chld=L&cht=qr&chs=150x150&chl=http://pstu.edu/uk/blog/2018/05/05/%D0%B4%D0%B5-%D1%82%D1%80%D0%B8-%D0%B5%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D1%96%D1%81%D1%82%D0%B0-%D1%82%D0%B0%D0%BC-%D0%BF%D1%8F%D1%82%D1%8C-%D0%B4%D1%83%D0%BC%D0%BE%D0%BA/" )
-		dl.dl-horizontal.small
-			dt Автор: 
-			dd: a( href="#" ) admin
-			dt Опубликовано:
-			dd 20/01/2018
-			dt Просмотры:
-			dd 25
-			dt Комментарии:
-			dd 10
-			dt Категории:
-			dd: ul.list-unstyled.list-inline: +links_list( info_categoryes )
-			dt Теги:
-			dd: .tags: ul.tags__list.list: +links_list( info_tags )
-	.excerpt: p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sunt nam sapiente consectetur totam deserunt sit est illum ducimus fugit facere beatae, ipsum laudantium dolorum numquam iste commodi suscipit! Iure!
+	img.alignright.lazy( src="#", data-src="http://chart.apis.google.com/chart?choe=UTF-8&chld=L&cht=qr&chs=150x150&chl=http://pstu.edu/" )
+	h1.title #{page.title}
+	.description.excerpt: p #{page.excerpt}
+	include ../components/_breadcrumb
+	include ../components/_share
