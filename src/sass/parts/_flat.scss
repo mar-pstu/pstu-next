@@ -1,0 +1,55 @@
+/**
+ *	Флат список
+ */
+
+
+.flat {
+
+	padding: 25px 0px;
+
+	.entry {
+		@include color ( #fff, #fff, #fff, #fff );
+		@include td ( none, none );
+		display: block;
+		position: relative;
+		text-shadow: 1px 1px 1px #262626;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 15px;
+		&:before { content: ''; display: block; @include position ( absolute, 0px, 0px, 0px, 0px ); background-color: rgba( 0, 0, 0, 0.75 ); }
+		&:hover {
+			.title { opacity: 0; transform: translate( 0px, -50px ); }
+			.excerpt { opacity: 1; transform: translate( 0px, 0px ); }
+		}
+	}
+
+	&__entry {
+		.wp-post-image { display: block; width: 100%; }
+		.title, .excerpt {
+			@include position ( absolute, 0px, 0px, 0px, 0px );
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			transform-origin: center center;
+			transition: opacity 250ms, transform 250ms;
+			padding: 10px;
+			> * { margin: 0px; overflow: hidden; }
+		}
+		.title {
+			opacity: 1;
+			transform: translate( 0px, 0px );
+			font-size: 16px;
+			text-transform: uppercase;
+			line-height: 24px;
+			font-weight: normal;
+		}
+		.excerpt {
+			opacity: 0;
+			transform: translate( 0px, 50px );
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+
+}

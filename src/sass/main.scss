@@ -18,6 +18,7 @@
 @import "components/_to-top-btn.scss";
 @import "components/_section.scss";
 @import "components/_media.scss";
+@import "components/_date.scss";
 
 @import "wordpress/_calendar.scss";
 @import "wordpress/_tagcloud.scss";
@@ -26,8 +27,12 @@
 
 
 //части страницы
-@import "parts/_header.scss";										//стили шапки сайта
-@import "parts/_footer.scss";										//стили подвала сайта 
+@import "parts/_header.scss";										// стили шапки сайта
+@import "parts/_jumbotron.scss";								// Слайдер на первом экране главной страницы
+@import "parts/_action.scss";										// блок с рекламой и "призывом" перейти на страницу о университете и страницу абитериенту
+@import "parts/_flat.scss";											// флат иконки
+@import "parts/_events.scss";										// "Анонсы" главной страницы
+@import "parts/_footer.scss";										// стили подвала сайта 
 
 
 .icon {

@@ -37,10 +37,9 @@ mixin list( args )
 //-
 //-
 mixin media ( args )
-	-
-		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
-		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
-		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum distinctio facere minima ducimus eos, et laudantium quaerat, iure quis unde eveniet nulla dolore fugit praesentium sapiente officiis cumque sit recusandae.';
+	- args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+	- args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
+	- args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum distinctio facere minima ducimus eos, et laudantium quaerat, iure quis unde eveniet nulla dolore fugit praesentium sapiente officiis cumque sit recusandae.';
 	.media.clearfix
 		.media-left.pull-left: a(href="#"): img.lazy.media-object.hidden-xs( src="#", data-src=args.thumbnail, alt=args.title )
 		.media-body
@@ -52,11 +51,10 @@ mixin media ( args )
 //-
 //-
 mixin flat_entry( args )
-	-
-		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
-		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit?';
-		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x200/2ecc71/ecf0f1';
-	.col-xs-12.col-sm-6.col-md-6.col-lg-6: a( href="#", title=args.title ).important__entry.entry
-		img.lazy( src="#", data-src=args.thumbnail )
-		h3.title #{args.title}
+	- args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+	- args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit?';
+	- args.thumbnail = ( args.thumbnail ) ? args.thumbnail : src.img+'300x200.png';
+	.col-xs-12.col-sm-6.col-md-6.col-lg-6: a( href="#", title=args.title ).flat__entry.entry
+		img.wp-post-image.lazy( src="#", data-src=args.thumbnail )
+		.title: h3 #{args.title}
 		.excerpt: p #{args.excerpt}
