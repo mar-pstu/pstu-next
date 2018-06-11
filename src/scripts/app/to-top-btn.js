@@ -3,7 +3,8 @@ jQuery( document ).ready( function () {
   var $w = jQuery( window ),
     $toTopBtn = jQuery( '<button>', {
       class: 'to-top-btn',
-      id: 'toTopBtn'
+      id: 'toTopBtn',
+      title: pstuNextThemeTranslate.toTopBtn,
     } ).appendTo( jQuery( 'body' ) );
   function _btnHide() {
     if ( $w.scrollTop() > screen.height * 0.5) {

@@ -3,7 +3,7 @@ script(src="./scripts/jquery.min.js")
 script(asinc, src=src.js+'lazyload.js')
 script.
 	jQuery( document ).ready( function () {
-		jQuery( "img.lazy" ).lazy();
+		jQuery( ".lazy" ).lazy();
 	} );
 
 script(asinc, src=src.js+'main.js')
@@ -35,7 +35,7 @@ script.
 		function GalleriesInit () {
 			jQuery( '.gallery' ).each( function () {
 				var $gallery = jQuery( this ),
-						$imgs = $gallery.find( 'img.lazyload' );
+						$imgs = $gallery.find( 'img.lazy' );
 				$imgs.unbind( 'load' ).on( 'load', function () {
 					BlocksItInit ( $gallery );
 				} );
@@ -69,16 +69,9 @@ script.
 		// "первый экран"
 		( function () {
 			jQuery( '#jumbotron-slider' ).slick( {
-				lazyLoad: 'ondemand',
-				autoplay: true,
-				autoplaySpeed: 2000,
-				dots: false,
-				infinite: true,
-				speed: 300,
-				centerMode: true,
-				variableWidth: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
+				appendArrows:  '#jumbotron-arrows',
+				prevArrow:     '<button type="button" class="slick-arrow slick-prev"><</button>',
+				nextArrow:     '<button type="button" class="slick-arrow slick-next">></button>',
 			} );
 		} )();
 

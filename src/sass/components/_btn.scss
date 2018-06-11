@@ -4,45 +4,50 @@
 
 .btn {
 
+	@include color ( #fff, #fff, #fff, #fff );
 	@include td ( none, none );
 	display: inline-block;
-	padding: 3px 5px;
-	margin: 2px 0px;
+	border-radius: 2px;
+	padding: 5px 10px;
+	margin: 2px;
 	cursor: pointer;
+	text-align: center;
+	margin: 0px 2px;
+	box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.25 );
+	transition: box-shadow 200ms, background-color 200ms;
+	&:hover { box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.50 ); }
 
 	&-default {
-		border: 1px solid darken( $brand-default, 25% );
-		background-color: $brand-default;
-		color: #262626 !important;
-		&:hover { background-color: darken( $brand-default, 10% ); }
+		background-color: #262626;
 	}
 
 	&-primary {
-		border: 1px solid darken( $brand-primary, 25% );
 		background-color: $brand-primary;
-		color: #fff !important;
-		text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.75 );
-		&:hover { background-color: lighten( $brand-primary, 10% ); }
+		&:hover { background-color: lighten( $brand-primary, 3% ); }
 	}
 
 	&-success {
-		border: 1px solid darken( $brand-success, 25% );
 		background-color: $brand-success;
-		color: #fff !important;
-		text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.75 );
-		&:hover { background-color: lighten( $brand-success, 10% ); }
+		&:hover { background-color: lighten( $brand-success, 3% ); }
+	}
+
+	&-xs {
+		padding: 2px 5px;
+		font-size: 0.85em;
 	}
 
 	&-md {
-		padding: 5px 10px;
+		padding: 10px 20px;
 		font-size: 1.25em;
 	}
 
 	&-lg {
-		padding: 10px 20px;
+		padding: 20px 25px;
 		font-size: 1.75em;
 	}
 
-	&-block { display: block; text-align: center;	}
+	&-block {
+		display: block;
+	}
 
 }
