@@ -26,6 +26,15 @@
 		height: auto;
 	}
 
+	.widget {
+		background-color: rgba( 255, 255, 255, 0.5 );
+		padding: 5px 10px;
+		transition: background-color 200ms;
+		border: 1px solid lighten( $brand-danger, 5% );
+		box-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.25 ) inset, 0px 0px 0px rgba( 0, 0, 0, 0.25 );
+		&:hover { background-color: rgba( 255, 255, 255, 1.0 ); }
+	}
+
 
 	&__nav {
 

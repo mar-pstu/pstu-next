@@ -69,9 +69,18 @@ script.
 		// "первый экран"
 		( function () {
 			jQuery( '#jumbotron-slider' ).slick( {
-				appendArrows:  '#jumbotron-arrows',
-				prevArrow:     '<button type="button" class="slick-arrow slick-prev"><</button>',
-				nextArrow:     '<button type="button" class="slick-arrow slick-next">></button>',
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 2000,
+				dots: false,
+				prevArrow: jQuery( '#jumbotron-slider-arrow-prev' ),
+				nextArrow: jQuery( '#jumbotron-slider-arrow-next' ),
+			} ).on( 'lazyLoaded', function ( e, slick, image, imageSource ) {
+				imageSource = image.attr( 'src' );
+				parentSlide = jQuery( image ).closest( '.jumbotron__entry.entry' );
+				parentSlide.css( 'background-image', 'url("'+imageSource+'")' );
+				console.log( parentSlide );
+				image.attr('src',''); // remove source
 			} );
 		} )();
 

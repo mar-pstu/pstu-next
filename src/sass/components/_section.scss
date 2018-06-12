@@ -6,7 +6,17 @@
 .section {
 
 	&__heading {
-
+		text-align: center;
+		margin: 25px 0px;
+		.title {
+			font-size: 26px;
+			text-transform: uppercase;
+			margin: 5px 0px;
+			font-weight: normal;
+		}
+		.description {
+			margin: 5px 0px;
+		}
 	} // heading
 
 	&__body {

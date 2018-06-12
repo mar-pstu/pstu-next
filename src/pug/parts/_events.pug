@@ -7,7 +7,7 @@ mixin events_entry ( args )
 		args.day = ( args.day ) ? args.day : '29';
 		args.month = ( args.month ) ? args.month : 'сентября';
 		args.year = ( args.year ) ? args.year : '2020';
-	.col-xs-12.col-sm-3.col-md-12.col-lg-12: a( href="#" ).events__entry.entry
+	.col-xs-12.col-sm-6.col-md-12.col-lg-12: a( href="#" ).events__entry.entry
 		.date
 			.date__day.day #{args.day}
 			.date__month.month #{args.month}
@@ -16,6 +16,7 @@ mixin events_entry ( args )
 //
 // EVENTS start
 section.events#events: .row
+		+events_entry( {} )
 		+events_entry( {} )
 		+events_entry( {} )
 		+events_entry( {} )

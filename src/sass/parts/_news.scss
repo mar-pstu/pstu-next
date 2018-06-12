@@ -1,0 +1,23 @@
+//
+//	Блок новостей на главнйо странце
+//
+
+
+.news {
+
+	.entry {
+
+	}
+
+	&__entry {
+		.media-object {
+			width: 150px;
+			height: 150px;
+			@include min-width ( $screen-sm ) {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+
+}

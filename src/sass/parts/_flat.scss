@@ -15,7 +15,8 @@
 		text-shadow: 1px 1px 1px #262626;
 		overflow: hidden;
 		position: relative;
-		margin-bottom: 15px;
+		margin: 0px auto 15px auto;
+		max-width: 400px;
 		&:before { content: ''; display: block; @include position ( absolute, 0px, 0px, 0px, 0px ); background-color: rgba( 0, 0, 0, 0.75 ); }
 		&:hover {
 			.title { opacity: 0; transform: translate( 0px, -50px ); }

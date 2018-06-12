@@ -41,7 +41,7 @@ mixin media ( args )
 	- args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
 	- args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum distinctio facere minima ducimus eos, et laudantium quaerat, iure quis unde eveniet nulla dolore fugit praesentium sapiente officiis cumque sit recusandae.';
 	.media.clearfix
-		.media-left.pull-left: a(href="#"): img.lazy.media-object.hidden-xs( src="#", data-src=args.thumbnail, alt=args.title )
+		.media-left.pull-left: a(href="#"): img.lazy.media-object( src="#", data-src=args.thumbnail, alt=args.title )
 		.media-body
 			h4.media-heading #{args.title}
 			div.excerpt: p #{args.excerpt}
