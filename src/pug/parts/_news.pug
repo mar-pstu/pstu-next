@@ -4,14 +4,14 @@
 mixin news_entry ( args )
 	.news__entry.entry
 		+media ( args )
-		p.text-right: a.btn.btn-success( href="#" ) Подробней
+			.text-right: a.btn.btn-success( href="#" ) Подробней
 	
 //
 // NEWS start
 section.section.news#news
 	.section__heading.heading
 		h2.title Новости
-	p.description.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, laudantium hic! Eligendi accusantium quas fugit temporibus modi veniam magnam? Doloremque commodi doloribus.
+		p.description.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, laudantium hic! Eligendi accusantium quas fugit temporibus modi veniam magnam? Doloremque commodi doloribus.
 	.section__body.body
 		+news_entry( { thumbnail: src.img+'news_thumbnail_150x150_01.jpg' } )
 		+news_entry( { thumbnail: src.img+'news_thumbnail_150x150_02.jpg' } )

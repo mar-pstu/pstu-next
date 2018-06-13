@@ -5,19 +5,36 @@
 
 .news {
 
-	.entry {
+	margin: 25px 0px;
 
+	.entry {
+		margin-bottom: 25px;
 	}
 
 	&__entry {
+		.media-left {
+			display: block;
+			float: none;
+			@include min-width ( $screen-sm ) {
+				display: table-cell;
+				float: left;
+			}
+		} // .media-left
 		.media-object {
 			width: 150px;
 			height: 150px;
+			margin: 15px auto;
 			@include min-width ( $screen-sm ) {
 				width: 100px;
 				height: 100px;
+				margin: 0px auto;
 			}
+		} // .media-object
+		.media-heading {
+			text-align: center;
+			@include min-width ( $screen-sm ) { text-align: left; }
+			a { @include td ( none, none ); }
 		}
-	}
+	} // __entry
 
 }

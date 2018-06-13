@@ -23,6 +23,8 @@
 		&:hover { background-color: $brand-info; }
 	}
 
+	.slick-active .entry { transform: scale( 1.00 ); }
+
 	.entry {
 		color: #fff;
 		text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.75 );
@@ -30,6 +32,8 @@
 		background-position: center center;
 		background-size: cover;
 		min-height: 380px;
+		transition: transform 300ms, opacity 300ms;
+		transform: scale( 0.85 );
 	}
 
 	&__entry {

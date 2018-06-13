@@ -1,4 +1,6 @@
-script(src="./scripts/jquery.min.js")
+script(src=src.js+'jquery.min.js')
+
+script(asinc, src=src.js+'parallax.js')
 
 script(asinc, src=src.js+'lazyload.js')
 script.
@@ -72,6 +74,8 @@ script.
 				lazyLoad: 'ondemand',
 				autoplay: true,
 				autoplaySpeed: 2000,
+				speed: 400,
+				fade: true,
 				dots: false,
 				prevArrow: jQuery( '#jumbotron-slider-arrow-prev' ),
 				nextArrow: jQuery( '#jumbotron-slider-arrow-next' ),
@@ -79,7 +83,6 @@ script.
 				imageSource = image.attr( 'src' );
 				parentSlide = jQuery( image ).closest( '.jumbotron__entry.entry' );
 				parentSlide.css( 'background-image', 'url("'+imageSource+'")' );
-				console.log( parentSlide );
 				image.attr('src',''); // remove source
 			} );
 		} )();

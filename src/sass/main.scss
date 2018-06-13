@@ -29,10 +29,13 @@
 //части страницы
 @import "parts/_header.scss";										// стили шапки сайта
 @import "parts/_jumbotron.scss";								// Слайдер на первом экране главной страницы
+@import "parts/_sticky.scss";										// закреплённый пост на главной странице
 @import "parts/_action.scss";										// блок с рекламой и "призывом" перейти на страницу о университете и страницу абитериенту
 @import "parts/_flat.scss";											// флат иконки
 @import "parts/_events.scss";										// "Анонсы" главной страницы
 @import "parts/_news.scss";											// блок новостей на главнйо странице
+@import "parts/_share.scss";										// блок "Поделиться" главной страницы
+@import "parts/_current.scss";
 @import "parts/_footer.scss";										// стили подвала сайта 
 
 
