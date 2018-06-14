@@ -73,7 +73,7 @@ script.
 			jQuery( '#jumbotron-slider' ).slick( {
 				lazyLoad: 'ondemand',
 				autoplay: true,
-				autoplaySpeed: 2000,
+				autoplaySpeed: 3000,
 				speed: 400,
 				fade: true,
 				dots: false,
@@ -91,14 +91,16 @@ script.
 		( function () {
 			jQuery( '#current-slider' ).slick( {
 				lazyLoad: 'ondemand',
+				slidesToShow: 1,
+				slidesToScroll: 1,
 				autoplay: true,
 				autoplaySpeed: 2000,
-				dots: true,
-				infinite: true,
-				speed: 300,
-				slidesToShow: 1,
 				centerMode: true,
 				variableWidth: true
+				speed: 300,
+				prevArrow: jQuery( '#current-slider-arrow-prev' ),
+				nextArrow: jQuery( '#current-slider-arrow-next' ),
+				dots: false,
 			} );
 		} )();
 

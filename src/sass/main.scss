@@ -1,5 +1,5 @@
-@import "helpers/_variables.scss";              //переменные
-@import "helpers/_mixins.scss";                 //миксины
+@import "helpers/_variables.scss";              // переменные
+@import "helpers/_mixins.scss";                 // миксины
 
 //
 @import "base/_normalize";
@@ -8,7 +8,8 @@
 
 //компоненты по БЭМу
 @import "components/_flexboxgrid.scss";
-@import "components/_wrapper.scss";             //контейнер страницы, прижатие футера
+@import "components/_wrapper.scss";             // контейнер страницы, прижатие футера
+@import "components/_entry.scss";								// иконка флат списка с эффектами
 @import "components/_icon.scss";
 @inport "components/_sprites.scss";
 @import "components/_nav.scss";
@@ -35,7 +36,7 @@
 @import "parts/_events.scss";										// "Анонсы" главной страницы
 @import "parts/_news.scss";											// блок новостей на главнйо странице
 @import "parts/_share.scss";										// блок "Поделиться" главной страницы
-@import "parts/_current.scss";
+@import "parts/_current.scss";									// слайдер с "актуальной" темой на главной странице
 @import "parts/_footer.scss";										// стили подвала сайта 
 
 

@@ -9,7 +9,7 @@
 
 	.jumbotron-arrows { @include position ( absolute, 0px, 0px, 0px, auto ); pointer-events: none; }
 
-	.slick-arrow {
+	.slider-arrow {
 		display: inline-block;
 		pointer-events: auto;
 		width: 40px;
