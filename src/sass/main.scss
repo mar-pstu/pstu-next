@@ -20,6 +20,7 @@
 @import "components/_section.scss";
 @import "components/_media.scss";
 @import "components/_date.scss";
+@import "components/_slider.scss";							// элементы слайдера
 
 @import "wordpress/_calendar.scss";
 @import "wordpress/_tagcloud.scss";
@@ -37,6 +38,8 @@
 @import "parts/_news.scss";											// блок новостей на главнйо странице
 @import "parts/_share.scss";										// блок "Поделиться" главной страницы
 @import "parts/_current.scss";									// слайдер с "актуальной" темой на главной странице
+@import "parts/_people.scss";										// Секция "Люди" главной страницы
+@import "parts/_projects.scss";									// Секция "Проекты" главной страницы
 @import "parts/_footer.scss";										// стили подвала сайта 
 
 

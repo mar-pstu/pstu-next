@@ -12,7 +12,6 @@
 	text-shadow: 1px 1px 1px #262626;
 	overflow: hidden;
 	position: relative;
-	margin: 0px auto 15px auto;
 	max-width: 400px;
 	&:before { content: ''; display: block; @include position ( absolute, 0px, 0px, 0px, 0px ); background-color: rgba( 0, 0, 0, 0.75 ); }
 	&:hover {

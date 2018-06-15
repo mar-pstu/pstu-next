@@ -1,0 +1,66 @@
+//
+//	Секция "Люди" главной страницы
+//	Для публикации рубрик: "Наши выпускники", "Такой я есть", "Профессора"
+//
+
+
+.people {
+
+	.slider-prev { left: 0%; margin-left: -20px; }
+	.slider-next { right: 0%; margin-right: -20px; }
+
+	.slider-for {
+
+		text-align: center;
+
+		.entry {
+			@include td ( none, none );
+			transform-origin: center bottom;
+			transform: scale( 0.75 );
+			opacity: 0.75;
+			transition: opacity 350ms, transform 350ms;
+		}
+
+		.slick-center .entry,
+		.slider-center .entry {
+			opacity: 1.00;
+			transform: scale( 1.00 );
+		}
+
+		.wp-post-image {
+			width: 100%;
+			max-width: 300px;
+			border-radius: 50%;
+			overflow: hidden;
+			border: 1px solid #888;
+			box-shadow: 0px 0px 5px rgba( 0, 0, 0, 0.75 ) inset;
+		}
+
+		.title * {
+			font-size: 1.5em;
+			line-height: 2em;
+			text-transform: uppercase;
+			font-weight: normal;
+			margin: 15px 0px;
+		}
+
+	} // slider-for
+
+	.slider-nav {
+
+		position: relative;
+
+		.entry {
+			display: block;
+			border: 0px;
+			padding: 0px;
+			width: 100px;
+			height: 100px;
+			background-position: center center;
+			background-size: 100% 100%;
+			cursor: pointer;
+		}
+
+	} // slider-nav
+
+}

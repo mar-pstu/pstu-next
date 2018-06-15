@@ -6,10 +6,10 @@ mixin projects_for_entry ( args )
 		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
 		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit.';
 		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x300/2ecc71/ecf0f1';
-	.projects_for__entry.entry: .row
-		.col-xs-12.col-sm-6.col-md-6.col-lg-6: img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
+	.slider-for__entry.entry: .row
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6: img.center-block.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
 		.col-xs-12.col-sm-6.col-md-6.col-lg-6
-			h3.title
+			.title: h3 #{args.title}
 			.excerpt: p #{args.excerpt}
 			p: a.btn.btn-success( href="#" ) Подробней
 
@@ -17,26 +17,30 @@ mixin projects_nav_entry ( args )
 	-
 		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
 		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/150x150/2ecc71/ecf0f1';
-	button.projects_nav__entry.entry: img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
+	button.slider-nav__entry.entry: img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
 
 //
 // PROJECTS start
-section.projects#projects
-	.section__heading.heading: .container: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+section.section.projects#projects: .container: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+	.section__heading.heading
 		h2.title Проекты
 		p.desctiption Проекты Приазовского государственного технического университета
-	.section__body.body: .container: .col-xs-12.col-sm-12.col-md-12.col-lg-12
-		.people-for#projects-for
-			+projects_for_entry ( {} )
-			+projects_for_entry ( {} )
-			+projects_for_entry ( {} )
-			+projects_for_entry ( {} )
-			+projects_for_entry ( {} )
-		.projects-nav#projects-nav
-			+projects_nav_entry ( {} )
-			+projects_nav_entry ( {} )
-			+projects_nav_entry ( {} )
-			+projects_nav_entry ( {} )
-			+projects_nav_entry ( {} )
+	.section__body.body
+		button.slider-arrow.slider-prev#projects-slider-arrow-prev &larr;
+		button.slider-arrow.slider-next#projects-slider-arrow-next &rarr;
+		.slider-for#projects-slider-for
+			+projects_for_entry ( { thumbnail: src.img+'project-bi.jpg', title: 'Бизнес — инкубатор', } )
+			+projects_for_entry ( { thumbnail: src.img+'project-bioart.jpg', title: 'Bioart', } )
+			+projects_for_entry ( { thumbnail: src.img+'project-cbs.jpg', title: 'Региональный учебный центр бизнес-навыков', } )
+			+projects_for_entry ( { thumbnail: src.img+'project-magic.jpg', title: 'Театр моды «Магия»', } )
+			+projects_for_entry ( { thumbnail: src.img+'project-mbs.jpg', title: 'Мариупольская бизнес-школа', } )
+			+projects_for_entry ( { thumbnail: src.img+'project-shadr.jpg', title: 'Школа Архитектурного и Дизайнерского Развития', } )
+		.slider-nav#projects-slider-nav
+			+projects_nav_entry ( { thumbnail: src.img+'project-bi.jpg', title: 'Бизнес — инкубатор', } )
+			+projects_nav_entry ( { thumbnail: src.img+'project-bioart.jpg', title: 'Bioart', } )
+			+projects_nav_entry ( { thumbnail: src.img+'project-cbs.jpg', title: 'Региональный учебный центр бизнес-навыков', } )
+			+projects_nav_entry ( { thumbnail: src.img+'project-magic.jpg', title: 'Театр моды «Магия»', } )
+			+projects_nav_entry ( { thumbnail: src.img+'project-mbs.jpg', title: 'Мариупольская бизнес-школа', } )
+			+projects_nav_entry ( { thumbnail: src.img+'project-shadr.jpg', title: 'Школа Архитектурного и Дизайнерского Развития', } )
 // PROJECTS end
 //

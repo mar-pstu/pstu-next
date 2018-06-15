@@ -1,6 +1,6 @@
 script(src=src.js+'jquery.min.js')
 
-script(asinc, src=src.js+'parallax.js')
+script(asinc, src=src.js+'prism.js')
 
 script(asinc, src=src.js+'lazyload.js')
 script.
@@ -91,12 +91,12 @@ script.
 		( function () {
 			jQuery( '#current-slider' ).slick( {
 				lazyLoad: 'ondemand',
-				slidesToShow: 1,
+				slidesToShow: 2,
 				slidesToScroll: 1,
 				autoplay: true,
 				autoplaySpeed: 2000,
 				centerMode: true,
-				variableWidth: true
+				variableWidth: true,
 				speed: 300,
 				prevArrow: jQuery( '#current-slider-arrow-prev' ),
 				nextArrow: jQuery( '#current-slider-arrow-next' ),
@@ -106,41 +106,50 @@ script.
 
 		// люди
 		( function () {
-			jQuery( '#people-for' ).slick( {
-				slidesToShow: 1,
+			jQuery( '#people-slider-for' ).slick( {
+				slidesToShow: 3,
 				slidesToScroll: 1,
+				speed: 400,
 				arrows: false,
-				fade: true,
-				asNavFor: '#people-nav'
+				fade: false,
+				dots: false,
+				asNavFor: '#people-slider-nav',
+				centerMode: true,
+				centerPadding: '60px',
 			} );
-			jQuery( '#people-nav' ).slick( {
+			jQuery( '#people-slider-nav' ).slick( {
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				asNavFor: '#people-for',
+				asNavFor: '#people-slider-for',
 				dots: false,
 				centerMode: true,
 				focusOnSelect: true,
-				variableWidth: true
+				variableWidth: true,
+				arrows: true,
+				prevArrow: jQuery( '#people-slider-arrow-prev' ),
+				nextArrow: jQuery( '#people-slider-arrow-next' ),
 			} );
 		} )();
 
 		// проекты
 		( function () {
-			jQuery( '#projects-for' ).slick( {
+			jQuery( '#projects-slider-for' ).slick( {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				arrows: false,
-				fade: true,
-				asNavFor: '#projects-nav'
+				fade: false,
+				asNavFor: '#projects-slider-nav'
 			} );
-			jQuery( '#projects-nav' ).slick( {
+			jQuery( '#projects-slider-nav' ).slick( {
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				asNavFor: '#projects-for',
+				asNavFor: '#projects-slider-for',
 				dots: false,
 				centerMode: true,
 				focusOnSelect: true,
-				variableWidth: true
+				variableWidth: true,
+				prevArrow: jQuery( '#projects-slider-arrow-prev' ),
+				nextArrow: jQuery( '#projects-slider-arrow-next' ),
 			} );
 		} )();
 
