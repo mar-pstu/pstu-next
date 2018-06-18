@@ -1,0 +1,27 @@
+//
+//
+//
+
+
+.links {
+
+	background-color: $brand-primary;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.50 );
+
+	a {
+		@include color ( #fff, #fff, #fff, #fff );
+		@include td ( none, none );
+		display: block;
+		padding: 5px 7px;
+		&:hover { background-color: $brand-success; }
+	}
+
+	&__list {
+		@extend %list-unstyled;
+		@extend %list-inline;
+	}
+
+	ul ul { display: none; }
+
+}

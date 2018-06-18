@@ -11,12 +11,12 @@ mixin partners_entry ( args )
 //
 // PARTNERS start
 section.partners#partners: .container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
-	#partners-slider
-		+partners_entry( {} )
-		+partners_entry( {} )
-		+partners_entry( {} )
-		+partners_entry( {} )
-		+partners_entry( {} )
-		+partners_entry( {} )
+	.section__body
+		button.slider-arrow.slider-prev#partners-slider-arrow-prev &larr;
+		button.slider-arrow.slider-next#partners-slider-arrow-next &rarr;
+		.partners-slider#partners-slider
+			+partners_entry( { thumbnail: src.img+'partner_mrpl.jpg', title: 'Мариупольский городской совет' } )
+			+partners_entry( { thumbnail: src.img+'partner_mon.jpg', title: 'Министерство образования и науки Украины' } )
+			+partners_entry( { thumbnail: src.img+'partner_mmateng.jpg', title: 'TEMPUS MMATENG' } )
 // PARTNERS end
 //

@@ -23,7 +23,7 @@ mixin projects_nav_entry ( args )
 // PROJECTS start
 section.section.projects#projects: .container: .col-xs-12.col-sm-12.col-md-12.col-lg-12
 	.section__heading.heading
-		h2.title Проекты
+		h2.title: a( href="#" ) Проекты
 		p.desctiption Проекты Приазовского государственного технического университета
 	.section__body.body
 		button.slider-arrow.slider-prev#projects-slider-arrow-prev &larr;
@@ -35,12 +35,5 @@ section.section.projects#projects: .container: .col-xs-12.col-sm-12.col-md-12.co
 			+projects_for_entry ( { thumbnail: src.img+'project-magic.jpg', title: 'Театр моды «Магия»', } )
 			+projects_for_entry ( { thumbnail: src.img+'project-mbs.jpg', title: 'Мариупольская бизнес-школа', } )
 			+projects_for_entry ( { thumbnail: src.img+'project-shadr.jpg', title: 'Школа Архитектурного и Дизайнерского Развития', } )
-		.slider-nav#projects-slider-nav
-			+projects_nav_entry ( { thumbnail: src.img+'project-bi.jpg', title: 'Бизнес — инкубатор', } )
-			+projects_nav_entry ( { thumbnail: src.img+'project-bioart.jpg', title: 'Bioart', } )
-			+projects_nav_entry ( { thumbnail: src.img+'project-cbs.jpg', title: 'Региональный учебный центр бизнес-навыков', } )
-			+projects_nav_entry ( { thumbnail: src.img+'project-magic.jpg', title: 'Театр моды «Магия»', } )
-			+projects_nav_entry ( { thumbnail: src.img+'project-mbs.jpg', title: 'Мариупольская бизнес-школа', } )
-			+projects_nav_entry ( { thumbnail: src.img+'project-shadr.jpg', title: 'Школа Архитектурного и Дизайнерского Развития', } )
 // PROJECTS end
 //

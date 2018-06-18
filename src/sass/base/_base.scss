@@ -68,12 +68,13 @@
 .list-inline { @extend %list-inline; }
 
 
-.list-unstyled {
+%list-unstyled {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 	li:before { display: none; }
 }
+.list-unstyled { @extend %list-unstyled; }
 
 %link-unstyled {
 	@include td ( inherit, inherit );
