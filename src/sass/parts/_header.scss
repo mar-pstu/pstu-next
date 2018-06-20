@@ -5,6 +5,46 @@
 
 .header {
 
+	.fixed {
+		position: fixed;
+		top: 50%;
+		right: 0%;
+		z-index: 1000;
+	}
+
+	&__fixed {
+		a {
+			@include td ( none, none );
+			@include color( #fff, #fff, #fff, #fff );
+			padding: 5px 15px;
+			display: block;
+			transition: background-color;
+			text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.50 );
+
+			&:hover { background-color: $brand-danger; }
+		}
+		.icon {
+			position: absolute;
+			top: 0%;
+			right: 0%;
+		}
+		.list {
+			padding: 0px;
+			margin: 0px;
+			background-color: $brand-info;
+			overflow: hidden;
+			border-radius: 2px;
+			border: 1px solid #262626;
+			transform-origin: center right;
+			transform: translate( 45%, -50% ) scale( 0.95 );
+			transition: transform 200ms, opacity 200ms;
+			opacity: 0;
+			li:before { display: none; }
+			&:hover { transform: translate( 0%, -50% ) scale( 1.00 ); opacity: 1; }
+		}
+		.menu-item + .menu-item { border-top: 1px solid #262626; }
+		.sub-menu { display: none; }
+	}
 
 	&__top {
 		background-color: $brand-primary;

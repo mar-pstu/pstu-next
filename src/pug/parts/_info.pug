@@ -1,8 +1,8 @@
 .main__info.info
-	img.lazy.qr-code( src="#", data-src="http://chart.apis.google.com/chart?choe=UTF-8&chld=L&cht=qr&chs=150x150&chl=http://pstu.edu/" )
+	img.lazy.qr-code( src="#", data-src="http://chart.apis.google.com/chart?choe=UTF-8&chld=L&cht=qr&chs=100x100&chl=http://pstu.edu/" )
 	h1.title #{page.title}
 	p.lead #{page.excerpt}
-	.clearfix: include ../components/_breadcrumb
+	include ../components/_breadcrumb
 	.clearfix: include ../components/_share
 	if ( page.type == 'page' ) || ( page.type == 'single' )
 		.tags: ul.tags__list.list

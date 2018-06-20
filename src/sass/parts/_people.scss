@@ -16,7 +16,7 @@
 		.entry {
 			@include td ( none, none );
 			transform-origin: center bottom;
-			transform: scale( 0.75 );
+			transform: scale( 0.65 );
 			opacity: 0.75;
 			transition: opacity 350ms, transform 350ms;
 		}

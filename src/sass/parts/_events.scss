@@ -20,7 +20,7 @@
 		margin-bottom: 10px;
 		padding: 0px 0px 0px 70px;
 		&:hover {
-			.date { background-color: $brand-info; }
+			.date { background-color: lighten( $brand-info, 5% ); }
 		}
 	}
 
