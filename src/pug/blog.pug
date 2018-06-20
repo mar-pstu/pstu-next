@@ -1,7 +1,4 @@
 extend layout/_index
-mixin blog_entry ( args )
-	+media( args )
-		.text-right: a.btn.btn-primary( href="#" ) Подробней
 
 block variables
 	- page.title = "Блог";
@@ -12,12 +9,16 @@ block main
 		.row
 			.col-xs-12.col-sm-7.col-md-7.col-lg-8
 				include parts/_info
-				+blog_entry ( {} )
-				+blog_entry ( {} )
-				+blog_entry ( {} )
-				+blog_entry ( {} )
-				+blog_entry ( {} )
-				+blog_entry ( {} )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_01.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_02.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_03.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_04.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_05.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_06.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_07.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_08.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_09.jpg' } )
+				+entry ( { thumbnail: src.img+'post_thumbnail_sm_10.jpg' } )
 				include components/_pagination
 			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
 	include parts/_current

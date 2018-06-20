@@ -8,24 +8,25 @@
 	padding: 25px;
 
 	.entry {
+		@include color ( $font-color-default, $font-color-default, $font-color-default, $font-color-default );
 		@include td ( none, none );
 		@include clearfix();
 		position: relative;
 		min-height: 64px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: top;
 		transition: background-color 250ms;
 		margin-bottom: 10px;
 		padding: 0px 0px 0px 70px;
 		&:hover {
-			.date { background-color: $brand-primary; }
+			.date { background-color: $brand-info; }
 		}
 	}
 
 	&__entry {
 		.date { @include position ( absolute, 0px, 0px, 0px, 0px ); }
-		.title { font-weight: normal; margin: 0px; }
+		.title { font-weight: normal; margin: 0px; font-size: 1.25em; }
 	}
 
 }

@@ -1,23 +1,18 @@
 //-
 	Секция главной страницы для вывода новостей
-
-mixin news_entry ( args )
-	.news__entry.entry
-		+media ( args )
-			.text-right: a.btn.btn-success( href="#" ) Подробней
 	
 //
 // NEWS start
 section.section.news#news
 	.section__heading.heading
-		h2.title Новости
+		h2.title: a( href="#" ) Новости
 		p.description.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, laudantium hic! Eligendi accusantium quas fugit temporibus modi veniam magnam? Doloremque commodi doloribus.
 	.section__body.body
-		+news_entry( { thumbnail: src.img+'post_thumbnail_sm_01.jpg' } )
-		+news_entry( { thumbnail: src.img+'post_thumbnail_sm_02.jpg' } )
-		+news_entry( { thumbnail: src.img+'post_thumbnail_sm_03.jpg' } )
-		+news_entry( { thumbnail: src.img+'post_thumbnail_sm_04.jpg' } )
-		+news_entry( { thumbnail: src.img+'post_thumbnail_sm_05.jpg' } )
+		+entry( { thumbnail: src.img+'post_thumbnail_sm_01.jpg' } )
+		+entry( { thumbnail: src.img+'post_thumbnail_sm_02.jpg' } )
+		+entry( { thumbnail: src.img+'post_thumbnail_sm_03.jpg' } )
+		+entry( { thumbnail: src.img+'post_thumbnail_sm_04.jpg' } )
+		+entry( { thumbnail: src.img+'post_thumbnail_sm_05.jpg' } )
 	.section__basement.basement
 		p.text-center: a.small( href="#" ) Смотреть ещё
 // NEWS end

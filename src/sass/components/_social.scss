@@ -1,0 +1,21 @@
+//
+//	Иконки ссылок на соц. сети
+//
+
+
+.social {
+
+	.list {
+		a {
+			@include td ( none, none );
+			display: block;
+		}
+		svg {
+			display: block;
+			height: 16px;
+			max-width: 32px;
+			* { fill: #fff; }
+		}
+	} // list
+
+}

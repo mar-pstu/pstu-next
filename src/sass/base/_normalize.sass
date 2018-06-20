@@ -23,9 +23,10 @@ body
   margin: 0
   font-size: $font-size-base
   line-height: $line-height-base
-  color: #262626
+  color: $font-color-default
   font-family: 'Open Sans', sans-serif
-  background-color: #eee
+  // background-color: #eee
+  background-color: #fff
 
 
 body *
@@ -100,8 +101,14 @@ template
 
 a
   background-color: transparent
-  @include color ( #444, #444, #444, #444 )
-  @include td ( none, underline )
+  color: $link-color-default
+  text-decoration: none
+  &:visited,
+  &:active
+    color: $link-color-default
+  &:hover
+    text-decoration: underline
+    color: $link-color-default
 
 
 //
@@ -146,14 +153,47 @@ strong
 //
 
 h1
-  font-size: 2em
-  line-height: 1.25em
-  margin: 0.67em 0
+  font-size: 2.00em
+  line-height: 1.15em
+  margin: 0.25em 0
+  text-transform: uppercase
+  font-weight: normal
+  @include min-width ( $screen-sm )
+    font-size: 2.35em
+    line-height: 1.25em
+    margin: 0.67em 0
+
 
 h2
-  font-size: 1.75em
+  font-size: 1.5em
   line-height: 1.25em
-  margin: 0.67em 0
+  margin: 0.25em 0
+  @include min-width ( $screen-sm )
+    font-size: 2em
+    line-height: 1.25em
+    margin: 0.67em 0
+
+h3
+  font-size: 1.10em
+  line-height: 1.25em
+  margin: 0.67em 0 0 0
+  font-weight: normal
+  @include min-width ( $screen-sm )
+    font-size: 1.35em
+    line-height: 1.25em
+    margin: 0.15em 0
+
+h4
+  font-size: 1.10em
+  line-height: 1.25em
+  margin: 0.25em 0 0 0
+  font-weight: normal
+  font-variant: small-caps
+
+h1 a, h2 a, h3 a, h4 a
+  color: inherit
+  &:hover
+    color: inherit
 
 //
 // Address styling not present in IE 8/9.
@@ -425,10 +465,19 @@ textarea
 table
   border-collapse: collapse
   border-spacing: 0
+  width: 100%
+  margin: 1em auto
+  caption
+    caption-side: top
+    text-align: right
+    font-style: italic
+    color: #999
 
 td,
 th
   padding: 0
+  border: 1px solid #999
+  padding: 2px 4px
 
 ul
   list-style: none

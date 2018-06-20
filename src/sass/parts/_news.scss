@@ -24,6 +24,7 @@
 			width: 150px;
 			height: 150px;
 			margin: 15px auto;
+			box-shadow: 1px 1px 3px rgba( 0, 0, 0, 0.50 );
 			@include min-width ( $screen-sm ) {
 				width: 100px;
 				height: 100px;
@@ -33,8 +34,9 @@
 		.media-heading {
 			text-align: center;
 			@include min-width ( $screen-sm ) { text-align: left; }
-			a { @include td ( none, none ); }
+			a { @include td ( none, none ); color: $font-color-default; }
 		}
+		.excerpt p { margin: 0px; }
 	} // __entry
 
 }

@@ -5,7 +5,7 @@ mixin partners_entry ( args )
 	-
 		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet';
 		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x200/2ecc71/ecf0f1';
-	a( href="#", title=args.title )
+	a.partners__entry.entry( href="#", title=args.title )
 		img( data-lazy=args.thumbnail, alt=args.title )
 
 //

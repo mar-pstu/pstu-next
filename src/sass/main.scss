@@ -8,41 +8,48 @@
 
 //компоненты по БЭМу
 @import "components/_flexboxgrid.scss";
-@import "components/_wrapper.scss";             // контейнер страницы, прижатие футера
-@import "components/_entry.scss";								// иконка флат списка с эффектами
-@import "components/_icon.scss";
-@inport "components/_sprites.scss";
-@import "components/_nav.scss";
-@import "components/_widget.scss";
-@import "components/_comments.scss";
-@import "components/_btn.scss";
-@import "components/_to-top-btn.scss";
-@import "components/_section.scss";
-@import "components/_media.scss";
-@import "components/_date.scss";
-@import "components/_slider.scss";							// элементы слайдера
+@import "components/_wrapper.scss";           // контейнер страницы, прижатие футера
+@import "components/_entry.scss";							// иконка флат списка с эффектами
+@inport "components/_sprites.scss";						// спрайты
+@import "components/_nav.scss";								// навигация
+@import "components/_widget.scss";						// виджеты
+@import "components/_comments.scss";					// комментарии
+@import "components/_btn.scss";								// кнопки
+@import "components/_to-top-btn.scss";				// кнопка "пролистать наверх"
+@import "components/_social.scss";						// иконки для ссылок на соц. сети
+@import "components/_section.scss";						// типовые секции главной страницы
+@import "components/_media.scss";							// элементы медиасписка (bootstrap 3)
+@import "components/_date.scss";							// блок "дата"
+@import "components/_slider.scss";						// элементы слайдера
+@import "components/_breadcrumb.scss";				// "хдебные крошки"
+@import "components/_pagination.scss";				// пагинация CMS Wordpress
+@import "components/_form.scss";							// стили элементов формы
 
-@import "wordpress/_calendar.scss";
-@import "wordpress/_tagcloud.scss";
-@import "wordpress/_menu.scss";
+// "стандартные" компоненты CMS Wordpress
+@import "wordpress/_calendar.scss";						// виджет "Календарь"
+@import "wordpress/_tagcloud.scss";						// виджет "Облако тегов"
+@import "wordpress/_menu.scss";								// виджет "Меню"
 @import "wordpress/_gallery.scss";
 
 
-//части страницы
-@import "parts/_header.scss";										// стили шапки сайта
-@import "parts/_jumbotron.scss";								// Слайдер на первом экране главной страницы
-@import "parts/_sticky.scss";										// закреплённый пост на главной странице
-@import "parts/_action.scss";										// блок с рекламой и "призывом" перейти на страницу о университете и страницу абитериенту
-@import "parts/_flat.scss";											// флат иконки
-@import "parts/_events.scss";										// "Анонсы" главной страницы
-@import "parts/_news.scss";											// блок новостей на главнйо странице
-@import "parts/_share.scss";										// блок "Поделиться" главной страницы
-@import "parts/_current.scss";									// слайдер с "актуальной" темой на главной странице
-@import "parts/_people.scss";										// Секция "Люди" главной страницы
-@import "parts/_projects.scss";									// Секция "Проекты" главной страницы
+// части страницы
+@import "parts/_aside.scss";									// сайдбары страницы
+@import "parts/_header.scss";									// стили шапки сайта
+@import "parts/_jumbotron.scss";							// Слайдер на первом экране главной страницы
+@import "parts/_404.scss";										// стили страницы ошибки 404
+@import "parts/_info.scss";										// информация о странице
+@import "parts/_sticky.scss";									// закреплённый пост на главной странице
+@import "parts/_action.scss";									// блок с рекламой и "призывом" перейти на страницу о университете и страницу абитериенту
+@import "parts/_flat.scss";										// флат иконки
+@import "parts/_events.scss";									// "Анонсы" главной страницы
+@import "parts/_news.scss";										// блок новостей на главнйо странице
+@import "parts/_share.scss";									// блок "Поделиться" главной страницы
+@import "parts/_current.scss";								// слайдер с "актуальной" темой на главной странице
+@import "parts/_people.scss";									// Секция "Люди" главной страницы
+@import "parts/_projects.scss";								// Секция "Проекты" главной страницы
 @import "parts/_links.scss";
-@import "parts/_partners.scss";
-@import "parts/_footer.scss";										// стили подвала сайта 
+@import "parts/_partners.scss";								// слайдер "Партнёры"
+@import "parts/_footer.scss";									// стили подвала сайта 
 
 
 .icon {

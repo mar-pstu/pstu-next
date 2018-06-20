@@ -2,13 +2,13 @@
 //- Сайдбар главной страницы. Отображается справа от блока новостей сайта
 //-
 mixin home_widget ( args )
-	.col-xs-12.col-sm-3.col-md-12.col-lg-12
+	.col-xs-12.col-sm-4.col-md-12.col-lg-12
 		+widget( args )
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quas magnam at unde perspiciatis provident voluptates minus molestias rem, nobis. Omnis eum eius assumenda unde eos odit soluta magnam perspiciatis?
 
 //
 // SIDE_HOME start
-aside.aside
+aside.aside: .row
 	+home_widget ( {} )
 	+home_widget ( {} )
 	+home_widget ( {} )

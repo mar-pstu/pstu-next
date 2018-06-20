@@ -15,7 +15,8 @@ mixin people_nav_entry ( args )
 		args.title = ( args.title ) ? args.title : 'Иванов Иван Иванович';
 		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit.';
 		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/150x150/2ecc71/ecf0f1';
-	button.slider-nav__entry.entry.lazy( data-src=src.img+'user-sm.jpg' ): img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
+	.slider-nav__entry.entry.lazy( data-src=src.img+'user-sm.jpg', width="50", height="50" )
+		//- img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
 
 //
 // PEOPLE start

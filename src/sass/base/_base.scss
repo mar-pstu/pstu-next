@@ -3,7 +3,6 @@
 //	базовые стили
 
 
-
 .font-italic { font-style: italic; }
 .font-bold { font-weight: bold; }
 .font-normal { font-weight: normal;	font-style: normal; }
@@ -97,3 +96,31 @@
 	align-items: center;
 }
 .y-center { @extend %y-center; }
+
+
+//
+//
+//
+
+table {
+	&.table-primary {
+		th { background-color: $brand-primary; color: #fff; }
+		th, td { border: 1px solid $brand-primary; }
+	}
+	&.table-success {
+		th { background-color: $brand-success; color: #fff; }
+		th, td { border: 1px solid $brand-success; }
+	}
+	&.table-info {
+		th { background-color: $brand-info; color: #fff; }
+		th, td { border: 1px solid $brand-info; }
+	}
+	&.table-danger {
+		th { background-color: $brand-danger; color: #fff; }
+		th, td { border: 1px solid $brand-danger; }
+	}
+	&.table-warning {
+		th { background-color: $brand-warning; color: #fff; }
+		th, td { border: 1px solid $brand-warning; }
+	}
+}

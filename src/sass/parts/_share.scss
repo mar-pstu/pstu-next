@@ -6,6 +6,8 @@
 
 .share {
 
+	// @include clearfix();
+
 	background-color: $brand-primary;
 	padding: 25px 0px;
 	box-shadow: 0px 0px 5px rgba( 0, 0, 0, 0.50 );
@@ -19,7 +21,14 @@
 	}
 
 	&__qr-code {
+		display: block;
 		box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.50 );
+		margin: 10px auto;
+		float: none;
+		@include min-width( $screen-sm ) {
+			float: right;
+			margin: 10px;
+		}
 	}
 
 }

@@ -58,3 +58,18 @@ mixin flat_entry( args )
 		img.wp-post-image.lazy( src="#", data-src=args.thumbnail )
 		.title: h3 #{args.title}
 		.excerpt: p #{args.excerpt}
+//-
+//-
+//-
+mixin entry ( args )
+	- args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+	- args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
+	- args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum distinctio facere minima ducimus eos, et laudantium quaerat, iure quis unde eveniet nulla dolore fugit praesentium sapiente officiis cumque sit recusandae.';
+	.news__entry.entry.media: .clearfix
+		.media-left.pull-left: a(href="#"): img.lazy.media-object( src="#", data-src=args.thumbnail, alt=args.title )
+		.media-body
+			h3.media-heading: a( href="#" ) #{args.title}
+			div.excerpt: p #{args.excerpt}
+			if ( block )
+				block
+			.text-right: a.btn.btn-success( href="#" ) Подробней
