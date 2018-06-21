@@ -7,7 +7,7 @@
 	@include color ( #fff, #fff, #fff, #fff );
 	@include td ( none, none );
 	display: inline-block;
-	border-radius: 2px;
+	border-radius: 1px;
 	padding: 5px 10px;
 	margin: 2px;
 	cursor: pointer;
@@ -50,6 +50,7 @@
 
 	&-block {
 		display: block;
+		width: 100%;
 	}
 
 }

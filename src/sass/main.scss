@@ -24,6 +24,7 @@
 @import "components/_breadcrumb.scss";				// "хдебные крошки"
 @import "components/_pagination.scss";				// пагинация CMS Wordpress
 @import "components/_form.scss";							// стили элементов формы
+@import "components/_pager.scss";
 
 // "стандартные" компоненты CMS Wordpress
 @import "wordpress/_calendar.scss";						// виджет "Календарь"
@@ -48,12 +49,14 @@
 @import "parts/_people.scss";									// Секция "Люди" главной страницы
 @import "parts/_projects.scss";								// Секция "Проекты" главной страницы
 @import "parts/_links.scss";
+@import "parts/_similar.scss";
 @import "parts/_partners.scss";								// слайдер "Партнёры"
 @import "parts/_footer.scss";									// стили подвала сайта 
 
 
 .icon {
   display: inline-block;
+  vertical-align: middle;
 }
 
 @mixin icon-sprites( $sprites ) {

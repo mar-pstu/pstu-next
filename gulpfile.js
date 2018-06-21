@@ -117,3 +117,5 @@ gulp.task( 'watch', function () {
 });
 
 gulp.task( 'default', [ 'sass', 'pug', 'js', 'watch' ] );
+gulp.task( 'sprite', [ 'icon' ] );
+gulp.task( 'image', [ 'sprite', 'imagemin', 'sass' ] );

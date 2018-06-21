@@ -17,5 +17,19 @@
 		}
 	}
 
+	.tags {
+		margin: 15px 0px;
+	}
+
+	&__tags {
+
+		.list {
+			@extend %list-unstyled;
+			@extend %list-inline;
+		}
+		.icon { vertical-align: middle; }
+
+	}
+
 
 }

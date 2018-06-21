@@ -264,7 +264,26 @@ figure
 hr
   -moz-box-sizing: content-box
   box-sizing: content-box
-  height: 0
+  margin: 15px auto
+  width: 90%
+  height: 1px
+  border: 0px
+  background-color: $brand-primary
+  position: relative
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 80px
+    height: 1px
+    left: 50%
+    margin-left: -40px
+    background-color: $brand-primary
+  &:before
+    top: -3px
+  &:after
+    bottom: -3px
 
 //
 // Contain overflow in all browsers.

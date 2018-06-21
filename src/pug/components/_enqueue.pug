@@ -56,15 +56,16 @@ script.
 		( function () {
 			jQuery( '#similar-slider' ).slick( {
 				lazyLoad: 'ondemand',
+				slidesToShow: 2,
+				slidesToScroll: 1,
 				autoplay: true,
 				autoplaySpeed: 2000,
-				dots: false,
-				infinite: true,
-				speed: 300,
 				centerMode: true,
-				variableWidth: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
+				variableWidth: true,
+				speed: 300,
+				prevArrow: jQuery( '#similar-slider-arrow-prev' ),
+				nextArrow: jQuery( '#similar-slider-arrow-next' ),
+				dots: false,
 			} );
 		} )();
 

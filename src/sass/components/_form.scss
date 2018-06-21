@@ -5,11 +5,27 @@
 
 form {
 
-
-	input[type=text],
-	input[type=email],
 	.form-control {
-		border: 1px solid #262626;
+		display: block;
+		width: 100%;
+		border: 1px solid #ddd;
+		padding: 5px 10px;
+		background-color: #fff;
+		transition: border-color 200ms;
+		&:hover,
+		&:active,
+		&:focus {
+			border: 1px solid $brand-primary;
+		}
+		&:invalid { border: 1px solid $brand-danger; box-shadow: none; }
+	}
+
+	.form-group {
+		margin: 5px 0px ;
+	}
+
+	label {
+		color: #777;
 	}
 
 

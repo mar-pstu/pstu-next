@@ -2,26 +2,29 @@
 	Секция "Похожие записи"
 
 mixin similar_entry ( args )
-	-
-		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
-		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit.';
-		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x200/2ecc71/ecf0f1';
-	a( href="#" ).similar__entry.entry
-		img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
-		h3.title  #{args.title}
-		.excerpt: p #{args.excerpt}
+	- args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+	- args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
+	- args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum distinctio facere minima ducimus eos, et laudantium quaerat, iure quis unde eveniet nulla dolore fugit praesentium sapiente officiis cumque sit recusandae.';
+	.similar__entry.entry.media.clearfix
+		.media-left.pull-left: a(href="#"): img.lazy.media-object( src="#", data-src=args.thumbnail, alt=args.title )
+		.media-body
+			h4.media-heading: a( href="#" ) #{args.title}
+			div.excerpt: p #{args.excerpt}
+			p: a( href="#" ) Подробней
 
 //
 // SIMILAR start
 section.section.similar#similar
 	.section__heading.heading: h2 Похожие записи
 	.section__body.boddy
-		#similar-slider
-			+similar_entry( {} )
-			+similar_entry( {} )
-			+similar_entry( {} )
-			+similar_entry( {} )
-			+similar_entry( {} )
-			+similar_entry( {} )
+		button.slider-arrow.slider-prev#similar-slider-arrow-prev &larr;
+		button.slider-arrow.slider-next#similar-slider-arrow-next &rarr;
+		#similar-slider.slider
+			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_01.jpg' } )
+			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_02.jpg' } )
+			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_03.jpg' } )
+			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_04.jpg' } )
+			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_05.jpg' } )
+			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_06.jpg' } )
 // SIMILAR end
 //
