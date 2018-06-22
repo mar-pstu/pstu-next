@@ -5,42 +5,24 @@
 
 .widget .menu {
 
-	background-color: #eee;
-	margin-bottom: -10px;
-
-	li {
-		position: relative;
-		&:before { display: none; content: ''; }
-		&:hover .sub-menu {
-			max-height: 100vh; display: block;
-			opacity: 1;
-		}
-	} // li
-
-	.has-sub-menu > a:after {
-		content: '+';
-		display: inline-block;
-		float: right;
-	}
+	list-style-type: none;
 
 	.sub-menu {
-		padding: 0px;
-		overflow: hidden;
-		max-height: 0px;
-		transition: max-height 500ms, opacity 350ms;
-		opacity: 0;
+		margin: 0px;
+		padding: 0px 0px 0px 20px;
+		li:before { display: none; }
+	}
 
-		a { padding-left: 25px; font-size: 1.00em; }
-
-	} // .sub-menu
+	> li {
+		> a {
+			padding: 5px 10px;
+			font-weight: bold;
+		}
+	}
 
 	a {
 		@include td ( none, none );
-		display: block;
-		padding: 5px;
-		font-size: 1.15em;
-		transition: background-color 150ms;
-		&:hover { background-color: rgba( 0, 0, 0, 0.15 ); text-shadow: 1px 1px 1px rgba( 255, 255, 255, 0.75 ); }
-	}	
+		@include color ( $font-color-default, $link-color-default, $font-color-default, $font-color-default );
+	}
 
 }

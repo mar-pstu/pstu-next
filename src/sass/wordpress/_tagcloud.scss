@@ -8,6 +8,7 @@
 	font-size: 0.85em;
 
 	.tag-cloud-link {
+		@include color ( $font-color-default, $font-color-default, $font-color-default, $font-color-default );
 		@include td ( none, none );
 		display: inline-block;
 		padding: 5px;

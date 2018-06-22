@@ -9,7 +9,7 @@ form {
 		display: block;
 		width: 100%;
 		border: 1px solid #ddd;
-		padding: 5px 10px;
+		padding: 4px 10px;
 		background-color: #fff;
 		transition: border-color 200ms;
 		&:hover,
@@ -18,15 +18,28 @@ form {
 			border: 1px solid $brand-primary;
 		}
 		&:invalid { border: 1px solid $brand-danger; box-shadow: none; }
+		&--md {
+			padding: 7px 15px;
+			font-size: 1.25em;
+		}
+		&--lg {
+			padding: 13px 19px;
+			font-size: 1.75em;
+		}
 	}
 
 	.form-group {
 		margin: 5px 0px ;
 	}
 
-	label {
-		color: #777;
+	.input-group {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
+
+	label { color: #777; }
 
 
 }

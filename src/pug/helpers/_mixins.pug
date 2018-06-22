@@ -3,13 +3,9 @@
 mixin widget( args )
 	.widget
 		if ( args.title )
-			h3.widget__title
-				i.icon.icon-quote
-				span " " + args.title
+			h3.widget__title #[i.icon.icon-quote] #{args.title}
 		else
-			h3.widget__title
-				i.icon.icon-quote
-				span &nbsp; Hello, world!
+			h3.widget__title #[i.icon.icon-quote] Hello, world!
 		if block
 			block
 		else

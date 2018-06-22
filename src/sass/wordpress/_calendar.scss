@@ -17,9 +17,11 @@
 		font-weight: bold;
 		border-bottom: 1px solid #888;
 		padding: 5px 3px;
+		color: #fff;
+		text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.75 );
+		background-color: lighten( $brand-primary, 50% );
 	}
 	td {
-		border-bottom: 1px solid #eee;
 		padding: 5px 3px;
 	}
 	a {
