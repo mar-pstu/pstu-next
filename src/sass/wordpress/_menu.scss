@@ -8,12 +8,17 @@
 	list-style-type: none;
 
 	.sub-menu {
-		margin: 0px;
-		padding: 0px 0px 0px 20px;
-		li:before { display: none; }
+		// 
 	}
-
+margin: 0px;
+		// padding: 0px 0px 0px 20px;
+		// li:before { display: none; }
 	> li {
+		&:before {
+			@include sprite ( $item-arrow ); 
+			border: 0px;
+			border-radius: 0px;
+		}
 		> a {
 			padding: 5px 10px;
 			font-weight: bold;

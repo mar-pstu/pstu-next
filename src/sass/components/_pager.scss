@@ -25,9 +25,9 @@
 			float: right;
 			border: 2px solid $brand-primary;
 			background-color: $brand-primary;
-			margin: 0px 5px 5px 0px;
+			margin: 0px 0px 10px 10px;
 		}
-		&:hover .arrow { transform: scale( 1.00 ) translate( 25%, 0% ); }
+		&:hover .arrow { transform: scale( 1.00 ); }
 	}
 
 	.previous {
@@ -37,13 +37,14 @@
 			float: left;
 			border: 2px solid $brand-success;
 			background-color: $brand-success;
-			margin: 0px 0px 5px 5px;
+			margin: 0px 10px 10px 0px;
 		}
-		&:hover .arrow { transform: scale( 1.00 ) translate( -25%, 0% ); }
+		&:hover .arrow { transform: scale( 1.00 ); }
 	}
 
 	.title {
 		font-variant: normal;
+		font-weight: normal;
 	}
 
 	.arrow {

@@ -13,12 +13,12 @@ header.wrapper__item.header#header
 		.col-xs-12.col-sm.col-md-3.col-lg-3.small: +widget( {} )
 		.col-xs-12.col-sm.col-md-3.col-lg-3.small: +widget( {} )
 	.header__nav.nav: .container: .row
-		.col-xs-12.col-sm-5.col-md-5.col-lg-4
-			a.button( href="#", role="button" ): i.icon.icon-rss
+		.col-xs-10.col-sm-10.col-md-3.col-lg-3
 			form.searchform#header-search( action="#", method="post" )
 				input.form-control( type="search", name="s", placeholder="" )
 				input.submit( type="submit", value="Поиск" )
-		.col-xs-12.col-sm-7.first-sm.col-md-7.col-lg-8
+		.col-xs-2.col-sm-2.col-md-1.col-lg-1: a.rss-button( href="#", role="button" ): i.icon.icon-rss
+		.col-xs-12.col-sm-12.col-md-7.col-lg-8.first-md
 			include ../nav/_header-nav
 // END #header
 //

@@ -107,7 +107,7 @@
 
 }
 
-@media ( max-width: 767px ) {
+@media ( max-width: $screen-lg ) {
 
   .mainWrap {
     width: auto;

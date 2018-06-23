@@ -17,14 +17,16 @@ mixin similar_entry ( args )
 section.section.similar#similar
 	.section__heading.heading: h2 Похожие записи
 	.section__body.boddy
-		button.slider-arrow.slider-prev#similar-slider-arrow-prev &larr;
-		button.slider-arrow.slider-next#similar-slider-arrow-next &rarr;
-		#similar-slider.slider
-			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_01.jpg' } )
-			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_02.jpg' } )
-			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_03.jpg' } )
-			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_04.jpg' } )
-			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_05.jpg' } )
-			+similar_entry( { thumbnail: src.img+'post_thumbnail_md_06.jpg' } )
+		.row
+			.col-xs-2.col-sm-2.col-md-1.col-lg-1
+				button#similar-slider-arrow-prev &larr;
+				button#similar-slider-arrow-next &rarr;
+			.col-xs-10.col-sm-10.col-md-11.col-lg-11: #similar-slider.slider
+				+similar_entry( { thumbnail: src.img+'post_thumbnail_md_01.jpg' } )
+				+similar_entry( { thumbnail: src.img+'post_thumbnail_md_02.jpg' } )
+				+similar_entry( { thumbnail: src.img+'post_thumbnail_md_03.jpg' } )
+				+similar_entry( { thumbnail: src.img+'post_thumbnail_md_04.jpg' } )
+				+similar_entry( { thumbnail: src.img+'post_thumbnail_md_05.jpg' } )
+				+similar_entry( { thumbnail: src.img+'post_thumbnail_md_06.jpg' } )
 // SIMILAR end
 //
