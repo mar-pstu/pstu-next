@@ -10,6 +10,12 @@ script.
 
 script(asinc, src=src.js+'main.js')
 
+script(asinc, src=src.js+'fancybox.js')
+script.
+	jQuery( document ).ready( function () {
+		jQuery( "a > img:only-child" ).closest( "a" ).fancybox();
+	} );
+
 script(asinc, src=src.js+'superembed.js')
 
 script(asinc, src=src.js+'rrssb.js')

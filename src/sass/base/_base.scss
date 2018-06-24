@@ -23,8 +23,12 @@
 
 .display-inline {	display: inline-block; }
 
-.pull-left, .alignleft { float: left; margin-right: 10px; }
-.pull-right, .alignright { float: right; margin-left: 10px; }
+.pull-left, .alignleft { float: left; }
+.pull-right, .alignright { float: right; }
+
+img.alignleft, a.alignleft img { margin: 5px 10px 10px 0px; }
+img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
+
 %clearfix { @include clearfix; }
 .clearfix { @extend %clearfix; }
 
