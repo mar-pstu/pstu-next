@@ -8,18 +8,23 @@ mixin search_entry ( args )
 block variables
 	- page.title = "Поиск";
 	- page.excerpt = "Шаблон страницы результатов поиска (search.php)";
-	- page.type = "blog category archive";
+	- page.type = "search";
 block main
 	.container
 		.row
 			.col-xs-12.col-sm-7.col-md-7.col-lg-8
 				include parts/_info
-				+search_entry ( {} )
-				+search_entry ( {} )
-				+search_entry ( {} )
-				+search_entry ( {} )
-				+search_entry ( {} )
-				+search_entry ( {} )
+				.search__list.list
+					+search_entry ( {} )
+					+search_entry ( {} )
+					+search_entry ( {} )
+					+search_entry ( {} )
+					+search_entry ( {} )
+					+search_entry ( {} )
+					+search_entry ( {} )
+					+search_entry ( {} )
+					+search_entry ( {} )
+					+search_entry ( {} )
 				include components/_pagination
 			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
 	include parts/_current

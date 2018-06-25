@@ -1,0 +1,29 @@
+extend layout/_index
+block variables
+	- page.title = "Структура сайта";
+	- page.excerpt = "";
+	- page.type = "page";
+block main
+	.container-fluid: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12: .entry-content
+		h2 Страницы
+		figure
+			a.center-block( href=src.img+'structure-pages.svg', title="Структура страниц сайта" ): img.center-block.lazy( src="#", data-src=src.img+'structure-pages.svg', alt="Структура страниц сайта" )
+			figcaption Структура страниц сайта
+		hr
+		//
+		h2 Категории
+		figure
+			a.center-block( href=src.img+'structure-categories.svg', title="Категории записей" ): img.center-block.lazy( src="#", data-src=src.img+'structure-categories.svg', alt="Категории записей" )
+			figcaption Категории записей
+		hr
+		//
+		h2 Типы записей
+		figure
+			a.center-block( href=src.img+'structure-type.svg', title="Типы записей" ): img.center-block.lazy( src="#", data-src=src.img+'structure-type.svg', alt="Типы записей" )
+			figcaption Типы записей
+		hr
+		//
+		h2 Меню
+		figure
+			a.center-block( href=src.img+'structure-menus.svg', title="Меню" ): img.center-block.lazy( src="#", data-src=src.img+'structure-menus.svg', alt="Меню" )
+			figcaption Меню

@@ -255,7 +255,11 @@ svg:not(:root)
 
 figure
   // margin: 1em 40px
-  margin: 0px
+  margin: 10px
+  figcaption
+    text-align: center
+    font-style: italic
+    color: #999
 
 //
 // Address differences between Firefox and other browsers.
@@ -300,6 +304,9 @@ code,
 samp
   font-family: monospace, monospace
   font-size: 1em
+  background-color: lighten( $brand-info, 60% )
+  color: $brand-warning
+  padding: 3px
 
 // Forms
 // ==========================================================================
@@ -524,3 +531,8 @@ blockquote
   box-shadow: inset 0px 0px 5px rgba( 0, 0, 0, 0.25 )
   font-size: 1em
   border-left: 3px solid $brand-primary
+
+dl
+  dt
+    font-variant: small-caps
+    font-weight: bold

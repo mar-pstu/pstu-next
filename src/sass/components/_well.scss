@@ -1,0 +1,27 @@
+//
+//	Мини панель на подобии bootstrap 3
+//
+
+
+
+.well {
+
+	display: block;
+	padding: 10px 20px;
+	margin: 5px auto;
+	background-color: #eee;
+	box-shadow: 0px 0px 5px rgba( 0, 0, 0, 0.5 ) inset;
+	border-radius: 2px;
+
+	&-sm {
+		padding: 5px 10px;
+		font-size: 0.85em;
+	}
+
+	&-primary { background-color: lighten( $brand-primary, 65% ); }
+	&-success { background-color: lighten( $brand-success, 65% ); }
+	&-info { background-color: lighten( $brand-info, 65% ); }
+	&-danger { background-color: lighten( $brand-danger, 45% ); }
+	&-warning { background-color: lighten( $brand-warning, 50% ); }
+
+}

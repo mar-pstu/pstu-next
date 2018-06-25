@@ -1,0 +1,44 @@
+form( action="#", method="post" class="form pstu-ajax-form")
+	input( id="pstu_faq_nonce", name="pstu_faq_nonce", value="5d2d324876", type="hidden" )
+	input( name="_wp_http_referer", value="/ru/ask-answers-ru/", type="hidden" )
+	label( for="user_auth", style="display: none; visibility: hidden;" ) Логин бочка с мёдом
+	input( id="user_auth", style="display: none; visibility: hidden;", name="user_auth", value="", type="text" )
+	.row
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12: .form-group
+			label( for="question_cat" ) Выберите категории вопросов
+			select.form-control#question_cat(, name="question[category]", required="" )
+				option( value="", selected="" ) Не выбрано
+				option( value="572" ) Библиотека
+				option( value="445" ) Вопрос к ректору
+				option( value="373" ) Прием
+				option( value="451" ) Противодействие корупции
+				option( value="414" ) Разное
+	.row
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12: .form-group
+			label( for="question_faculty" ) Выбор факультета
+			select.form-control.chosen-select-simple( name="question[faculty]", id="question_faculty" )
+				option( value="", selected="" ) Не выбрано
+				option( value="123" ) Металлургический факультет
+				option( value="127" ) Социально-гуманитарный факультет
+				option( value="131" ) Факультет Инженерной и языковой подготовки
+				option( value="135" ) Факультет Информационных технологий
+				option( value="139" ) Факультет Машиностроения и сварки
+				option( value="143" ) Факультет Транспортных технологий
+				option( value="115" ) Экономический факультет
+				option( value="119" ) Энергетический факультет (ЭнФ)
+	.row
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6: .form-group
+			label( for="faq_question_uname" ) Ваше имя
+			input.form-control#faq_question_uname( name="question[name]", type="text" )
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6: .form-group
+			label( for="question_email" ) Ваш email
+			input.form-control#question_email( name="question[email]", type="email" )
+	.row
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12: .form-group
+			label( for="question_msg" ) Текст сообщения
+			textarea.form-control#question_msg( name="question[msg]", rows="5", required="" )
+	.row
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12: .form-group.form-answer
+	.row
+		.col-xs-6.col-sm-6.col-md-6.col-lg-6: .form-group.text-left: button.btn.btn-default( type="reset" ) Очитстить
+		.col-xs-6.col-sm-6.col-md-6.col-lg-6: .form-group.text-right: button.btn.btn-success( type="submit" ) Задать вопрос

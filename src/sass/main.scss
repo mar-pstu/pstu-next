@@ -24,7 +24,8 @@
 @import "components/_breadcrumb.scss";				// "хдебные крошки"
 @import "components/_pagination.scss";				// пагинация CMS Wordpress
 @import "components/_form.scss";							// стили элементов формы
-@import "components/_pager.scss";
+@import "components/_pager.scss";							// 
+@import "components/_well.scss";							// 
 
 // "стандартные" компоненты CMS Wordpress
 @import "wordpress/_calendar.scss";						// виджет "Календарь"
@@ -38,6 +39,7 @@
 @import "parts/_header.scss";									// стили шапки сайта
 @import "parts/_jumbotron.scss";							// Слайдер на первом экране главной страницы
 @import "parts/_404.scss";										// стили страницы ошибки 404
+@import "parts/_search.scss";
 @import "parts/_info.scss";										// информация о странице
 @import "parts/_sticky.scss";									// закреплённый пост на главной странице
 @import "parts/_action.scss";									// блок с рекламой и "призывом" перейти на страницу о университете и страницу абитериенту
