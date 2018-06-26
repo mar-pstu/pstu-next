@@ -22,6 +22,9 @@
 	&:hover { background-color: $brand-primary; }
 }
 
+.slider-prev { left: 0%; margin-left: -25px; }
+.slider-next { right: 0%; margin-right: -25px; }
+
 .slider-arrow { @extend %slider-arrow; }
 
 .slider-dots {

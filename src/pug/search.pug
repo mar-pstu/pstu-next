@@ -3,7 +3,7 @@ mixin search_entry ( args )
 	.search__entry.entry
 		h3.title Lorem ipsum dolor sit amet, consectetur adipisicing elit
 		.excerpt: p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus fugiat eligendi placeat. At, dolor quisquam officia nisi molestiae minus distinctio eaque recusandae, incidunt vel cupiditate? Repellendus assumenda mollitia neque. Iusto.
-		.text-right: a.btn.btn-primary( href="#" ) Подробней
+		.text-right: a.btn.btn-primary( href="#" ) Подробней #[i.icon.icon-more]
 
 block variables
 	- page.title = "Поиск";
@@ -12,7 +12,7 @@ block variables
 block main
 	.container
 		.row
-			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+			.col-xs-12.col-sm-12.col-md-7.col-lg-8
 				include parts/_info
 				.search__list.list
 					+search_entry ( {} )
@@ -26,5 +26,5 @@ block main
 					+search_entry ( {} )
 					+search_entry ( {} )
 				include components/_pagination
-			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
+			.col-xs-12.col-sm-12.col-md-5.col-lg-4: include asides/_right
 	include parts/_current

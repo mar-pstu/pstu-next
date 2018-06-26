@@ -3,7 +3,7 @@ mixin documents_entry ( args )
 	-
 		args.thumbnail = src.img+'document-thumbnail.png';
 	+media( args )
-		.text-right: a.btn.btn-primary( href="#" ) Подробней
+		.text-right: a.btn.btn-primary( href="#" ) Подробней #[i.icon.icon-more]
 
 block variables
 	- page.title = "Документы";
@@ -12,7 +12,7 @@ block variables
 block main
 	.container
 		.row
-			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+			.col-xs-12.col-sm-12.col-md-7.col-lg-8
 				include parts/_info
 				+documents_entry ( {} )
 				+documents_entry ( {} )
@@ -21,5 +21,5 @@ block main
 				+documents_entry ( {} )
 				+documents_entry ( {} )
 				include components/_pagination
-			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
+			.col-xs-12.col-sm-12.col-md-5.col-lg-4: include asides/_right
 	include parts/_current

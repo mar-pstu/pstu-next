@@ -6,7 +6,15 @@
 .similar {
 
 	.entry {
-		
+		.media-object {
+			display: block;
+			width: 75px;
+			height: 75px;
+			@include min-width ( $screen-sm ) {
+				width: 150px;
+				height: 150px;
+			}
+		}
 	}
 
 }

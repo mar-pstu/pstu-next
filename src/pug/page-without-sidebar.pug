@@ -4,9 +4,9 @@ block variables
 	- page.excerpt = "Шаблон страницы без сайдбара (page-without-sidebar.php)";
 	- page.type = "page";
 block main
-	.container
+	.container-fluid
 		.row
-			.col-xs-12.col-sm-12.col-md-12.col-lg-12
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12: article.entry-content
 				include parts/_info
 				include components/_content
 				ul.text-right.list-unstyled.font-italic

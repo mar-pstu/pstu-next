@@ -7,7 +7,7 @@ block variables
 block main
 	.container
 		.row
-			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+			.col-xs-12.col-sm-12.col-md-7.col-lg-8
 				include parts/_info
 				+entry ( { thumbnail: src.img+'post_thumbnail_sm_01.jpg' } )
 				+entry ( { thumbnail: src.img+'post_thumbnail_sm_02.jpg' } )
@@ -20,5 +20,5 @@ block main
 				+entry ( { thumbnail: src.img+'post_thumbnail_sm_09.jpg' } )
 				+entry ( { thumbnail: src.img+'post_thumbnail_sm_10.jpg' } )
 				include components/_pagination
-			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
+			.col-xs-12.col-sm-12.col-md-5.col-lg-4: include asides/_right
 	include parts/_current

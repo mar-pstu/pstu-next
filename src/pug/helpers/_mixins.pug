@@ -69,3 +69,13 @@ mixin entry ( args )
 			if ( block )
 				block
 			.text-right: a.btn.btn-success( href="#" ) Подробней #[i.icon.icon-more]
+//-
+//-
+//-
+mixin blocksit( args )
+	- args.element = ( args.element ) ? args.element : 'a';
+	- args.column = ( args.column ) ? args.column : '3';
+	- args.images = ( args.images ) ? args.images : [ src.img+'image_1.jpg', src.img+'image_2.jpg', src.img+'image_3.jpg', src.img+'image_4.jpg', src.img+'image_5.jpg', src.img+'image_6.jpg', src.img+'image_8.jpg', src.img+'image_9.jpg', src.img+'image_10.jpg', src.img+'image_11.jpg', src.img+'image_12.jpg' ];
+	.gallery( data-block-element=args.element, data-block-column=args.element )
+		each image in args.images
+			a.gallery__item.item( href=image ): img.lazy( src="#" data-src=image, width="200" )

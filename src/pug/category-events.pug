@@ -22,7 +22,7 @@ block variables
 block main
 	.container
 		.row
-			.col-xs-12.col-sm-7.col-md-7.col-lg-8
+			.col-xs-12.col-sm-12.col-md-7.col-lg-8
 				include parts/_info
 				+events_entry ( { day: '15', month: '06', year: '2018' } )
 				+events_entry ( { day: '20', month: '07', year: '2018' } )
@@ -31,5 +31,5 @@ block main
 				+events_entry ( { day: '07', month: '08', year: '2018' } )
 				+events_entry ( { day: '10', month: '12', year: '2018' } )
 				include components/_pagination
-			.col-xs-12.col-sm-5.col-md-5.col-lg-4: include asides/_right
+			.col-xs-12.col-sm-12.col-md-5.col-lg-4: include asides/_right
 	include parts/_current

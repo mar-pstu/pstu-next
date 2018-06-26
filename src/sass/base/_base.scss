@@ -21,6 +21,18 @@
 .text-right { text-align: right; }
 .text-justify { text-align: justify; }
 
+.text-primary { color: $brand-primary; }
+.text-success { color: $brand-success; }
+.text-info { color: $brand-info; }
+.text-danger { color: $brand-danger; }
+.text-warning { color: $brand-warning; }
+
+.bg-primary { background-color: lighten( $brand-primary, 50% ); padding: 2px 3px; }
+.bg-success { background-color: lighten( $brand-success, 50% ); padding: 2px 3px; }
+.bg-info { background-color: lighten( $brand-info, 50% ); padding: 2px 3px; }
+.bg-danger { background-color: lighten( $brand-danger, 40% ); padding: 2px 3px; }
+.bg-warning { background-color: lighten( $brand-warning, 40% ); padding: 2px 3px; }
+
 .display-inline {	display: inline-block; }
 
 .pull-left, .alignleft { float: left; }
@@ -127,4 +139,26 @@ table {
 		th { background-color: $brand-warning; color: #fff; }
 		th, td { border: 1px solid $brand-warning; }
 	}
+}
+
+
+.hide-xs { display: none; }
+.visible-xs { display: block; }
+
+@include min-width ( $screen-sm ) {
+	.hide-sm { display: none; }
+	.hide-md { display: block; }
+	.hide-lg { display: block; }
+	.visible-sm { display: block; }
+}
+
+@include min-width ( $screen-md ) {
+	.hide-md { display: none; }
+	.hide-lg { display: block; }
+	.visible-md { display: block; }
+}
+
+@include min-width ( $screen-lg ) {
+	.hide-lg { display: none; }
+	.visible-lg { display: block; }
 }

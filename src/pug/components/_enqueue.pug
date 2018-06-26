@@ -13,7 +13,12 @@ script(asinc, src=src.js+'main.js')
 script(asinc, src=src.js+'fancybox.js')
 script.
 	jQuery( document ).ready( function () {
-		jQuery( "a > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.jpg'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.png'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.svg'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.bmp'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.gif'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.jpeg'] > img:only-child" ).closest( "a" ).fancybox();
 	} );
 
 script(asinc, src=src.js+'superembed.js')
@@ -62,13 +67,13 @@ script.
 		( function () {
 			jQuery( '#similar-slider' ).slick( {
 				lazyLoad: 'ondemand',
-				slidesToShow: 2,
-				slidesToScroll: 1,
 				autoplay: true,
-				autoplaySpeed: 2000,
-				centerMode: true,
-				variableWidth: true,
+				autoplaySpeed: 3000,
+				dots: true,
+				infinite: true,
 				speed: 300,
+				slidesToShow: 1,
+				adaptiveHeight: false,
 				prevArrow: jQuery( '#similar-slider-arrow-prev' ),
 				nextArrow: jQuery( '#similar-slider-arrow-next' ),
 				dots: false,
