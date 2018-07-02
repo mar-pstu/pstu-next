@@ -1,0 +1,117 @@
+//
+//	Для типа страницы со списком дочерних в виде "шагов"
+//
+
+$steps-count-width: 100px;
+$steps-count-height: 100px;
+
+.steps {
+
+	position: relative;
+	margin: 25px 0px;
+	padding: 15px 0px;
+
+	.line {
+		display: block;
+		width: 2px;
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		left: 50%;
+		background-color: $brand-primary;
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			width: 15px;
+			height: 15px;
+			background-color: $brand-primary;
+			position: absolute;
+			left: 0%;
+			margin-left: -6px;
+		}
+		&:before { top: 0%; }
+		&:after { top: 100%; }
+	}
+
+	.entry {
+		@include td ( none, none );
+		@include color ( $font-color-default, $font-color-default, $font-color-default, $font-color-default );
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		margin: 50px 0px;
+		&:nth-child( even ) {
+			flex-direction: row;
+			.title { text-align: right; }
+			.excerpt { transform-origin: left center; text-align: left; }
+		}
+		&:nth-child( odd ) {
+			flex-direction: row-reverse;
+			.title { text-align: left; }
+			.excerpt { transform-origin: right center; text-align: right; }
+		}
+		&:hover {
+			.count { transform: rotate( 0deg ); }
+			.number { transform: rotate( 0deg ); }
+			.excerpt { opacity: 1; transform: translate( 0px, 0px ) rotateY( 0deg ); }
+		}
+	}
+
+
+	&__entry {
+
+		.count {
+			transform-origin: center center;
+			transform: rotate( 45deg );
+			transition: transform 250ms;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -( $steps-count-width / 2 ) - 1px;
+			margin-left: -( $steps-count-height / 2 ) - 1px;
+			display: block;
+			width: $steps-count-width + 4px;
+			height: $steps-count-height + 4px;
+			background-color: $brand-primary;
+			text-align: center;
+			border: 2px solid $brand-primary;
+			box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.50 ), 0px 0px 3px rgba( 0, 0, 0, 0.50 ) inset;
+			.wp-post-image {
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				display: block;
+				width: $steps-count-width;
+				height: $steps-count-height;
+				z-index: 1;
+				opacity: 0.75;
+			}
+			.number {
+				transform: rotate( -45deg );
+				transition: transform 250ms;
+				position: relative;
+				z-index: 2;
+				color: #fff;
+				line-height: $steps-count-height;
+				font-size: 60px;
+				text-shadow: 1px 1px 3px rgba( 0, 0, 0, 0.75 );
+			}
+		} // .count
+
+		.title {
+			width: 30%;
+		} // title
+
+		.excerpt {
+			transform: rotateY( -45deg );
+			width: 30%;
+			opacity: 0;
+			transition: opacity 250ms, transform 250ms;
+		}
+
+	} // entry
+
+
+}

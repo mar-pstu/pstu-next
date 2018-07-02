@@ -34,6 +34,10 @@ script.
 		});
 	});
 
+
+script(asinc, src=src.js+'impress.js')
+
+
 script(asinc, src=src.js+'blocksit.js')
 script.
 	( function () {
@@ -58,6 +62,17 @@ script.
 		jQuery( window ).load( GalleriesInit );
 		jQuery( window ).resize( GalleriesInit );
 	} )();
+//- script.
+//- 	( function () {
+//- 		jQuery( document ).ready( function () {
+//- 			jQuery( '#impress' ).BlocksIt({
+//- 				numOfCol: 5,
+//- 				offsetX: 8,
+//- 				offsetY: 8,
+//- 				blockElement: 'div'
+//- 			});
+//- 		} );
+//- 	} )();
 
 script(asinc, src=src.js+'slick.js')
 script.

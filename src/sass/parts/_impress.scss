@@ -1,0 +1,27 @@
+//
+//
+//
+
+
+.impress {
+	position: relative;
+
+	.entry {
+		transform-origin: center center;
+		border: 1px solid #262626;
+		padding: 15px;
+	}
+
+	&__entry {
+		.title {
+
+		}
+		.excerpt {
+
+		}
+		.permalink {
+			text-align: center;
+		}
+	}
+
+}
