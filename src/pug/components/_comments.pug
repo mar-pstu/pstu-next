@@ -10,8 +10,9 @@ mixin comment( args )
 			p #{args.comment}
 			div.clearfix
 				date.small.pull-left.text-info 20.05.2018
-				a.pull-right(href="#", role="button") <i class="glyphicon glyphicon-pencil"></i> Редактировать
-				a.pull-right(href="#", role="button") <i class="glyphicon glyphicon-share-alt"></i> Ответить
+				.alignright
+					.btn.btn-link(href="#", role="button") <i class="glyphicon glyphicon-pencil"></i> Редактировать
+					.btn.btn-link(href="#", role="button") <i class="glyphicon glyphicon-share-alt"></i> Ответить
 			if ( block )
 				block
 //

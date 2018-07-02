@@ -33,6 +33,18 @@
 		&:hover { background-color: lighten( $brand-success, 3% ); }
 	}
 
+	&-link {
+		color: $link-color-default !important;
+		text-decoration: underline;
+		background-color: transparent;
+		box-shadow: none;
+		&:hover {
+			color: $link-color-default;
+			text-decoration: none;
+			box-shadow: none;
+		}
+	}
+
 	&-xs {
 		padding: 2px 5px;
 		font-size: 0.85em;
