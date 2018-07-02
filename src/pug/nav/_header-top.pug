@@ -1,64 +1,44 @@
 .nav
 	button.nav__burger.burger#top-nav-burger( title="Главное меню" ) Верхнее меню
 	ul.nav__list.list#top-nav-list
-		li.menu-item: a( href="#" ) 100 часов волонтёрства
-		li.menu-item: a( href="#" ) «Такий я є!»
-		li
-			a( href="#" ) Наука
-			ul.sub-menu
-				li.menu-item: a( href="#" ) Аспирантура, докторантура
-				li.menu-item
-					a( href="#" ) Выставки
-					ul.sub-menu
-						li.menu-item: a( href="#" ) Web-ресурсы
-						li.menu-item: a( href="#" ) История
-						li.menu-item: a( href="#" ) Профсоюзный комитет
-						li.menu-item: a( href="#" ) Ректорат
-						li.menu-item: a( href="#" ) Структура ПГТУ
-						li.menu-item: a( href="#" ) Ученый совет
-				li.menu-item: a( href="#" ) Научные издания
-				li.menu-item: a( href="#" ) План проведения конференций и олимпиад
-				li
-					a( href="#" ) Приоритетные направления деятельности
-					ul.sub-menu
-						li.menu-item: a( href="#" ) Web-ресурсы
-						li.menu-item: a( href="#" ) История
-						li.menu-item: a( href="#" ) Профсоюзный комитет
-						li.menu-item: a( href="#" ) Ректорат
-						li.menu-item: a( href="#" ) Структура ПГТУ
-						li.menu-item: a( href="#" ) Ученый совет
-				li.menu-item: a( href="#" ) Совет молодых ученых ПГТУ
-				li.menu-item: a( href="#" ) Специализированные ученые советы
-				li.menu-item: a( href="#" ) Студенческая наука
-		li: a( href="#" ) Международная работа
-		li
+		li.menu-item.has-sub-menu
 			a( href="#" ) Университет
 			ul.sub-menu
-				li.menu-item: a( href="#" ) Web-ресурсы
-				li.menu-item: a( href="#" ) История
-				li.menu-item: a( href="#" ) Профсоюзный комитет
+				li.menu-item.has-sub-menu
+					a( href="#" ) Структура
+					ul.sub-menu
+						li.menu-item: a( href="#" ) Факультеты
+						li.menu-item: a( href="#" ) Коледжи
+						li.menu-item: a( href="#" ) Институты
+						li.menu-item: a( href="#" ) Подразделения
+				li.menu-item: a( href="#" ) Учёный совет
+				li.menu-item: a( href="#" ) Руководство
 				li.menu-item: a( href="#" ) Ректорат
-				li.menu-item: a( href="#" ) Структура ПГТУ
-				li.menu-item: a( href="#" ) Ученый совет
-		li.menu-item: a( href="#" ) Факультеты
-		li.menu-item: a( href="#" ) Анонсы
-		li
+		li.menu-item: a( href="#" ) Наука
+		li.menu-item: a( href="#" ) Международная работа
+		li.menu-item.has-sub-menu
 			a( href="#" ) Информация
 			ul.sub-menu
-				li.menu-item: a( href="#" ) Действующие стандарты университета и положения подготовленные в соответствии с системой Менеджмента качества
-				li.menu-item: a( href="#" ) Информация, подлежащая публикации в соответствии с действующим законодательством
-				li.menu-item: a( href="#" ) Кодекс академической доброчестности ГВУЗ «ПГТУ»
-				li.menu-item: a( href="#" ) Кодекс корпоративной культуры университета
-				li.menu-item: a( href="#" ) Лицензионные дела (аспирантура, докторантура)
-				li.menu-item: a( href="#" ) Лицензионные и аккредитационные дела
+				li.menu-item: a( href="#" ) Доступ к публичной инфонмации
+				li.menu-item: a( href="#" ) Регистрационные документы
+				li.menu-item: a( href="#" ) Образовательные программы
 				li.menu-item: a( href="#" ) Лицензия на осуществление образовательной деятельности
-				li.menu-item: a( href="#" ) Образовательные программы (бакалавриат)
-				li.menu-item: a( href="#" ) Образовательные программы (магистратура)
-				li.menu-item: a( href="#" ) Перечень сертификатов по специальностям
+				li.menu-item: a( href="#" ) План государственных закупок
 				li.menu-item: a( href="#" ) Противодействие коррупции
-				li.menu-item: a( href="#" ) Публичные закупки
-				li.menu-item: a( href="#" ) Результаты аккредитационной экспертизы
-				li.menu-item: a( href="#" ) Структура и органы управления учебного заведения
+				li.menu-item: a( href="#" ) Годовой отчёт
+		li.menu-item.has-sub-menu
+			a( href="#" ) Образовательные ресурсы
+			ul.sub-menu
+				li.menu-item: a( href="#" ) Методические материалы
+				li.menu-item: a( href="#" ) Прграммы вступительных экзаменов
+				li.menu-item: a( href="#" ) Расписание занятий
+				li.menu-item: a( href="#" ) Дистанциооное обучение
+		li.menu-item.has-sub-menu
+			a( href="#" ) Библиотечные ресурсы
+			ul.sub-menu
+				li.menu-item: a( href="#" ) Электронный каталог НТБ
+				li.menu-item: a( href="#" ) Электронный репозиторий
+				li.menu-item: a( href="#" ) Научно-техническая библиотека
 		li.menu-item: a( href="#" ) Старый сайт
 		li.menu-item: a( href="#" ): img( src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFQSURBVHjaYmRo/c8AB//+MfwBkgwg8s8/KPoFI4GIgQEgAIdycgMACAMxUAF6oygqoQ1q45dkzSH5N26XR/8zCEuepggsVEPFkxB+S9bcRwCxMDCBVD/5+h+o9O8/BqDE378Mv/+DpCGKfgERmCHLw8jw4x9AAIFs+AdUBLQWZDZI9a/////8BSuFawBzf/8FuQMggFiALvsLsh2k+g/cbCTVUBLkKgaGDwwAAcTCIHJKhFPh19+fIHf/+/cbpBNI/gO75x+I/RfKluFiY5A6AhBAjH8fMjDI5P///+A/wy8GoFf/A+34hZVkYlJ6f/wUQACxAEOSESwEDEhURSiqwbJ/gKENEEAgDcwgDlAIrgiLNgaGvyD0hwEggEAamP4DdUrCREE6GRl/gyMPQv6BqgYG+z8GgABi/HoTFL///kBJBjgbwmBAcEEcBgaAAAMASIdu6OFHDhsAAAAASUVORK5CYII=", title="Українська", alt="Українська" )
 		li.menu-item: a( href="#" ): img( src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAE2SURBVHjaYvz69T8DAvz79w9CQVj/0MCffwwAAcQClObiAin6/x+okxHMgPCAbOb//5n+I4EXL74ABBALxGSwagTjPzbAyMgItAQggBg9Pf9nZPx//x7kjL9////9C2QAyf9//qCQQCQkxFhY+BEggFi2b/+nq8v46BEDSPQ3w+8//3//BqFfv9BJeXmQEwACCOSkP38YgHy4Bog0RN0vIOMXVOTPH6Cv/gEEEEgDxFKgHEgDXCmGDUAE1AAQQCybGZg1f/d8//XsH0jTn3+///z79RtE/v4NZfz68xfI/vOX+4/0ZoZFAAHE4gYMvD+3/v2+h91wCANo9Z+/jH9VxBkYAAKIBRg9TL//MEhKAuWAogxgZzGC2CCfgUggAoYdGAEVAwQQ41egu5AQAyoXTQoIAAIMAD+JZR7YOGEWAAAAAElFTkSuQmCC", title="Русский", alt="Русский" )

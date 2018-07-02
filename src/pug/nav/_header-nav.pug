@@ -1,7 +1,13 @@
 button.nav__burger.burger#header-nav-burger( title="Главное меню" ) Главное меню
 ul.nav__list.list#header-nav-list
 	li.menu-item: a( href="#" ) Главная
-	li.menu-item: a( href="#" ) Новости
+	li.menu-item.has-sub-menu
+		a( href="#" ) Пресс-центр
+		ul.sub-menu
+			li.menu-item: a( href="#" ) Новости
+			li.menu-item: a( href="#" ) Анонсы
+			li.menu-item: a( href="#" ) Такой я есть
+			li.menu-item: a( href="#" ) 100 дней волонтёрства
 	li.menu-item.has-sub-menu
 		a( href="#" ) Студенту
 		ul.sub-menu
