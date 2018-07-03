@@ -10,18 +10,23 @@ mixin right_aside_widget ( args )
 // aside--right
 aside.aside.aside--right: .row
 	+right_aside_widget( {} )
+		ul
+			li
+				a(href="#") Yastech Developments: The Best Web Design Company
+				ul
+					li: a(href="#") Best PSD Freebies: Login Form
+					li: a(href="#") Best PSD Freebies: Login Form
+					li: a(href="#") Best PSD Freebies: Login Form
+			li: a(href="#") Best PSD Freebies: Login Form
+			li: a(href="#") Wedding Photography Shoot Takes & Tricks
+			li: a(href="#") Best PSD Freebies: Amazing Design Resource & Inspiration
+			li: a(href="#") Best PSD Freebies: Login Form
+			li: a(href="#") Wedding Photography Shoot Takes & Tricks
+			li: a(href="#") Best PSD Freebies: Amazing Design Resource & Inspiration
+	+right_aside_widget( {} )
 		include ../forms/_search
 	+right_aside_widget( { title: 'Календарь' } )
 		include ../widgets/_calendar
-	+right_aside_widget( {} )
-		ul
-			li: a(href="#") Yastech Developments: The Best Web Design Company
-			li: a(href="#") Best PSD Freebies: Login Form
-			li: a(href="#") Wedding Photography Shoot Takes & Tricks
-			li: a(href="#") Best PSD Freebies: Amazing Design Resource & Inspiration
-			li: a(href="#") Best PSD Freebies: Login Form
-			li: a(href="#") Wedding Photography Shoot Takes & Tricks
-			li: a(href="#") Best PSD Freebies: Amazing Design Resource & Inspiration
 	+right_aside_widget( {} )
 		include ../widgets/_tagcloud
 // aside--right

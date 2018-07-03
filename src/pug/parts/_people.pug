@@ -16,7 +16,7 @@ mixin people_nav_entry ( args )
 		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit.';
 		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/150x150/2ecc71/ecf0f1';
 	.slider-nav__entry.entry.lazy( data-src=src.img+'user-sm.jpg', width="50", height="50" )
-		//- img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
+		img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
 
 //
 // PEOPLE start
@@ -27,17 +27,11 @@ section.people.section#people: .container: .row: .col-xs-12.col-sm-12.col-md-12.
 	.section__body.body
 		button.slider-arrow.slider-prev#people-slider-arrow-prev &larr;
 		button.slider-arrow.slider-next#people-slider-arrow-next &rarr;
-		.slider-for#people-slider-for
+		#people-slider
 			+people_for_entry ( { thumbnail: src.img+'user-md.jpg' } )
 			+people_for_entry ( { thumbnail: src.img+'user-md.jpg' } )
 			+people_for_entry ( { thumbnail: src.img+'user-md.jpg' } )
 			+people_for_entry ( { thumbnail: src.img+'user-md.jpg' } )
 			+people_for_entry ( { thumbnail: src.img+'user-md.jpg' } )
-		.slider-nav#people-slider-nav
-			+people_nav_entry ( { thumbnail: src.img+'user-sm.jpg' } )
-			+people_nav_entry ( { thumbnail: src.img+'user-sm.jpg' } )
-			+people_nav_entry ( { thumbnail: src.img+'user-sm.jpg' } )
-			+people_nav_entry ( { thumbnail: src.img+'user-sm.jpg' } )
-			+people_nav_entry ( { thumbnail: src.img+'user-sm.jpg' } )
 // PEOPLE end
 //

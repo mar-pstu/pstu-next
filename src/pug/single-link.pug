@@ -1,0 +1,26 @@
+extend layout/_index
+block variables
+	- page.title = "Запись (ссылка)";
+	- page.excerpt = "Шаблон страницы записи (поста/новости) типа \"ссылка\" (single.php)";
+	- page.type = "single";
+block main
+	.container
+		.row
+			.col-xs-12.col-sm-12.col-md-7.col-lg-8
+				article.entry-content
+					include parts/_info
+					.well: .row.middle-xs
+						.col-xs-12.col-sm-4.col-md-4.col-lg-4: a.center-block( href="#" ): img.center-block.lazy( src="#", data-src=src.img+'grid-world.png' )
+						.col-xs-12.col-sm-8.col-md-8.col-lg-8
+							p.text-center.lead: a.text-success.font-bold( href="#" ) https://www.flaticon.com/free-icon/grid-world_12195
+							p.text-center: a.btn.btn-success Перейти
+					include components/_content
+					ul.text-right.list-unstyled.font-italic
+						li Опубликовано: #[a( href="#" ) admin] 20.06.2018
+						li Обновлено: #[a( href="#" ) invitery] 21.06.2018
+						li Ответственный: Иванов И.И. #[a( href="#" ) ivanov_i_i@pstu.edu]
+				include components/_pager
+				include parts/_similar
+				include components/_comments
+			.col-xs-12.col-sm-12.col-md-5.col-lg-4: include asides/_right
+	include parts/_current
