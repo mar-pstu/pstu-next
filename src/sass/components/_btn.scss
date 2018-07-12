@@ -33,6 +33,16 @@
 		&:hover { background-color: lighten( $brand-success, 3% ); }
 	}
 
+	&-warning {
+		background-color: $brand-warning;
+		&:hover { background-color: lighten( $brand-warning, 3% ); }
+	}
+
+	&-danger {
+		background-color: $brand-danger;
+		&:hover { background-color: lighten( $brand-danger, 3% ); }
+	}
+
 	&-link {
 		color: $link-color-default !important;
 		text-decoration: none;
