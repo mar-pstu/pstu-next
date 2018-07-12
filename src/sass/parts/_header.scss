@@ -26,9 +26,17 @@
 		li { z-index: 100; }
 		a { padding: 5px 10px; }
 		ul ul { text-align: left; }
-	}	
+	}
 
 	.bloginfo { background-color: #eee; }
+
+	.bloginfo-name {
+		@extend h1;
+		a {
+			@include color ( $font-color-default, $font-color-default, $font-color-default, $font-color-default );
+			@include td ( none, none );
+		}
+	}
 
 	.custom-logo-link { @include td ( none, none ); display: block }
 

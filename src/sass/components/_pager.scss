@@ -21,6 +21,7 @@
 	.next {
 		float: right;
 		margin-left: 5px;
+		.title { text-align: right; }
 		.arrow {
 			float: right;
 			border: 2px solid $brand-primary;
@@ -33,6 +34,9 @@
 	.previous {
 		float: left;
 		padding-right: 5px;
+		.title {
+			text-align: left;
+		}
 		.arrow {
 			float: left;
 			border: 2px solid $brand-success;
