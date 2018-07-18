@@ -27,11 +27,11 @@
 .text-danger { color: $brand-danger !important; }
 .text-warning { color: $brand-warning !important; }
 
-.bg-primary { background-color: lighten( $brand-primary, 50% ); padding: 2px 3px; }
-.bg-success { background-color: lighten( $brand-success, 50% ); padding: 2px 3px; }
-.bg-info { background-color: lighten( $brand-info, 50% ); padding: 2px 3px; }
-.bg-danger { background-color: lighten( $brand-danger, 40% ); padding: 2px 3px; }
-.bg-warning { background-color: lighten( $brand-warning, 40% ); padding: 2px 3px; }
+.bg-primary { background-color: lighten( $brand-primary, 50% ) !important; padding: 2px 3px; }
+.bg-success { background-color: lighten( $brand-success, 50% ) !important; padding: 2px 3px; }
+.bg-info { background-color: lighten( $brand-info, 50% ) !important; padding: 2px 3px; }
+.bg-danger { background-color: lighten( $brand-danger, 40% ) !important; padding: 2px 3px; }
+.bg-warning { background-color: lighten( $brand-warning, 40% ) !important; padding: 2px 3px; }
 
 .display-inline {	display: inline-block; }
 

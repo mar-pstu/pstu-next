@@ -5,13 +5,15 @@ header.wrapper__item.header#header
 		include ../nav/_header-fixed
 	.header__top.top: .container-fluid: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
 		include ../nav/_header-top
-	.header__bloginfo.bloginfo: .container: .row
-		.col-xs-12.col-sm-3.col-md-2.col-lg-2.middle-xs: a.custom-logo-link( href="#" ): img.custom-logo( src=src.img+'pstu.png', title=blog.name )
-		.col-xs-12.col-sm-9.col-md.col-lg.middle-xs
+	.header__bloginfo.bloginfo: .container: .row.middle-xs
+		.col-xs-12.col-sm-3.col-md-2.col-lg-2: a.custom-logo-link( href="#" )
+			//- img.custom-logo( src=src.img+'pstu.png', title=blog.name )
+			img.custom-logo( src='http://old.pstu.edu/fileadmin/pictures/univer/lofo_pstu_rus.jpg', title=blog.name )
+		.col-xs-12.col-sm-9.col-md.col-lg
 			h1.bloginfo-name #{blog.name}
 			p.bloginfo-description #{blog.description}
-		.col-xs-12.col-sm.col-md-3.col-lg-3.small: +widget( {} )
-		.col-xs-12.col-sm.col-md-3.col-lg-3.small: +widget( {} )
+		.col-xs-12.col-sm.col-md-3.col-lg-3.small.top-xs: +widget( {} )
+		.col-xs-12.col-sm.col-md-3.col-lg-3.small.top-xs: +widget( {} )
 	.header__nav.nav: .container: .row
 		.col-xs-10.col-sm-10.col-md-7.col-lg-2
 			form.searchform#header-search( action="#", method="post" )

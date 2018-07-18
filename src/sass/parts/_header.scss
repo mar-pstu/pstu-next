@@ -21,20 +21,21 @@
 	}
 
 	&__top {
-		background-color: $brand-primary;
+		background-color: lighten( $brand-primary, 10% );
 		text-align: center;
 		li { z-index: 100; }
 		a { padding: 5px 10px; }
 		ul ul { text-align: left; }
 	}
 
-	.bloginfo { background-color: #eee; }
+	.bloginfo { background-color: $brand-primary; color: #fff; }
 
 	.bloginfo-name {
 		@extend h1;
 		a {
-			@include color ( $font-color-default, $font-color-default, $font-color-default, $font-color-default );
+			@include color ( #fff, #fff, #fff, #fff );
 			@include td ( none, none );
+			color: #fff;
 		}
 	}
 
@@ -45,6 +46,7 @@
 		max-height: 150px;
 		width: auto;
 		height: auto;
+		margin: 5px 0px;
 	}
 
 	.widget {
@@ -58,12 +60,13 @@
 		padding: 5px 10px;
 		box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.50 ) inset;
 		background-color: #fff;
+		color: $font-color-default;
 	}
 
 
 	&__nav {
 		li { z-index: 99; }
-		background-color: $brand-primary;
+		background-color: lighten( $brand-primary, 10% );
 		a {
 			font-size: 16px;
 			padding: 12px;
