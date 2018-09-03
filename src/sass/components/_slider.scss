@@ -15,11 +15,12 @@
 	height: 40px;
 	color: #fff;
 	border: 0px;
-	background-color: $brand-success;
+	background-color: $brand-slider-btn;
 	cursor: pointer;
 	text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.75 );
 	z-index: 50;
-	&:hover { background-color: $brand-primary; }
+	// &:hover { background-color: $brand-primary; }
+	&:hover { background-color: darken( $brand-slider-btn, 10% ); }
 }
 
 .slider-prev { left: 0%; margin-left: -25px; }
@@ -40,6 +41,7 @@
 		transform: rotate( 45deg ) scale( 1.1 );
 	}
 	.slick-active button:hover { background-color: $brand-primary; }
+	// .slick-active button:hover { background-color: $brand-success; }
 
 	button {
 		display: block;
