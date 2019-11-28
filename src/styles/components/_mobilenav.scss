@@ -1,0 +1,95 @@
+//
+//	Стили Мобильного меню
+//
+//
+
+
+
+.mobilenav {
+
+	display: block !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $brand-primary;
+	transition: transform 200ms, opacity 200ms;
+	z-index: 999;
+	transform: translate( 100% );
+	opacity: 0;
+	padding-top: 50px;
+	color: #fff;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	box-sizing: border-box;
+
+	&:after {
+		content: '';
+		display: block;
+		height: 50px;
+	}
+
+	.logo {
+		max-width: 150px;
+		max-height: 150px;
+		margin: 15px auto;
+		display: block;
+	}
+
+	h2 {
+		margin: 15px auto;
+	}
+
+	a:link,
+	a:visited {
+		color: #fff;
+		text-decoration: none;
+		padding: 3px 0;
+	}
+	a:hover {
+		color: #fff;
+	}
+
+	.burger-button {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 15px;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+	.burger-button-icon {
+		margin: 0px 5px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.mobile-menu > li {
+		font-weight: bold;
+		list-style: none;
+	}
+
+	.mobile-menu .sub-menu > li {
+		font-weight: normal;
+	}
+
+	.mobile-menu li {
+		margin: 5px auto;
+	}
+
+}
+
+
+.mobilenav-active {
+	overflow: hidden;
+	.mobilenav {
+		opacity: 1;
+		transform: translate( 0%, 0% );
+	}
+	.wrapper {
+		opacity: 0;
+		transform: translate( 100%, 0% );
+	}
+}

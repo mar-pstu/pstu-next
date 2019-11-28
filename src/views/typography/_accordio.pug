@@ -1,0 +1,56 @@
+//-
+	Аккордеон
+
+
+
+
+h2 Аккордеон #[small (доступно в Гутенберг)]
+
+mixin accordio_section_with_thumbnail( thumbnail )
+	.accordio__listitem.listitem( role="listitem" )
+		.listitem__panel.panel
+			.thumbnail: img.lazy( src="#", alt="Превью", data-src=thumbnail )
+			.title 1 курс Денна на базі ПЗСО 
+		.listitem__content.content
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odio libero qui atque, ipsa saepe suscipit ipsum nobis eveniet perspiciatis odit placeat, a, nostrum dolores. Sapiente repudiandae vel architecto aut.
+			p Rerum vitae voluptatem tempora ipsam, voluptatum, porro enim assumenda, illum quod quidem quia error. Repellendus similique rerum dolor dolores doloremque, voluptatum dicta et debitis ex, quidem pariatur quisquam ullam, aspernatur.
+			+heading( { level: 'h2', thumbnail: src.img+'iconnav/bell.png', title: 'Пропозиції вступу' } )
+			+heading( { level: 'h3', thumbnail: src.img+'iconnav/certificate.png', title: 'Галузі знань' } )
+			p Repellat incidunt, quaerat quod cupiditate! Excepturi dicta sequi earum id nisi possimus repudiandae minima repellendus, sint eligendi ut, similique beatae officia deleniti, nobis tempora exercitationem tenetur cumque rem hic veritatis!
+
+
+mixin accordio_section_auto
+	h4 курс Денна на базі ПЗСО
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odio libero qui atque, ipsa saepe suscipit ipsum nobis eveniet perspiciatis odit placeat, a, nostrum dolores. Sapiente repudiandae vel architecto aut.
+	p Rerum vitae voluptatem tempora ipsam, voluptatum, porro enim assumenda, illum quod quidem quia error. Repellendus similique rerum dolor dolores doloremque, voluptatum dicta et debitis ex, quidem pariatur quisquam ullam, aspernatur.
+	+heading( { level: 'h4', thumbnail: src.img+'iconnav/certificate.png', title: 'Галузі знань' } )
+	p Repellat incidunt, quaerat quod cupiditate! Excepturi dicta sequi earum id nisi possimus repudiandae minima repellendus, sint eligendi ut, similique beatae officia deleniti, nobis tempora exercitationem tenetur cumque rem hic veritatis!
+
+
+
+
+//- h3 Список с иконками секций
+//- .accordio( data-heading="h4", role="list" )
+//- 	+accordio_section_with_thumbnail( src.img+'iconnav/ukraine.png' )
+//- 	+accordio_section_with_thumbnail( src.img+'iconnav/science.png' )
+//- 	+accordio_section_with_thumbnail( src.img+'iconnav/bell.png' )
+
+h3 Автоматически сгенерированный список
+.accordio( data-heading="h4", role="list" )
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odio libero qui atque, ipsa saepe suscipit ipsum nobis eveniet perspiciatis odit placeat, a, nostrum dolores. Sapiente repudiandae vel architecto aut.
+	+accordio_section_auto
+//
+.accordio.accordio--primary( data-heading="h4", role="list" )
+	+accordio_section_auto
+//
+.accordio.accordio--success( data-heading="h4", role="list" )
+	+accordio_section_auto
+//
+.accordio.accordio--warning( data-heading="h4", role="list" )
+	+accordio_section_auto
+//
+.accordio.accordio--danger( data-heading="h4", role="list" )
+	+accordio_section_auto
+//
+.accordio.accordio--info( data-heading="h4", role="list" )
+	+accordio_section_auto

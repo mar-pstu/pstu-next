@@ -1,0 +1,26 @@
+extend layout/_index
+
+block variables
+	- page.title = "Блог";
+	- page.excerpt = "Шаблон блога / категории / архива (index.php / category.php / archive.php)";
+	- page.type = "blog category archive";
+block main
+	.container
+		.row
+			.col-xs-12.col-sm-12.col-md.col-lg
+				include components/_pageheader
+				.archive__list.list#entries-container
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_01.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_02.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_03.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_04.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_05.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_06.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_07.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_08.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_09.jpg' } )
+					+entry ( { thumbnail: src.img+'post_thumbnail_lg_10.jpg' } )
+				#loadingicon.loadingicon
+				include components/_pagination
+				include parts/_info
+			.col-xs-12.col-sm-12.col-md-5.col-lg-4: include asides/_right

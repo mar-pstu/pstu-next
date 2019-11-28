@@ -1,0 +1,27 @@
+//
+//		FOOTER
+//		стили подвала сайта
+
+
+
+.footer {
+
+	background-color: $brand-primary;
+	color: #fff;
+
+	a {
+		@include color ( #fff, #fff, #fff, #fff );
+		@include td ( none, underline );
+	}
+
+	.copyright {
+		text-align: center;
+		@include min-width( $screen-sm ) { text-align: left; }
+	}
+
+	.developer {
+		text-align: center;
+		@include min-width( $screen-sm ) { text-align: right; }
+	}
+
+}

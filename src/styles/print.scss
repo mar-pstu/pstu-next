@@ -1,0 +1,31 @@
+//
+// Стили для печати
+//
+
+
+@import "helpers/variables";              // переменные
+@import "helpers/functions";
+@import "helpers/mixins";                 // миксины
+@import "helpers/extends";
+@import "helpers/extends.icons.scss";
+@import "helpers/flat";
+
+@import "base/_normalize";
+@import "base/base";
+@import "base/type";
+
+
+
+.header {
+	display: none;
+}
+
+.aside {
+	display: none;
+}
+
+.links { display: none; }
+
+.footer {
+	display: none;
+}

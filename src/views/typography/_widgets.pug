@@ -1,0 +1,25 @@
+//-
+	Виджеты CMS Wordpress
+
+mixin typograhy_widget ( args )
+	.col-xs-12.col-sm-6.col-md-4.col-lg-3
+		+widget( args )
+			block
+
+aside.aside
+	.row
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12
+			h2 Виджеты CMS Wordpress
+	.row
+		+typograhy_widget( { title: 'Календарь' } )
+			include ../widgets/_calendar
+		+typograhy_widget( { title: 'Облако тегов' } )
+			include ../widgets/_tagcloud
+		+typograhy_widget( { title: 'Произвольный текст' } )
+			include ../widgets/_text
+		+typograhy_widget( { title: 'Меню' } )
+			include ../widgets/_menu
+		+typograhy_widget( { title: 'Поиск' } )
+			include ../widgets/_searchform
+
+hr

@@ -1,0 +1,41 @@
+//
+//	Закрёплённая запись на главной странце
+//
+
+
+.sticky {
+	
+	padding: 25px 0px;
+	border-bottom: 3px solid $brand-warning;
+
+	&__entry {
+		.title a:hover { text-decoration: none; }
+		.thumbnail {
+			display: block;
+			text-decoration: none;
+			position: relative;
+			overflow: hidden;
+		}
+		.thumbnail .label {
+			position: absolute;
+			background-color: $brand-warning;
+			color: #fff;
+			padding: 2px;
+			text-shadow: 1px 1px 1px #888;
+			left: 90%;
+			bottom: 10%;
+			width: 100%;
+			text-align: center;
+			transform-origin: left center;
+			transform: rotate( -45deg ) translate( -50%, 0% );
+		}
+		.wp-post-image {
+			display: block;
+			width: 100%;
+			max-width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+}

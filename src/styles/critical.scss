@@ -1,0 +1,12 @@
+//
+@import "helpers/variables.scss";              // переменные
+@import "helpers/mixins.scss";                 // миксины
+@import "helpers/extends.scss";
+@import "helpers/extends.icons.scss";
+@import "helpers/flat.scss";
+
+@import "base/normalize";
+
+@import "components/_nav.scss";
+@import "components/_mobilenav";
+@import "parts/_header";

@@ -1,0 +1,20 @@
+extend layout/_index
+block variables
+	- page.title = "PSTU Next";
+	- page.excerpt = "Список шаблонов страниц";
+	- page.type = "page";
+block main
+	.container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12: article.entry-content
+		include typography/_blocks
+		include typography/_heading
+		include typography/_accordio
+		include typography/_navicon
+		include typography/_form
+		include typography/_btn
+		include typography/_table
+		include typography/_text
+		include typography/_well
+		include typography/_lists
+		include typography/_widgets
+		include typography/_files
+		//- include typography/_sprites

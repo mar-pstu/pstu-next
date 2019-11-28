@@ -1,0 +1,54 @@
+//
+//	Стили секции "Проекты" главной страницы
+//
+
+
+
+.projects {
+
+	box-shadow: 0px 0px 15px rgba( 0, 0, 0, 0.5 ) inset;
+
+	// &:before {
+	// 	content: '';
+	// 	display: block;
+	// 	height: 100%;
+	// 	box-shadow: 0px 0px 15px rgba( 0, 0, 0, 0.5 );
+	// 	position: absolute;
+	// 	bottom: 100%;
+	// 	left: 0%;
+	// 	right: 0%;
+	// }
+
+	.entry {
+		display: block;
+		text-decoration: none;
+		color: $font-color-default;
+		padding: 5px;
+		text-align: left;
+		margin: 15px auto;
+	}
+
+	.entry:hover {
+		text-decoration: none;
+		color: $font-color-default;
+	}
+
+	.entry:hover:after,
+	.entry:hover:before { opacity: 1; }
+
+	&__entry {
+		.title {
+			margin: 0px;
+		}
+		.excerpt {
+			margin: 0px;
+		}
+		.wp-post-image {
+			display: block;
+			max-width: 150px;
+			max-height: 150px;
+			margin: 5px auto;
+		}
+	}
+
+}

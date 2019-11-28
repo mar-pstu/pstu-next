@@ -1,0 +1,83 @@
+//
+//
+//
+
+.pager {
+
+	margin: 25px 0px;
+
+	.item {
+		@include color ( $font-color-default, $font-color-default, $font-color-default, $font-color-default );
+		@include td ( none, none );
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 100%;
+		margin: 15px 0px;
+		font-size: 0.85em;
+		@include min-width ( $screen-md ) {
+			width: 49%;
+		}
+	}
+
+	.next {
+		float: right;
+		margin-left: 5px;
+		flex-direction: row-reverse;
+		.title { text-align: right; }
+		.arrow {
+			border: 2px solid $brand-primary;
+			background-color: $brand-primary;
+			margin: 0px 0px 10px 10px;
+		}
+		.arrow:before { transform: rotate( 90deg ); }
+		&:hover .arrow { transform: scale( 1.00 ); }
+	}
+
+	.previous {
+		float: left;
+		padding-right: 5px;
+		flex-direction: row;
+		.title {
+			text-align: left;
+		}
+		.arrow {
+			border: 2px solid $brand-success;
+			background-color: $brand-success;
+			margin: 0px 10px 10px 0px;
+		}
+		.arrow:before { transform: rotate( -90deg ); }
+		&:hover .arrow { transform: scale( 1.00 ); }
+	}
+
+	.title {
+		font-variant: normal;
+		font-weight: normal;
+		margin: 0;
+	}
+
+	.arrow {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 49px;
+		height: 49px;
+		text-align: center;
+		border-radius: 3px;
+		box-shadow: 0px 0px 3px rgba( 0, 0, 0, 0.50 ), 0px 0px 3px rgba( 0, 0, 0, 0.50 ) inset;
+		transition: transform 300ms;
+		transform-origin: center center;
+		transform: scale( 0.85 );
+		flex-shrink: 0;
+		&:before {
+			@extend %background-icon;
+			@extend %icon-double-arrow;
+			content: '';
+			width: 35px;
+			height: 35px;
+			transform-origin: center center;
+		}
+	}
+
+}

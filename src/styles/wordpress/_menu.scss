@@ -1,0 +1,32 @@
+//
+//	Виджет "Меню" wordpress
+//
+
+
+.widget .menu {
+
+	// list-style-type: none;
+
+	.sub-menu .sub-menu {
+		display: none;
+	}
+	// > li {
+	// 	&:before {
+	// 		@extend %background-icon;
+	// 		@extend %icon-double-arrow;
+	// 		content: '';
+	// 		width: 1em;
+	// 		height: 1em;
+	// 	}
+	// 	> a {
+	// 		padding: 5px 10px;
+	// 		font-weight: bold;
+	// 	}
+	// }
+
+	// a {
+	// 	@include td ( none, none );
+	// 	@include color ( $font-color-default, $link-color-default, $font-color-default, $font-color-default );
+	// }
+
+}

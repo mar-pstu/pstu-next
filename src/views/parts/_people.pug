@@ -1,0 +1,35 @@
+//-
+	Секйия-слайдер главной страницы
+
+mixin people_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Иванов Иван Иванович';
+		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit.';
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x300/2ecc71/ecf0f1';
+	a.slider-for__entry.entry.center-block( href="#", title=args.title )
+		.thumbnail: img.wp-post-image( src="#", data-lazy=args.thumbnail, alt=args.title )
+		h3.title #{args.title}
+		p.excerpt #{args.excerpt}
+
+//
+// PEOPLE start
+section.people.section#people: .container: .row: .col-xs-12.col-sm-12.col-md-12.col-lg-12
+	.section__heading.heading
+		h2.title Выпускники
+		p.desctiption Выдающиеся выпускники Приазовского государственного технического университета
+		ul.people__groups.groups.list-unstyled.list-inline
+			li: a.btn.btn-xs.btn-primary( href="#" ) Такий я є
+			li: a.btn.btn-xs.btn-primary( href="#" ) Переможці олімпіад
+			li: a.btn.btn-xs.btn-primary( href="#" ) Професори
+			li: a.btn.btn-xs.btn-primary( href="#" ) Переможці конкурсів
+	.section__body.body
+		button.slider-arrow.slider-prev#people-slider-arrow-prev &larr;
+		button.slider-arrow.slider-next#people-slider-arrow-next &rarr;
+		#people-slider
+			+people_entry ( { thumbnail: src.img+'user-md.jpg' } )
+			+people_entry ( { thumbnail: src.img+'user-md.jpg' } )
+			+people_entry ( { thumbnail: src.img+'user-md.jpg' } )
+			+people_entry ( { thumbnail: src.img+'user-md.jpg' } )
+			+people_entry ( { thumbnail: src.img+'user-md.jpg' } )
+// PEOPLE end
+//

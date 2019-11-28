@@ -1,0 +1,34 @@
+//
+//	Блок новостей на главнйо странце
+//
+
+
+.news {
+
+	.entry {
+		margin: 0px auto 15px auto;
+		display: block;
+		text-decoration: none;
+		color: $font-color-default;
+		&:hover {
+			text-decoration: none;
+			color: $font-color-default;
+		}
+		&.sticky .badge { background-color: $brand-warning; }
+	}
+
+	&__entry {
+		.title { margin: 0px; }
+		.badge { @extend %badge; }
+		.excerpt {
+			max-height: $line-height-base * 3;
+			overflow: hidden;
+			margin: 0px;
+		}
+		.datetime {
+			font-size: 75%;
+			font-weight: bold;
+		}
+	}
+
+}

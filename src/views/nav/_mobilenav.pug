@@ -1,0 +1,80 @@
+//-
+	Мобильное меню
+
+
+
+.mobilenav#mobilenav( style="display: none;" )
+	img.logo.lazy( src="#", data-src=src.img+'pstu_new.png', alt=blog.name )
+	//- .bg.lazy( data-src=src.img+'pstu_new.png' )
+	button.burger-button
+		span Закрыть
+		svg.burger-button-icon( x="0px", y="0px", width="20px", height="20px", viewBox="0 0 459 459", style="enable-background:new 0 0 459 459;" xml:space="preserve" )
+			path( d="M181.05,321.3l35.7,35.7l127.5-127.5L216.75,102l-35.7,35.7l66.3,66.3H0v51h247.35L181.05,321.3z M408,0H51    C22.95,0,0,22.95,0,51v102h51V51h357v357H51V306H0v102c0,28.05,22.95,51,51,51h357c28.05,0,51-22.95,51-51V51    C459,22.95,436.05,0,408,0z", data-original="#000000", data-old_color="#ffffff", fill="#ffffff" )
+	.container
+		h2.text-center #{blog.name}
+		p.lead.text-center Меню сайта
+
+		#mobile-nav-first-menu-container
+		
+		//- ul.list-unstyled
+		//- 	li.menu-item: a( href="#" ) Главная
+		//- 	li.menu-item.has-sub-menu
+		//- 		a( href="#" ) Пресс-центр
+		//- 		ul.sub-menu
+		//- 			li.menu-item: a( href="#" ) Новости
+		//- 			li.menu-item: a( href="#" ) Анонсы
+		//- 			li.menu-item: a( href="#" ) Такой я есть
+		//- 			li.menu-item: a( href="#" ) 100 дней волонтёрства
+		//- 	li.menu-item.has-sub-menu
+		//- 		a( href="#" ) Студенту
+		//- 		ul.sub-menu
+		//- 			li.menu-item: a( href="#" ) Проекты
+		//- 			li.menu-item: a( href="#" ) Расписание
+		//- 			li.menu-item: a( href="#" ) Рейтинг студентов-бюджетников
+		//- 			li.menu-item: a( href="#" ) Студенческий сенат
+		//- 	li.menu-item.has-sub-menu
+		//- 		a( href="#" ) Абитуриенту
+		//- 		ul.sub-menu
+		//- 			li.menu-item: a( href="#" ) Информация о приеме
+		//- 			li.menu-item: a( href="#" ) Кафедра военной подготовки
+		//- 			li.menu-item: a( href="#" ) Образовательный центр «Донбасс – Украина»
+		//- 			li.menu-item: a( href="#" ) Подбор специальности
+		//- 			li.menu-item: a( href="#" ) Подготовительное отделение
+		//- 			li.menu-item: a( href="#" ) Приёмная комиссия
+		//- 			li.menu-item: a( href="#" ) Программы вступительных экзаменов
+		//- 			li.menu-item: a( href="#" ) Профориентационная практика
+		//- 			li.menu-item: a( href="#" ) Специальности
+		//- 			li.menu-item: a( href="#" ) Списки приёмной комиссии
+		//- 			li.menu-item: a( href="#" ) Стоимость обучения
+		//- 	li.menu-item.has-sub-menu
+		//- 		a( href="#" ) Университет
+		//- 		ul.sub-menu
+		//- 			li.menu-item: a( href="#" ) Структура
+		//- 			li.menu-item: a( href="#" ) Учёный совет
+		//- 			li.menu-item: a( href="#" ) Руководство
+		//- 			li.menu-item: a( href="#" ) Ректорат
+		//- 	li.menu-item: a( href="#" ) Контакты
+		h3 Поиск
+		include ../forms/_search
+
+		#mobile-nav-second-menu-container
+
+		//- ul
+		//- 	li.menu-item: a( href="#" ) Наука
+		//- 	li.menu-item: a( href="#" ) Международная работа
+		//- 	li.menu-item.has-sub-menu
+		//- 		a( href="#" ) Информация
+		//- 		ul.sub-menu
+		//- 			li.menu-item: a( href="#" ) Доступ к публичной инфонмации
+		//- 			li.menu-item: a( href="#" ) Регистрационные документы
+		//- 			li.menu-item: a( href="#" ) Образовательные программы
+		//- 			li.menu-item: a( href="#" ) Лицензия на осуществление образовательной деятельности
+		//- 			li.menu-item: a( href="#" ) План государственных закупок
+		//- 			li.menu-item: a( href="#" ) Противодействие коррупции
+		//- 			li.menu-item: a( href="#" ) Годовой отчёт
+		//- 	li.menu-item.has-sub-menu
+		//- 		a( href="#" ) WEB-ресурсы
+		//- 		ul.sub-menu
+		//- 			li.menu-item: a( href="#" ) Старый сайт
+		//- 			li.menu-item: a( href="#" ) Библиотечные ресурсы
+		//- 			li.menu-item: a( href="#" ) Образовательные ресурсы

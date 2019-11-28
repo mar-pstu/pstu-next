@@ -1,0 +1,34 @@
+//
+//	Элемент сетки
+//
+
+
+
+.container,
+.container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $gutter;
+	padding-left: $gutter;
+}
+
+
+@media only screen and (min-width: $sm-start) {
+	.container {
+		width: 46rem;
+	}
+}
+
+
+@media only screen and (min-width: $md-start) {
+  .container {
+    width: 61rem;
+  }
+}
+
+
+@media only screen and (min-width: $lg-start) {
+  .container {
+    width: 71rem;
+  }
+}

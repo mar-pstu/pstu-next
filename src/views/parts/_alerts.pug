@@ -1,0 +1,23 @@
+//-
+	Шапка сайта
+	Блок "Оповещения"
+
+
+
+mixin alerts_entry( args )
+	a.alerts__entry.entry( href="#" ): .overlay: h3.title #{args.title}
+
+
+
+
+
+
+
+.alerts#alerts
+	.arrow.arrow--prev#header-alerts-arrow-prev: .sr-only Предыдущий слайд
+	.arrow.arrow--next#header-alerts-arrow-next: .sr-only Следующий слайд
+	.alerts__list.list#header-alerts-list
+		+alerts_entry( { title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos beatae sed deleniti in repudiandae quidem reiciendis voluptas numquam cupiditate delectus eius vero, saepe aliquam accusamus sint assumenda ad quaerat?' } )
+		+alerts_entry( { title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, obcaecati, autem. Esse quas, mollitia laborum dolor quis suscipit quo harum nostrum ipsa quibusdam quam perferendis provident! Voluptas, laborum. Non, quis.' } )
+		+alerts_entry( { title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet, quisquam hic officia dolorum autem, reiciendis itaque porro quaerat odit veniam eligendi harum facilis sequi a aliquam, dolorem provident neque!' } )
+		+alerts_entry( { title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet neque autem itaque ad nulla quia officia culpa suscipit molestias possimus quas, ullam, voluptatem, ipsam optio nisi laudantium rem. Animi!' } )

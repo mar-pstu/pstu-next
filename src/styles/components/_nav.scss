@@ -1,0 +1,92 @@
+/**
+ *  Навигационные меню
+ */
+
+
+.nav__list {
+
+  margin: 0px;
+  padding: 0px;
+  text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.7 );
+
+  li {
+    display: inline-block;
+    position: relative;
+    &:before { display: none; }
+    &:first-child { margin-left:0; }
+
+    a {
+      text-decoration: none;
+      display: block;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      color: #ffffff;
+      transition: all 0.2s ease-in-out 0s;
+      .icon { margin-left: 10px; }
+    }
+
+    a:hover,
+    &:hover > a {
+      color: #ffffff;
+      background: $brand-success;
+    }
+
+    &:hover > ul { display: block; }
+
+  } // li
+
+  .has-sub-menu > a:after {
+    content: '';
+    background-image: url( 'data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGc+Cgk8cGF0aCBkPSJNMjI1LjkyMywzNTQuNzA2Yy04LjA5OCwwLTE2LjE5NS0zLjA5Mi0yMi4zNjktOS4yNjNMOS4yNywxNTEuMTU3Yy0xMi4zNTktMTIuMzU5LTEyLjM1OS0zMi4zOTcsMC00NC43NTEgICBjMTIuMzU0LTEyLjM1NCwzMi4zODgtMTIuMzU0LDQ0Ljc0OCwwbDE3MS45MDUsMTcxLjkxNWwxNzEuOTA2LTE3MS45MDljMTIuMzU5LTEyLjM1NCwzMi4zOTEtMTIuMzU0LDQ0Ljc0NCwwICAgYzEyLjM2NSwxMi4zNTQsMTIuMzY1LDMyLjM5MiwwLDQ0Ljc1MUwyNDguMjkyLDM0NS40NDlDMjQyLjExNSwzNTEuNjIxLDIzNC4wMTgsMzU0LjcwNiwyMjUuOTIzLDM1NC43MDZ6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjZmZmZmZmIj48L3BhdGg+CjwvZz48L2c+IDwvc3ZnPg==' );
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+    padding-left: 15px;
+  }
+
+  ul {
+
+    display: none;
+    margin: 0px;
+    padding: 3px 0px 0px 0px;
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+
+    li {
+      display: block;
+      float: none;
+      background: none;
+      margin: 0;
+      padding: 0;
+      background: #3E4156;
+      &:before { display: none; }
+    }
+
+    li a {
+      font-weight: normal;
+      background: #3E4156;
+      font-size: 13px;
+      text-transform: none;
+    }
+
+    li a:hover,
+    li:hover > a { background: $brand-success; }
+
+  } // ul
+
+  ul ul {
+    left: 100%;
+    top: 0%;
+    padding-left: 3px;
+  }
+
+} // nav__list

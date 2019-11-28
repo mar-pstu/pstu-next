@@ -1,0 +1,22 @@
+//
+//
+//
+//
+
+
+
+
+.archive {
+	
+	&__list	.entry {
+		margin: 15px auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-top: 1px solid #eee;
+		@include min-width( $screen-md ) {
+			margin: 50px auto;
+		}
+	}
+	
+
+}

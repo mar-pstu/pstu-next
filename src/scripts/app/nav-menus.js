@@ -1,51 +1,22 @@
 /* Навигационное меню */
 jQuery( document ).ready( function () {
-	
-		var $touch = jQuery( '#header-nav-burger' ),
-			$menu 	= jQuery( '#header-nav-list' ),
-			$submunus = $menu.find( '.sub-menu' );
 
-		jQuery( $touch ).on( 'click', function( e ) {
-			e.preventDefault();
-			$menu.slideToggle();
-		});
-		
-		jQuery( window ).resize( function() {
-			var w = jQuery( window ).width();
-			if( w > 767 && $menu.is( ':hidden' ) ) {
-				$menu.removeAttr( 'style' );
-			}
-		});
+	jQuery( 'body' ).on( 'click', '.burger-button', function() {
+		jQuery( 'body' ).toggleClass( 'mobilenav-active' );
+	} )
 
-		$submunus.each( function () {
-			jQuery( this ).closest( 'li' ).find( '> a' ).append( '<i class="icon icon-down-arrow"></i>' );
-		} );
+	jQuery( '#header-nav-list' ).clone()
+		.attr( 'class', 'mobile-menu lead' ).attr( 'id', 'mobile-menu-main' )
+		.appendTo( '#mobile-nav-first-menu-container' )
+		.find( 'ul ul' ).remove().end()
+		.find( 'li' ).removeAttr( 'id' ).end()
+		.find( 'a[href=""], a:not([href])' ).closest( 'li' ).remove();
 
-} );
-
-
-
-/* Навигационное меню */
-jQuery( document ).ready( function () {
-	
-		var $touch = jQuery( '#top-nav-burger' ),
-			$menu 	= jQuery( '#top-nav-list' ),
-			$submunus = $menu.find( '.sub-menu' );
-
-		jQuery( $touch ).on( 'click', function( e ) {
-			e.preventDefault();
-			$menu.slideToggle();
-		});
-		
-		jQuery( window ).resize( function() {
-			var w = jQuery( window ).width();
-			if( w > 980 && $menu.is( ':hidden' ) ) {
-				$menu.removeAttr( 'style' );
-			}
-		});
-
-		$submunus.each( function () {
-			jQuery( this ).closest( 'li' ).find( '> a' ).append( '<i class="icon icon-down-arrow"></i>' );
-		} );
+	jQuery( '#top-nav-list' ).clone()
+		.attr( 'class', 'mobile-menu lead' ).attr( 'id', 'mobile-menu-second' )
+		.appendTo( '#mobile-nav-second-menu-container' )
+		.find( 'ul ul' ).remove().end()
+		.find( 'li' ).removeAttr( 'id' ).end()
+		.find( 'a[href=""], a:not([href])' ).closest( 'li' ).remove();
 
 } );

@@ -1,0 +1,20 @@
+extend layout/_index
+block variables
+	- page.title = "Запись";
+	- page.excerpt = "Шаблон страницы записи (поста/новости) (single.php)";
+	- page.type = "single";
+block main
+	#main-bgi.main-bgi.lazy( data-src=src.img+'iconboxes/world.png' )
+	.container
+		.row
+			.col-xs-12.col-sm-12.col-md-7.col-lg-8
+				article.entry-content
+					include components/_pageheader
+					include components/_breadcrumb
+					include components/_content
+					include parts/_info
+				include components/_pager
+				include parts/_similar
+				include components/_comments
+			.col-xs-12.col-sm-12.col-md-5.col-lg-4
+				include asides/_right

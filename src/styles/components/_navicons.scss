@@ -1,0 +1,62 @@
+//
+// Блок и иконкой
+// для формирования списка преимуществ, ссылок на калькулятор страницы абитуриента
+//
+
+
+
+.navicons {
+
+	@extend %row;
+	@extend .center-xs;
+	align-items: stretch;
+	margin-top: $line-height-base;
+	margin-bottom: $line-height-base;
+
+	.item {
+		@extend .col-xs-6;
+		@extend .col-sm-4;
+		@extend .col-md-3;
+		@extend .col-lg-2;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		max-width: 320px;
+		overflow: hidden;
+	}
+	.item:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		border: 2px solid $brand-default;
+	}
+	.item:hover { text-decoration: none; }
+	.item:hover:before { border: 2px solid $brand-primary; }
+
+	&__item {
+		.icon {
+			max-width: 60%;
+			margin: 0.5em auto;
+			height: auto;
+			// @include min-width( $screen-sm ) {
+			// 	max-width: 100px;
+			// }
+		}
+		.title {
+			margin: 0.5em;
+			text-align: center;
+			color: $font-color-default;
+			// font-size: 85%;
+			// @include min-width( $screen-sm ) { font-size: 100%; }
+		}
+	}
+
+}

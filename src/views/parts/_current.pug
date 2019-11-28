@@ -1,0 +1,23 @@
+//-
+	Актуальная "текущая" тема. К примеру новости категории: "Поступление", "Мероприятия" ...
+
+mixin current_entry ( args )
+	-
+		args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+		args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, praesentium explicabo! Placeat rerum, voluptas commodi aspernatur ratione eveniet ex quam repellendus, aliquid alias facere esse sequi quo nostrum natus ipsum?';
+		args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/300x200/2ecc71/ecf0f1';
+	.col-xs-12.col-sm-10.col-md-4.col-lg-12: a.current__entry.flat__entry.entry( href="#", title=args.title )
+		img.wp-post-image.lazy( src="#", data-src=args.thumbnail, alt=args.title )
+		h3.title #{args.title}
+		.excerpt: p #{args.excerpt}
+
+//
+// start section
+section.section.section--small.current.flat#current
+	.section__heading.heading: h2.title #[a.more( href="#" ): span.sr-only Просмотр категории] Актуальне
+	.section__body.body: .row.center-xs
+		+current_entry( { title: 'День открытых дверей ФИТ', excerpt: 'Факультет информационных технологий приглашает будущих абитуриентов и их родителей посетить университет: услышать о деятельности факультета и кафедр, о специальностях, по которым обучают на кафедрах факультета, задать вопросы и получить ответы по интересующим темам, а также получить экскурсию по всем кафедрам факультета информационных технологий!', thumbnail: src.img+'post_thumbnail_md_01.jpg' } )
+		+current_entry( { title: 'Регистрация на ВНО-2019 Консультационный пункт', excerpt: 'с 5 февраля по 25 марта включительно проводится регистрация на ВНО 2019 г. Консультационный пункт по вопросам регистрации на ВНО работает с 9-00 до 15-30 в 5 корпусе ПГТУ', thumbnail: src.img+'post_thumbnail_md_02.jpg' } )
+		+current_entry( { title: 'Конкурс на замещение вакантных научно-педагогических должностей', excerpt: 'ГВУЗ «Приазовский государственный технический университет» объявляет конкурс на замещение вакантных научно-педагогических должностей', thumbnail: src.img+'post_thumbnail_md_03.jpg' } )
+// CURRENT end
+//

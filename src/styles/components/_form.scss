@@ -1,0 +1,158 @@
+//
+//	Стили элементов форм
+//
+
+
+form {
+
+	input[type=text],
+	input[type=email],
+	input[type=search],
+	input[type=url],
+	input[type=password],
+	textarea,
+	.form-control {
+		display: block;
+		width: 100%;
+		border: 1px solid #ddd;
+		padding: 4px 10px;
+		background-color: #fff;
+		margin: 0.5em 0;
+		&:invalid { border: 1px solid $brand-danger; box-shadow: none; }
+		&:disabled, &.disabled {
+			@extend %disabled;
+			background-color: #ddd;
+			resize: none;
+		}
+		&--md {
+			padding: 7px 15px;
+			font-size: 1.25em;
+		}
+		&--lg {
+			padding: 13px 19px;
+			font-size: 1.75em;
+			margin: 0.5em 0;
+		}
+	}
+
+	button {
+		// @extend %button;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	.form-group {
+		margin: 5px 0;
+	}
+
+	.input-group {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	label {
+		color: #777;
+		display: inline-block;
+		margin: 2px 10px 2px 0;
+		padding: 0px;
+		cursor: pointer;
+		&:last-child { margin-right: auto; }
+	}
+
+
+	input[type=checkbox] {
+		display: inline-block;
+		border: 1px solid #b4b9be;
+		background-color: #fff;
+		cursor: pointer;
+		outline: 0;
+		padding: 0;
+		text-align: center;
+		vertical-align: middle;
+		width: 1em;
+		height: 1em;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		box-shadow: inset 0 1px 2px rgba( 0, 0, 0, .1 );
+		background-position: center center;
+		background-size: 0.7em 0.7em;
+		background-repeat: no-repeat;
+	}
+	input[type=checkbox]:checked {
+		// background-image: url( 'data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ0OC44IDQ0OC44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NDguOCA0NDguODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnPgoJPGcgaWQ9ImNoZWNrIj4KCQk8cG9seWdvbiBwb2ludHM9IjE0Mi44LDMyMy44NSAzNS43LDIxNi43NSAwLDI1Mi40NSAxNDIuOCwzOTUuMjUgNDQ4LjgsODkuMjUgNDEzLjEsNTMuNTUgICAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzBDNDI2RiIgZGF0YS1vbGRfY29sb3I9IiMwYzQyNmYiPjwvcG9seWdvbj4KCTwvZz4KPC9nPjwvZz4gPC9zdmc+' );
+		background-image: url( 'data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ0Mi41MzMgNDQyLjUzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQyLjUzMyA0NDIuNTMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+PGc+Cgk8cGF0aCBkPSJNNDM0LjUzOSw5OC40OTlsLTM4LjgyOC0zOC44MjhjLTUuMzI0LTUuMzI4LTExLjc5OS03Ljk5My0xOS40MS03Ljk5M2MtNy42MTgsMC0xNC4wOTMsMi42NjUtMTkuNDE3LDcuOTkzTDE2OS41OSwyNDcuMjQ4ICAgbC04My45MzktODQuMjI1Yy01LjMzLTUuMzMtMTEuODAxLTcuOTkyLTE5LjQxMi03Ljk5MmMtNy42MTYsMC0xNC4wODcsMi42NjItMTkuNDE3LDcuOTkyTDcuOTk0LDIwMS44NTIgICBDMi42NjQsMjA3LjE4MSwwLDIxMy42NTQsMCwyMjEuMjY5YzAsNy42MDksMi42NjQsMTQuMDg4LDcuOTk0LDE5LjQxNmwxMDMuMzUxLDEwMy4zNDlsMzguODMxLDM4LjgyOCAgIGM1LjMyNyw1LjMzMiwxMS44LDcuOTk0LDE5LjQxNCw3Ljk5NGM3LjYxMSwwLDE0LjA4NC0yLjY2OSwxOS40MTQtNy45OTRsMzguODMtMzguODI4TDQzNC41MzksMTM3LjMzICAgYzUuMzI1LTUuMzMsNy45OTQtMTEuODAyLDcuOTk0LTE5LjQxN0M0NDIuNTM3LDExMC4zMDIsNDM5Ljg2NCwxMDMuODI5LDQzNC41MzksOTguNDk5eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojMEM0MjZGIiBkYXRhLW9sZF9jb2xvcj0iIzBjNDI2ZiI+PC9wYXRoPgo8L2c+PC9nPiA8L3N2Zz4=' );
+	}
+
+
+	input[type=radio] {
+		display: inline-block;
+		border: 1px solid #b4b9be;
+		background-color: #fff;
+		cursor: pointer;
+		outline: 0;
+		padding: 0;
+		text-align: center;
+		vertical-align: middle;
+		width: 1em;
+		height: 1em;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		box-shadow: inset 0 1px 2px rgba( 0, 0, 0, .1 );
+		background-position: center center;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+	}
+	input[type=radio]:checked {
+		background-image: radial-gradient( circle closest-side, $brand-primary 60%, transparent 61% );
+	}
+
+
+
+
+	input[type=submit] {
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-md;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+
+	//
+
+
+	fieldset {
+		padding: 10px;
+		margin: 15px 0;
+		border: 1px solid #999;
+	}
+
+
+	fieldset fieldset {
+		@extend %blockquote;
+		// @extend .well;
+		// @extend .well-info;
+		padding: 0 10px 10px 10px;
+		border: none;
+		background-color: #fff;
+	}
+
+
+	legend {
+		padding: 0 5px;
+		background-color: #fff;
+		color: $brand-primary;
+		font-weight: bold;
+		font-size: 1em;
+	}
+
+	fieldset fieldset legend {
+		@extend .small;
+	}
+
+
+}

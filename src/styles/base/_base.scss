@@ -1,0 +1,153 @@
+//
+//	BASE
+//	базовые стили
+
+
+.font-italic { font-style: italic; }
+.font-bold { font-weight: bold; }
+.font-normal { font-weight: normal;	font-style: normal; }
+
+.tt-uppercase { text-transform: uppercase; }
+.tt-lowercase { text-transform: lowercase; }
+.tt-capitalize { text-transform: capitalize; }
+.tt-normal { text-transform: none; }
+
+.small { font-size: 0.85em; }
+.lead { font-size: 1.15em; }
+.normal { font-size: 1.00em; font-weight: normal;	font-style: normal; text-transform: none; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.text-primary { color: $brand-primary !important; }
+.text-success { color: $brand-success !important; }
+.text-info { color: $brand-info !important; }
+.text-danger { color: $brand-danger !important; }
+.text-warning { color: $brand-warning !important; }
+
+.bg-primary { background-color: lighten( $brand-primary, 50% ) !important; padding: 2px 3px; }
+.bg-success { background-color: lighten( $brand-success, 50% ) !important; padding: 2px 3px; }
+.bg-info { background-color: lighten( $brand-info, 50% ) !important; padding: 2px 3px; }
+.bg-danger { background-color: lighten( $brand-danger, 40% ) !important; padding: 2px 3px; }
+.bg-warning { background-color: lighten( $brand-warning, 40% ) !important; padding: 2px 3px; }
+
+.display-inline {	display: inline-block; }
+
+.pull-left, .alignleft { float: left; }
+.pull-right, .alignright { float: right; }
+
+img.alignleft, a.alignleft img { margin: 5px 10px 10px 0px; }
+img.alignright, a.alignright img { margin: 5px 0px 10px 10px; }
+
+
+.clearfix { @extend %clearfix; }
+
+
+
+.wp-caption {}
+.wp-caption-text {}
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.dl-horizontal {
+	dt {
+		float: left;
+		width: 145px;
+		height: $line-height-base;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-weight: bold;
+		white-space: nowrap;
+		display: block;
+    	clear: both;
+	}
+	dd {
+		margin-left: 145px;
+		font-style: italic;
+		padding-left: 5px;
+	}
+	dt:nth-of-type( 2n+1 ),
+	dd:nth-of-type( 2n+1 ) { background-color: #eee; }
+}
+
+.list-inline { @extend %list-inline; }
+
+.list-unstyled { @extend %list-unstyled; }
+
+.link-unstyled { @extend %link-unstyled; }
+
+.center-block { @extend %center-block; }
+
+.y-center { @extend %y-center; }
+
+.sr-only { visibility: hidden; display: none; opacity: 0; }
+
+.hide-xs { display: none; }
+.visible-xs { display: block; }
+
+@include min-width ( $screen-sm ) {
+	.hide-sm { display: none; }
+	.hide-md { display: block; }
+	.hide-lg { display: block; }
+	.visible-sm { display: block; }
+}
+
+@include min-width ( $screen-md ) {
+	.hide-md { display: none; }
+	.hide-lg { display: block; }
+	.visible-md { display: block; }
+}
+
+@include min-width ( $screen-lg ) {
+	.hide-lg { display: none; }
+	.visible-lg { display: block; }
+}
+
+
+//
+// Gutenberg
+// стили "стандартных" блоков
+//
+
+
+// .has-small-font-size,
+// .has-medium-font-size,
+// .has-large-font-size,
+// .has-huge-font-size,
+// .has-larger-font-siz {
+// 	line-height: 1.4em;
+// }
+
+
+
+
+.wp-block-pullquote {
+
+	padding: 1em 0;
+	margin: 1em 0;
+	border-top: 3px solid $brand-default;
+	border-bottom: 3px solid $brand-default;
+	
+	blockquote {
+		box-shadow: none;
+		border-left: none;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	cite {
+		@extend .small;
+	}
+
+}

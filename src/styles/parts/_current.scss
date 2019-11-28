@@ -1,0 +1,20 @@
+//
+//
+//
+
+
+section.current {
+
+	margin: 0px auto;
+
+	.entry {
+		@extend %entry;
+		border-left: 1px solid #fff;
+		// margin: 15px auto;
+	}
+
+	&__entry {
+		@extend %entry_parts;
+	}
+
+}

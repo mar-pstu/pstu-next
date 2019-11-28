@@ -1,0 +1,214 @@
+link( rel="stylesheet", type="text/css", media="print", href=src.css+"print.css" )
+
+script(src=src.js+'jquery.js')
+
+script(asinc, src=src.js+'prism.js')
+
+script(asinc, src=src.js+'lazyload.js')
+script.
+	jQuery( ".lazy" ).lazy( {
+		beforeLoad: function( element ) {
+			jQuery( element ).fadeOut( 0 );
+		},
+		afterLoad: function( element ) {
+			element.css( 'border', 'none');
+		}
+	} );
+
+script(asinc, src=src.js+'main.js')
+
+script(asinc, src=src.js+'fancybox.js')
+script.
+		jQuery( "a[href$='.jpg'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.png'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.svg'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.bmp'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.gif'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( "a[href$='.jpeg'] > img:only-child" ).closest( "a" ).fancybox();
+		jQuery( ".fancybox" ).fancybox();
+		//- jQuery().fancybox({
+		//- 	selector: '.slick-slide:not(.slick-cloned)',
+		//- 	hash: false
+		//- });
+		jQuery( ".fancybox-frame" ).fancybox( {
+			'type':'iframe',
+		} );
+
+script(asinc, src=src.js+'superembed.js')
+
+link( rel="stylesheet", href=src.css+'jssocials.css' )
+link( rel="stylesheet", href=src.css+'jssocials-theme-flat.css' )
+script(asinc, src=src.js+'jssocials.js')
+script.
+	jQuery( ".jssocials" ).jsSocials( {
+		showLabel: false,
+		showCount: true,
+		shares: [
+			{
+				share: "email",
+				logo: pstuNextThemeTranslate.themeUrl+"images/share/email.svg"
+			},
+			{
+				share: "twitter",
+				logo: pstuNextThemeTranslate.themeUrl+"images/share/twitter.svg"
+			},
+			{
+				share: "facebook",
+				logo: pstuNextThemeTranslate.themeUrl+"images/share/facebook.svg"
+			},
+			//- {
+			//- 	share: "linkedin",
+			//- 	logo: pstuNextThemeTranslate.themeUrl+"images/share/linkedin.svg"
+			//- },
+			{
+				share: "pinterest",
+				logo: pstuNextThemeTranslate.themeUrl+"images/share/pinterest.svg"
+			},
+			{
+				share: "stumbleupon",
+				logo: pstuNextThemeTranslate.themeUrl+"images/share/stumbleupon.svg"
+			},
+			{
+				share: "whatsapp",
+				logo: pstuNextThemeTranslate.themeUrl+"images/share/whatsapp.svg"
+			},
+			{
+				share: "viber",
+				logo: pstuNextThemeTranslate.themeUrl+"images/share/viber.svg"
+			},
+			{
+				share: "telegram",
+				logo: pstuNextThemeTranslate.themeUrl+"images/share/telegram.svg"
+			},
+		]
+	} );
+
+
+
+
+
+link( rel="stylesheet", href=src.css+'slick.css' )
+script(asinc, src=src.js+'slick.js')
+script.
+	jQuery( document ).ready( function () {
+
+			jQuery( '#header-alerts-list' ).slick( {
+				vertical: true,
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				autoplay: true,
+				autoplaySpeed: 1500,
+				dots: true,
+				dotsClass: 'dots',
+				appendDots: jQuery( '#alerts' ),
+				prevArrow: jQuery( '#header-alerts-arrow-prev' ),
+				nextArrow: jQuery( '#header-alerts-arrow-next' ),
+			} );
+
+		// "похожие записи"
+			jQuery( '#similar-slider' ).slick( {
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 3000,
+				dots: true,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				adaptiveHeight: false,
+				prevArrow: jQuery( '#similar-slider-arrow-prev' ),
+				nextArrow: jQuery( '#similar-slider-arrow-next' ),
+				dots: false,
+			} );
+
+
+		// "первый экран"
+			jQuery( '#jumbotron-slider' ).slick( {
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 3000,
+				speed: 400,
+				fade: true,
+				dots: false,
+				prevArrow: jQuery( '#jumbotron-slider-arrow-prev' ),
+				nextArrow: jQuery( '#jumbotron-slider-arrow-next' ),
+			} ).on( 'lazyLoaded', function ( e, slick, image, imageSource ) {
+				imageSource = image.attr( 'src' );
+				parentSlide = jQuery( image ).closest( '.jumbotron__entry.entry' );
+				parentSlide.css( 'background-image', 'url("'+imageSource+'")' );
+				image.attr('src',''); // remove source
+			} );
+
+
+		// люди
+			jQuery( '#people-slider' ).slick( {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 4000,
+				speed: 400,
+				arrows: true,
+				prevArrow: jQuery( '#people-slider-arrow-prev' ),
+				nextArrow: jQuery( '#people-slider-arrow-next' ),
+				fade: false,
+				dots: false,
+				centerMode: true,
+				centerPadding: '60px',
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+						}
+					},
+				],
+			} );
+
+		// "Партнёры"
+			jQuery( '#partners-slider' ).slick( {
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 5000,
+				dots: true,
+				dotsClass: 'slider-dots',
+				infinite: true,
+				speed: 300,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				centerMode: true,
+				variableWidth: true,
+				prevArrow: jQuery( '#partners-slider-arrow-prev' ),
+				nextArrow: jQuery( '#partners-slider-arrow-next' ),
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 4,
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2,
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+						}
+					},
+				],
+			} );
+
+	} );

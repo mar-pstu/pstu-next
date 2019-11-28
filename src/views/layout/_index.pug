@@ -1,0 +1,22 @@
+include ../helpers/_variables
+include ../helpers/_mixins
+- page.title = "Главная";
+- page.excerpt = "Шаблон страницы front-page.php";
+- page.type = "home";
+block variables
+doctype html
+html(lang="ru")
+	include ../components/_head
+	block head
+	body( class=page.type )
+		include ../nav/_mobilenav
+		.wrapper#wrapper
+			include ../parts/_header
+			main.wrapper__item.wrapper__item--main.main#main
+				block main
+			block footer
+				include ../nav/_links
+				include ../asides/_basement
+				include ../parts/_partners
+				include ../parts/_footer
+				include ../components/_enqueue

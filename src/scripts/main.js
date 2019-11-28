@@ -1,7 +1,11 @@
-//= ./app/to-top-btn.js
+//= app/ajax-pagination.js
 
-//= ./app/nav-menus.js
+//= app/files.js
 
-//= ./app/doc-icons.js
+//= app/nav-menus.js
 
-//= ./app/wp.js
+//= app/to-top-btn.js
+
+//= app/wp.js
+
+//= app/accordio.js

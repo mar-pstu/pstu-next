@@ -1,121 +1,109 @@
 'use strict';
 
-var gulp           = require( 'gulp' ),
-    sass           = require( 'gulp-sass' ),             // sass / scss
-    sourcemaps     = require( 'gulp-sourcemaps' ),       // мапы ( из какого исходника правило )
-    autoprefixer   = require( 'gulp-autoprefixer' ),     // префиксы для старых браузеров
-    pug            = require( 'gulp-pug' ),              // препроцессор html
-    plumber        = require( 'gulp-plumber' ),          // выводит ошбку не прерывая работу gulp
-    rigger         = require( 'gulp-rigger' ),           // склеивает файлы с помощью //- filename
-    uglify         = require( 'gulp-uglify' ),           // минифицырует js
-    cssmin         = require( 'gulp-cssmin' ),           // минификация css
-    rename         = require( 'gulp-rename' ),           // переименование / добавление префикса min
-    spritesmith    = require( 'gulp.spritesmith' ),
-    gulpif         = require( 'gulp-if' ),
-    imagemin       = require( 'gulp-imagemin' );
+var gulp           = require( 'gulp' );
+var styles         = require( 'gulp-sass' );
+var html           = require( 'gulp-pug' );
+var plumber        = require( 'gulp-plumber' );
+var autoprefixer   = require( 'gulp-autoprefixer' );
+var images         = require( 'gulp-imagemin' );
+var sourcemaps     = require( 'gulp-sourcemaps' );
+var uglify         = require( 'gulp-uglify' );       // минифицирует js
+var rigger         = require( 'gulp-rigger' );       // склеивает файлы с помощью //- filename-name
+var cleancss       = require( 'gulp-clean-css' );
+var rename         = require( 'gulp-rename' );       // добавляет суфикс min к имени файла
+var cache          = require( 'gulp-cache' );
+var del            = require( 'del' );
+var browserSync    = require( 'browser-sync' );
 
 
-// создание спрайта
-gulp.task( 'icon', function () {
-    var spriteData =
-        gulp.src('./src/icon/*') // путь, откуда берем картинки для спрайта
-            .pipe( spritesmith( {
-                imgName: 'icon.png',
-                cssName: '_icon.scss',
-                cssFormat: 'scss',
-                algorithm: 'binary-tree',
-                imgPath: "../images/icon.png",
-                cssVarMap: function ( sprite ) {
-                  sprite.name = sprite.name
-                }
-            } ) );
-    spriteData.img.pipe( gulp.dest( './build/images/') ); // путь, куда сохраняем картинку
-    spriteData.css.pipe( gulp.dest( './src/sass/components/') ); // путь, куда сохраняем стили
-});
+styles.compiler      = require( 'node-sass' );
+
+ 
+gulp.task( 'styles', function () {
+  return gulp.src( './src/styles/**/*.scss' )
+    .pipe( plumber() )
+    .pipe( sourcemaps.init() )
+    .pipe( styles().on( 'error', styles.logError ) )
+    .pipe( autoprefixer() )
+    .pipe( sourcemaps.write( '.' ) )
+    .pipe( gulp.dest( './build/styles/' ) )
+    .on( 'end', browserSync.reload );
+} );
+ 
 
 
-// сжатие изображений
-gulp.task( 'imagemin', function() {
-  gulp.src( [ 'src/images/**/*.*', 'src/images/*.*' ] )
-  .pipe( imagemin() )
-  .pipe( gulp.dest( 'build/images' ) );
-});
+gulp.task( 'html', function buildHTML() {
+  return gulp.src( './src/views/*.pug' )
+    .pipe( plumber() )
+    .pipe( html( { pretty: true } ) )
+    .pipe( gulp.dest( './build/' ) )
+    .on( 'end', browserSync.reload );
+} );
 
 
-//pug - сборка html
-gulp.task( 'pug', function( callback ) {
-  gulp.src( './src/pug/*.pug' )
-      .pipe( plumber() )
-      .pipe( pug( {
-        pretty: true,
-      } ) )
-      .pipe( gulp.dest( './build/' ) );
-  callback();
-});
+
+gulp.task( 'scripts', function () {
+  return gulp.src( 'src/scripts/*.js' )
+    .pipe( plumber() )
+    .pipe( rigger() )
+    .pipe( gulp.dest( './build/scripts/' ) )
+    .pipe( uglify() )
+    .pipe( rename( { suffix: '.min' } ) )
+    .pipe( gulp.dest( './build/scripts/' ) );
+})
 
 
-//gulp-rigger - сборка и минификация js файлов
-gulp.task( 'js', function ( callback ) {
-    gulp.src( './src/scripts/*.js' )
+
+gulp.task( 'images', function () {
+    return gulp.src( './src/images/**/*.{png,jpg,svg,gif}' )
         .pipe( plumber() )
-        .pipe( rigger() )
-        .pipe( gulp.dest( './build/scripts/' ) )
-        .pipe( uglify(), )
-        .pipe( rename( { suffix: '.min' } ), )
-        .pipe( gulp.dest( './build/scripts/' ) );
-    callback();
-});
+        .pipe( cache( images() ) )
+        .pipe( gulp.dest( './build/images/' ) )
+        .on( 'end', browserSync.reload );
+    }
+);
 
 
-//sass и autoprefixer
-gulp.task( 'sass', function ( callback ) {
-  return gulp.src( './src/sass/*.scss' )
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: [
-        'Chrome >= 35',
-        'Firefox >= 8',
-        'Edge >= 12',
-        'Explorer >= 8',
-        'iOS >= 8',
-        'Safari >= 5',
-        'Android 2.3',
-        'Android >= 4',
-        'Opera >= 12'
-      ],
-      cascade: true
-    }))
-    .pipe( gulp.dest( './build/css' ) )
-    .pipe(sourcemaps.write('.', {
-      includeContent: false,
-      sourceRoot: 'source'
-    }))
-    .pipe( gulp.dest('./build/css') );
-  callback();
-});
+
+gulp.task( 'cleancss', function () {
+  return gulp.src( [ './build/styles/**/*.css', '!./build/styles/**/*.min.css' ] )
+    .pipe( cleancss( { compatibility: 'ie8' } ) )
+    .pipe( rename( { suffix: '.min' } ) )
+    .pipe( gulp.dest( './build/styles/' ) );
+} );
 
 
-// минификация css
-gulp.task( 'cssmin', function( callback ) {
-  return gulp.src( [ './build/css/*.css', '!./build/css/*.min.css' ] )
-    .pipe( cssmin() )
-    .pipe( rename({suffix: '.min'}) )
-    .pipe( gulp.dest('./build/css') );
-  callback();
-});
+
+gulp.task( 'server', function () {
+  browserSync.init({
+    server: {
+      baseDir: './build/'
+    }
+  } );
+} );
+
+
+gulp.task( 'removebuild', function () {
+  return del.sync( 'build' );
+} );
+
+
+gulp.task( 'clearcache', function () {
+  return cache.clearAll();
+} );
 
 
 
 gulp.task( 'watch', function () {
-  gulp.watch( './src/sass/**/*.*',          [ 'sass' ] );
-  gulp.watch( './src/pug/**/*.*',           [ 'pug'] );
-  gulp.watch( './src/sprite/**/*.*',        [ 'icon'] );
-  gulp.watch( './src/scripts/**/*.*',       [ 'js'] );
-  gulp.watch( './src/icon/*.*',             [ 'icon'] );
-});
+  gulp.watch( './src/styles/**/*.scss',                gulp.series( 'styles', 'cleancss' ) );
+  gulp.watch( './src/views/**/*.pug',                  gulp.series( 'html' ) );
+  gulp.watch( './src/scripts/**/*.js',                 gulp.series( 'scripts' ) );
+  gulp.watch( './src/images/**/*.{png,jpg,svg,gif}',   gulp.series( 'images' ) );
+} );
 
-gulp.task( 'default', [ 'sass', 'pug', 'js', 'watch' ] );
-gulp.task( 'sprite', [ 'icon' ] );
-gulp.task( 'image', [ 'sprite', 'imagemin', 'sass' ] );
+
+
+gulp.task( 'default', gulp.series(
+  gulp.parallel( 'html', 'styles', 'scripts', 'images' ),
+  gulp.parallel( 'watch', 'server' )
+) );

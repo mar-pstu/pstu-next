@@ -1,0 +1,46 @@
+//-
+	Заголовки
+
+
+
+h2 Заголовки #[small (доступно в Гутенберг)]
+
+h3 Простой заголовок
+.row
+	.col-xs-12.col-sm-6.col-md-6.col-lg-6
+		h1 Заголовок 1-го уровня #[small small]
+		h2 Заголовок 2-го уровня #[small small]
+		h3 Заголовок 3-го уровня #[small small]
+		h4 Заголовок 4-го уровня #[small small]
+		h5 Заголовок 5-го уровня #[small small]
+		h6 Заголовок 6-го уровня #[small small]
+	.col-xs-12.col-sm-6.col-md-6.col-lg-6: pre: code.language-markup.
+		&lt;h1&gt;Заголовок 1-го уровня &lt;small&gt;small&lt;/small&gt;&lt;/h1&gt;
+		&lt;h2&gt;Заголовок 2-го уровня &lt;small&gt;small&lt;/small&gt;&lt;/h2&gt;
+		&lt;h3&gt;Заголовок 3-го уровня &lt;small&gt;small&lt;/small&gt;&lt;/h3&gt;
+		&lt;h4&gt;Заголовок 4-го уровня &lt;small&gt;small&lt;/small&gt;&lt;/h4&gt;
+		&lt;h5&gt;Заголовок 5-го уровня &lt;small&gt;small&lt;/small&gt;&lt;/h5&gt;
+		&lt;h6&gt;Заголовок 6-го уровня &lt;small&gt;small&lt;/small&gt;&lt;/h6&gt;
+
+h3 Заголовки с иконкой
+.row
+	.col-xs-21.col-sm-6.col-md-6.col-lg-6
+		+heading( { level: 'h2', thumbnail: src.img+'iconnav/bell.png', title: 'Пропозиції вступу' } )
+		+heading( { level: 'h3', thumbnail: src.img+'iconnav/certificate.png', title: 'Галузі знань' } )
+		+heading( { level: 'h4', thumbnail: src.img+'iconnav/ukraine.png', title: '“Гаряча лінія” МОН' } )
+	.col-xs-12.col-sm-6.col-md-6.col-lg-6: pre: code.language-markup.
+		&lt;div class="heading"&gt;
+			&lt;img class="heading__thumbnail thumbnail lazy" src="images/iconnav/bell.png" alt="Иконка"&gt;
+			&lt;h2 class="heading__title title"&gt;Пропозиції вступу&lt;/h2&gt;
+		&lt;/div&gt;
+		<!-- -->
+		&lt;div class="heading"&gt;
+			&lt;img class="heading__thumbnail thumbnail lazy" src="images/iconnav/certificate.png" alt="Иконка"&gt;
+			&lt;h3 class="heading__title title"&gt;Галузі знань&lt;/h3&gt;
+		&lt;/div&gt;
+		<!-- -->
+		&lt;div class="heading"&gt;
+			&lt;img class="heading__thumbnail thumbnail lazy" src="images/iconnav/ukraine.png" alt="Иконка"&gt;
+			&lt;h4 class="heading__title title"&gt;“Гаряча лінія” МОН&lt;/h4&gt;
+		&lt;/div&gt;
+hr

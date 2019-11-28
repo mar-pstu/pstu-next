@@ -1,0 +1,44 @@
+//-
+	Главная страница
+	"Структура (подразделения)"
+
+
+
+mixin unit( args )
+	a.structure__unit.unit( href="#", title=args.title )
+		img.wp-post-thumbnail.lazy( src="#", data-src=args.thumbnail )
+		h4.title #{args.title}
+
+
+
+aside.structure
+	.list.clearfix.text-center
+		+unit( { thumbnail: src.img+'structure/mf.png', title: 'Металлургический факультет' } )
+		+unit( { thumbnail: src.img+'structure/sgf.png', title: 'Социально-гуманитарный факультет' } )
+		+unit( { thumbnail: src.img+'structure/fimp.png', title: 'Факультет инженерной и языковой подготовки' } )
+		+unit( { thumbnail: src.img+'structure/fit.png', title: 'Факультет информационных технологий' } )
+		+unit( { thumbnail: src.img+'structure/fmz.png', title: 'Факультет машиностроения и сварки' } )
+		+unit( { thumbnail: src.img+'structure/ftt.png', title: 'Факультет транспортных технологий' } )
+		+unit( { thumbnail: src.img+'structure/ekf.png', title: 'Экономический факультет' } )
+		+unit( { thumbnail: src.img+'structure/enf.png', title: 'Энергетический факультет' } )
+	ul.structure__list.list
+		li.has-sub-menu
+			a( href="#" ) Подразделения университета
+			ul.sub-menu
+				li: a( href="#" ) Международная работа
+				li: a( href="#" ) Образовательный центр «Донбасс – Украина»
+				li: a( href="#" ) Отдел дистанционного обучения
+				li: a( href="#" ) Отдел обеспечения качества образования
+				li: a( href="#" ) Подготовительное отделение
+				li: a( href="#" ) Приёмная комиссия
+				li: a( href="#" ) Профсоюзный комитет
+				li: a( href="#" ) Студенческий сенат
+				li: a( href="#" ) Учебный отдел
+				li: a( href="#" ) Центр карьеры
+				li: a( href="#" ) Центр компьютерных технологий
+		li.has-sub-menu
+			a( href="#" ) Колледжи
+			ul.sub-menu
+				li: a( href="#" ) Мариупольский колледж
+				li: a( href="#" ) Мариупольский машиностроительный колледж
+				li: a( href="#" ) Мариупольский механико-металлургический колледж

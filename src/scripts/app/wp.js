@@ -16,10 +16,10 @@ jQuery( document ).ready( function () {
 
 	// открыть ссылку на новой вкладке
 
-	jQuery( '.content a[target="_blank"]' ).each( function () {
-		if ( ( jQuery( this ).find( '.icon-share' ).length == 0 ) && ( jQuery( this ).find( 'img, div, h1, h2, h3, h4, h5, h6' ).length == 0 ) ) {
-			jQuery( this ).append( '<i class="icon icon-share"></i>' );
-		}
-	} );
+	// jQuery( '.content a[target="_blank"]' ).each( function () {
+	// 	if ( ( jQuery( this ).find( '.icon-share' ).length == 0 ) && ( jQuery( this ).find( 'img, div, h1, h2, h3, h4, h5, h6' ).length == 0 ) ) {
+	// 		jQuery( this ).append( '<i class="icon icon-share"></i>' );
+	// 	}
+	// } );
 
 } );

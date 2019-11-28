@@ -1,0 +1,53 @@
+//
+//	Информация о странице
+//
+
+
+
+.info {
+
+	margin: 25px auto;
+
+	.qr-code {
+		margin: 15px auto;
+		display: block;
+		float: none;
+		@include min-width ( $screen-sm ) {
+			margin: 10px;
+			float: right;
+		}
+	}
+
+	&__box { @extend %info-box; }
+
+	.box {
+		.heading { @extend %info-box-heading; }
+		&--share .heading:before { @extend %icon-share; }
+		&--tags .heading:before { @extend %icon-tags; }
+		&--translations .heading:before { @extend %icon-translations; }
+		&--publish .heading:before { @extend %icon-calendar; }
+		&--refresh .heading:before { @extend %icon-refresh; }
+	}
+
+	.breadcrumbs {
+		margin: 15px auto;
+	}
+
+	.items {
+		li {
+			&:after { content: ',' }
+			&:last-child:after { content: ''; }
+		}
+		a {
+			opacity: 0.7;
+			transition: opacity 250ms;
+			&:hover { opacity: 1; }
+		}
+		a {
+			color: $font-color-default;
+			&:hover { text-decoration: none; }
+		}
+	}
+
+
+}

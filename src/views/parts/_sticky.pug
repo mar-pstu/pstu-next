@@ -1,0 +1,17 @@
+//-
+	Закреплённая (stichy) запись
+
+
+mixin sticky_entry( args )
+	.sticky__entry.entry: .row.center-xs
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6: a.thumbnail( href="#" )
+			img.wp-post-image.lazy( src="#", data-src=args.thumbnail )
+			.label Важное
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6
+			h3.title: a( href="#" ) #{args.title}
+			.excerpt: p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui voluptatem quasi nulla quisquam porro illum voluptatibus doloremque maxime. Vero hic excepturi labore eum sed, eos accusantium culpa consectetur non amet.
+			a.btn.btn-block.btn-success( href="#" ) Подробней
+
+
+section.sticky#sticky
+	+sticky_entry( { thumbnail: src.img+'sticky_thumbnail.jpg', title: 'В ПГТУ купили 3D принтер' } )

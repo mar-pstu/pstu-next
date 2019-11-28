@@ -1,0 +1,23 @@
+//-
+	Список преимуществ
+
+
+
+
+mixin advantage( args )
+	a.advantages__item.item( href="#", role="listitem" )
+		img.icon.lazy( src="#", data-src=args.icon, alt=args.title )
+		.title #{args.title}
+
+
+h2 Список "преимуществ"
+
+
+.advantages( role="list" )
+	+advantage( { icon: src.img+'navicon/bell.png', title: 'Повышенные стипендии, гранты, стажировки и обучения за рубежом' } )
+	+advantage( { icon: src.img+'navicon/certificate.png', title: 'Высокие позиции ПГТУ в рейтингах среди вузов Украины' } )
+	+advantage( { icon: src.img+'navicon/magisters.png', title: 'Высокий спрос на выпускников, гарантированное трудоустройство' } )
+	+advantage( { icon: src.img+'navicon/world.png', title: 'Университет расположен в центре города, компактно расположена инфраструктура Университета' } )
+	+advantage( { icon: src.img+'navicon/science.png', title: 'ПГТУ — высшее учебное заведение, имеющее многолетнюю историю, большой опыт и традиции' } )
+
+hr

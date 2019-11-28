@@ -1,0 +1,23 @@
+//-
+	Блок иконки с описанием
+
+
+mixin navicon( args )
+	a.navicons__item.item( href="#", role="listitem" )
+		img.icon.lazy( src="#", data-src=args.icon, alt=args.title )
+		.title #{args.title}
+
+
+h2 Иконка с описание #[small (доступно в Гутенберг)]
+p Для формирования вариантов поступления 
+
+
+.navicons( role="list" )
+	+navicon( { icon: src.img+'navicon/bell.png', title: 'для випускників шкіл' } )
+	+navicon( { icon: src.img+'navicon/certificate.png', title: 'для випускників технікумів та коледжів' } )
+	+navicon( { icon: src.img+'navicon/magisters.png', title: 'для майбутніх магістрів' } )
+	+navicon( { icon: src.img+'navicon/world.png', title: 'для іноземних громадян' } )
+	+navicon( { icon: src.img+'navicon/science.png', title: 'аспірантура та докторантура' } )
+	+navicon( { icon: src.img+'navicon/ukraine.png', title: 'для абітуриєнтів з Донбасу' } )
+
+hr

@@ -1,0 +1,28 @@
+//
+//	Иконка подгрузки по AJAX
+
+
+
+@keyframes loading {
+	from {
+		transform: rotate( 0deg );
+	}
+	to {
+		transform: rotate( 360deg );
+	}
+}
+
+
+
+.loadingicon {
+	@extend %background-icon;
+	@extend %icon-refresh;
+	width: 2em;
+	height: 2em;
+	margin: 25px auto;
+	transform-origin: center center;
+	animation-name: loading;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}

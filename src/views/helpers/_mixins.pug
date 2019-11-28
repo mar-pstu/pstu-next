@@ -1,0 +1,79 @@
+//-
+//-
+mixin widget( args )
+	.widget
+		if ( args.title )
+			h3.widget__title #[i.icon.icon-quote] #{args.title}
+		else
+			h3.widget__title Hello, world!
+		if block
+			block
+		else
+			p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+//-
+//-
+//-
+mixin links_list( args )
+	each item in args.list
+		li: a(href=item.url)!= item.text
+//-
+//-
+//-
+mixin list( args )
+	each item in args
+		li!= item
+//-
+//-
+//-
+mixin media ( args )
+	- args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+	- args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
+	- args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum distinctio facere minima ducimus eos, et laudantium quaerat, iure quis unde eveniet nulla dolore fugit praesentium sapiente officiis cumque sit recusandae.';
+	.media.clearfix
+		.media-left.pull-left: a(href="#"): img.lazy.media-object( src="#", data-src=args.thumbnail, alt=args.title )
+		.media-body
+			h4.media-heading: a( href="#" ) #{args.title}
+			div.excerpt: p #{args.excerpt}
+			if ( block )
+				block
+//-
+//-
+//-
+mixin flat_entry( args )
+	- args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit';
+	- args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reiciendis culpa dolor ex cupiditate quasi, magnam. Pariatur, molestiae, quaerat similique praesentium repellat incidunt nulla, doloribus soluta voluptatum molestias voluptate fugit?';
+	- args.thumbnail = ( args.thumbnail ) ? args.thumbnail : src.img+'300x200.png';
+	.col-xs-12.col-sm-6.col-md-6.col-lg-6: a( href="#", title=args.title ).flat__entry.entry
+		img.wp-post-image.lazy( src="#", data-src=args.thumbnail )
+		h3.title #{args.title}
+		.excerpt: p #{args.excerpt}
+//-
+//-
+//-
+mixin entry ( args )
+	- args.title = ( args.title ) ? args.title : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+	- args.thumbnail = ( args.thumbnail ) ? args.thumbnail : 'http://placehold.it/100x100/2ecc71/ecf0f1';
+	- args.excerpt = ( args.excerpt ) ? args.excerpt : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum distinctio facere minima ducimus eos, et laudantium quaerat, iure quis unde eveniet nulla dolore fugit praesentium sapiente officiis cumque sit recusandae.';
+	.entry
+		.text-center: a(href="#").display-inline: img.lazy( src="#", data-src=args.thumbnail, alt=args.title )
+		h3.media-heading: a( href="#" ) #{args.title}
+		p.excerpt #{args.excerpt}
+		time.font-bold.small 20.06.2019
+		.text-right: a.btn.btn-primary( href="#" ) Подробней
+//-
+//-
+//-
+//- mixin blocksit( args )
+//- 	- args.element = ( args.element ) ? args.element : 'a';
+//- 	- args.column = ( args.column ) ? args.column : '3';
+//- 	- args.images = ( args.images ) ? args.images : [ src.img+'image_1.jpg', src.img+'image_2.jpg', src.img+'image_3.jpg', src.img+'image_4.jpg', src.img+'image_5.jpg', src.img+'image_6.jpg', src.img+'image_8.jpg', src.img+'image_9.jpg', src.img+'image_10.jpg', src.img+'image_11.jpg', src.img+'image_12.jpg' ];
+//- 	.gallery( data-block-element=args.element, data-block-column=args.element )
+//- 		each image in args.images
+//- 			a.gallery__item.item( href=image ): img.lazy( src="#" data-src=image, width="200" )
+
+
+
+mixin heading( args )
+	.heading.heading--icon
+		img.heading__thumbnail.thumbnail.lazy( src="#", alt="Иконка", data-src=args.thumbnail )
+		#{args.level}.heading__title.title #{args.title}

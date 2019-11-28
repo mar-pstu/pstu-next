@@ -1,0 +1,89 @@
+//
+//	Главная страница
+//	"Меню структуры университета" (подразделения)
+//
+
+
+
+.structure {
+
+	margin: 15px auto;
+
+	.unit {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 5px 8px;
+		text-decoration: none;
+		color: $font-color-default;
+		overflow: hidden;
+		text-shadow: 1px 1px 0px #fff;
+		&:hover {
+			text-decoration: none;
+			color: $font-color-default;
+		}
+		&:after {
+			@extend %background-icon;
+			@extend %icon-arrow-angle-right;
+			content: '';
+			display: block;
+			width: 1em;
+			height: 1em;
+			margin-left: auto;
+			transition: opacity 250ms, transform 250ms;
+			opacity: 0;
+			transform: translate( -50%, 0% );
+		}
+		&:hover:after {
+			opacity: 1;
+			transform: translate( 0%, 0% );
+		}
+	}
+
+	.unit + .unit { border-top: 1px solid #eee; }
+
+	&__unit {
+		.title {
+			text-align: left;
+			margin: 0px;
+			font-weight: normal;
+		}
+		.wp-post-thumbnail {
+			flex-shrink: 0;
+			display: block;
+			width: 2em;
+			height: 2em;
+			margin-right: 0.3em;
+		}
+	}
+
+	&__list {
+		margin: 15px auto;
+		padding-left: 0;
+		> li > a {
+			color: $font-color-default;
+			font-size: 1.5em;
+		}
+		> li > a:hover { text-decoration: none; }
+		> li { list-style-type: none; }
+		li:before {
+			@extend %background-icon;
+			@extend %icon-double-arrow-right;
+			content: '';
+			display: inline-block;
+			margin-right: 5px;			
+			width: 1em;
+			height: 1em;
+		}
+		.sub-menu {
+			li {
+				list-style-type: circle;
+				margin: auto;
+			}
+			li:before { display: none; }
+		}
+	}
+
+}

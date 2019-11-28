@@ -1,0 +1,56 @@
+//
+//	Главная странциа
+//	Блок "Анонсы"
+//
+
+
+.events {
+
+	.entry {
+		margin: 0px auto 15px auto;
+		display: block;
+		text-decoration: none;
+		color: $font-color-default;
+		&:hover {
+			text-decoration: none;
+			color: $font-color-default;
+		}
+	}
+
+	&__entry {
+		.title {
+			margin: 0px;
+		}
+		.title:before {
+			@extend %icon;
+			@extend %background-icon;
+			@extend %icon-star;
+			content: '';
+			margin-right: 5px;
+			width: $line-height-base;
+			height: $line-height-base;
+		}
+		.excerpt {
+			margin: 0px;
+			max-height: $line-height-base * 3;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+		.datetime {
+			font-size: 75%;
+			font-weight: bold;
+		}
+		.datetime:before {
+			@extend %icon;
+			@extend %background-icon;
+			@extend %icon-calendar;
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 12px;
+			height: 12px;
+			margin-right: 5px;
+		}
+	}
+
+}

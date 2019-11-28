@@ -1,0 +1,73 @@
+@import "helpers/variables";              // переменные
+@import "helpers/functions";
+@import "helpers/mixins";                 // миксины
+@import "helpers/extends";
+@import "helpers/extends.icons";
+@import "helpers/flat";
+
+//
+// @import "base/_normalize";
+@import "base/base";
+@import "base/type";
+
+
+//компоненты по БЭМу
+@import "components/flexboxgrid";
+@import "components/wrapper";              // контейнер страницы, прижатие футера
+@import "components/sprites";              // спрайты
+// @import "components/nav.scss";                  // навигация
+@import "components/widget";               // виджеты
+@import "components/comments";             // комментарии
+@import "components/btn";                  // кнопки
+@import "components/to-top-btn";           // кнопка "пролистать наверх"
+@import "components/section";              // типовые секции главной страницы
+@import "components/media";                // элементы медиасписка (bootstrap 3)
+@import "components/slider";               // элементы слайдера 
+@import "components/breadcrumbs";          // "хдебные крошки"
+@import "components/pagination";           // пагинация CMS Wordpress
+@import "components/form";                 // стили элементов формы
+@import "components/pager";                // 
+@import "components/well";                 // 
+@import "components/languages";                 // меню выбора языка в шапке
+// @import "components/mobilenav";
+@import "components/pageheader";
+@import "components/file";                 // иконки файлов
+@import "components/loadingicon";          // иконка "подгрузки" по AJAX
+@import "components/subpages";
+@import "components/navicons";             // для формирования списка преимуществ, ссылок на калькулятор страницы абитуриента
+@import "components/accordio";
+@import "components/heading";
+
+
+// "стандартные" компоненты CMS Wordpress
+@import "wordpress/calendar";              // виджет "Календарь"
+@import "wordpress/tagcloud";              // виджет "Облако тегов"
+@import "wordpress/menu";                  // виджет "Меню"
+@import "wordpress/gallery";
+@import "wordpress/blocks";                // стили стандартных блоков Гутенберга
+
+
+// части страницы
+@import "parts/aside";                          // сайдбары страницы
+// @import "parts/header";                      // стили шапки сайта
+@import "parts/alerts";                         // блок "Оповещения" в шапке сайта
+@import "parts/jumbotron";                      // Слайдер на первом экране главной страницы
+@import "parts/structure";                      // Главная странциа меню "Структура (подразделения)" 
+@import "parts/404";                            // стили страницы ошибки 404
+@import "parts/search";
+@import "parts/info";                           // информация о странице
+@import "parts/sticky";                         // закреплённый пост на главной странице
+@import "parts/action";                         // блок с рекламой и "призывом" перейти на страницу о университете и страницу абитериенту
+@import "parts/archive";                        // страница блога / архива
+@import "parts/flat";                           // флат иконки
+@import "parts/news";                           // блок новостей на главнйо странице
+@import "parts/events";
+@import "parts/share";                          // блок "Поделиться" главной страницы
+@import "parts/current";                        // слайдер с "актуальной" темой на главной странице
+@import "parts/people";                         // Секция "Люди" главной страницы
+@import "parts/projects";                       // Секция "Проекты" главной страницы
+@import "parts/links";
+@import "parts/similar";
+@import "parts/partners";                       // слайдер "Партнёры"
+@import "parts/steps";                          // для шаблона со списком подстраниц в виде "шагов"
+@import "parts/footer";                         // стили подвала сайта 

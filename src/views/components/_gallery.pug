@@ -1,0 +1,32 @@
+//-
+	Галерея в виде слайдера
+
+
+
+.gallery.gallery-23.slider#gallery-23
+	button.slider-arrow.slider-prev#gallery-23-arrow-prev &larr;
+	button.slider-arrow.slider-next#gallery-23-arrow-next &rarr;
+	#gallery-23-wrap.gallery-wrap
+		a.gallery__item.item( href=src.img+'gallery/full-01.jpg' ): img( src="#", data-lazy=src.img+'gallery/large-01.jpg', alt="Фото 01" )
+		a.gallery__item.item( href=src.img+'gallery/full-02.jpg' ): img( src="#", data-lazy=src.img+'gallery/large-02.jpg', alt="Фото 02" )
+		a.gallery__item.item( href=src.img+'gallery/full-03.jpg' ): img( src="#", data-lazy=src.img+'gallery/large-03.jpg', alt="Фото 03" )
+		a.gallery__item.item( href=src.img+'gallery/full-04.jpg' ): img( src="#", data-lazy=src.img+'gallery/large-04.jpg', alt="Фото 04" )
+		a.gallery__item.item( href=src.img+'gallery/full-05.jpg' ): img( src="#", data-lazy=src.img+'gallery/large-05.jpg', alt="Фото 05" )
+		a.gallery__item.item( href=src.img+'gallery/full-06.jpg' ): img( src="#", data-lazy=src.img+'gallery/large-06.jpg', alt="Фото 06" )
+		a.gallery__item.item( href=src.img+'gallery/full-07.jpg' ): img( src="#", data-lazy=src.img+'gallery/large-07.jpg', alt="Фото 07" )
+script.
+	document.addEventListener( 'DOMContentLoaded', function () {
+		jQuery( '#gallery-23-wrap' ).slick( {
+			lazyLoad: 'ondemand',
+			autoplay: false ,
+			autoplaySpeed: 2000,
+			dots: true,
+			dotsClass: 'slider-dots',
+			infinite: true,
+			slidesToShow: 1,
+			speed: 300,
+			//- variableWidth: true,
+			prevArrow: jQuery( '#gallery-23-arrow-prev' ),
+			nextArrow: jQuery( '#gallery-23-arrow-next' ),
+		} );
+	}, false);

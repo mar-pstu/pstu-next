@@ -1,0 +1,15 @@
+extend layout/_index
+block variables
+	- page.title = "Страница";
+	- page.excerpt = "Шаблон страницы (page.php)";
+	- page.type = "page";
+block main
+	#main-container.container
+		.row
+			.col-xs-12.col-sm-12.col-md-7.col-lg-8
+				article.entry-content
+					include components/_pageheader
+					include components/_content
+					include parts/_info
+				include components/_comments
+			.col-xs-12.col-sm-12.col-md-5.col-lg-4: include asides/_right
